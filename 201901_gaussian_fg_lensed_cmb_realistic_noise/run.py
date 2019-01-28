@@ -9,7 +9,7 @@ import so_pysm_models
 
 
 simulator = mapsims.from_config(
-    "example_config.cfg"
+    "simulation.cfg"
 )
 simulator.execute(write_outputs=True)
 
