@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --qos=regular
-#SBATCH --time=3:00:00
+#SBATCH --time=3:30:00
 #SBATCH --nodes=1
 #SBATCH --job-name=mapsims
 #SBATCH --constraint=haswell
@@ -8,4 +8,9 @@
 #SBATCH --error=mapsims_%j.err
 #SBATCH --output=mapsims_%j.out
 
-time python run.py
+NUM="0000"
+sim=foreground
+template_config_file=${sim}.cfg
+config_file="output/$sim/simulation.cfg"
+sed "s/0000/${NUM}/" $template_config_file > $config_file
+time mapsims_run $config_file
