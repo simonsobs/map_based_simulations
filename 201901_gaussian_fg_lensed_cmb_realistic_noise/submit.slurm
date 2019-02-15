@@ -1,21 +1,23 @@
 #!/bin/bash
-#SBATCH --qos=regular
-#SBATCH --time=3:30:00
+#SBATCH --qos=debug
+#SBATCH --time={hours}:{minutes}:00
 #SBATCH --nodes=1
-#SBATCH --job-name=mapsims
+#SBATCH --job-name=mapsims_{simulation_type}_{nside}
 #SBATCH --constraint=haswell
 #SBATCH --mail-user
-#SBATCH --error=mapsims_%j.err
-#SBATCH --output=mapsims_%j.out
-#SBATCH --array=1-1
+#SBATCH --error=mapsims_{simulation_type}_{nside}_%j.err
+#SBATCH --output=mapsims_{simulation_type}_{nside}_%j.out
+#SBATCH --array={first_sim_id}-{last_sim_id}
 
 NUM=$(printf "%04d" $SLURM_ARRAY_TASK_ID)
-sim=noise
-NSIDE=4096
+sim={simulation_type}
+NSIDE={nside}
+CHANNELS={channels}
 template_config_file=common.cfg
-output_folder="output/$nside/$sim/$NUM"
+output_folder="output/$NSIDE/$sim/$NUM"
 mkdir -p $output_folder
 config_file="$output_folder/common.cfg"
-sed "s/0000/${NUM}/" $template_config_file | sed "s/512/$NSIDE/" > $config_file
+sed "s/0000/$NUM/" $template_config_file | sed "s/512/$NSIDE/" | sed "s/all/$CHANNELS/" > $config_file
 echo "MAPSIMS RUN: $NSIDE $sim $NUM"
-time mapsims_run $config_file ${sim}.cfg
+sim+='.cfg'
+time mapsims_run $config_file $sim
