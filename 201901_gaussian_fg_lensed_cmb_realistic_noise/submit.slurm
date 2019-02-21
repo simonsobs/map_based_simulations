@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --qos=debug
+#SBATCH --qos=regular
 #SBATCH --time={hours}:{minutes}:00
 #SBATCH --nodes=1
 #SBATCH --job-name=mapsims_{simulation_type}_{nside}
