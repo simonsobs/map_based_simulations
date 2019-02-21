@@ -12,7 +12,7 @@ Each component is saved separately, all maps are in `uK_CMB`, IQU, single precis
 
 * Gaussian synchrotron, see the [`GaussianSynchrotron` PySM component documentation](https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html#gaussiansynchrotron) and the input parameters in `synchrotron.cfg`
 * Gaussian dust, see the [`GaussianDust` PySM component documentation](https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html#gaussiandust) and the input parameters in `dust.cfg`
-* Lensed CMB, see the [`SOPrecomputedCMB` class in `mapsims`](https://mapsims.readthedocs.io/en/latest/api/mapsims.SOPrecomputedCMB.html#mapsims.SOPrecomputedCMB).
+* Lensed CMB, see the [`SOStandalonePrecomputedCMB` class in `mapsims`](https://mapsims.readthedocs.io/en/latest/api/mapsims.SOStandalonePrecomputedCMB.html#mapsims.SOStandalonePrecomputedCMB) and the [details about the CMB simulations](https://mapsims.readthedocs.io/en/latest/models.html#available-cosmic-microwave-background-simulations)
 * Noise from power spectra released on 20180822, see [`SO_Noise_Calculator_Public_20180822.py`](https://github.com/simonsobs/mapsims/tag/0.1.0/mapsims/SO_Noise_Calculator_Public_20180822.py), the [`SONoiseSimulator` class in `mapsims`](https://mapsims.readthedocs.io/en/0.1.0/api/mapsims.SONoiseSimulator.html#mapsims.SONoiseSimulator).
 
 ## Available maps
