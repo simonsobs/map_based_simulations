@@ -52,43 +52,51 @@ the 4096 foregrounds take ~140 minutes each, noise ~40 minutes, cmb ~15 minutes.
 ### 4096
 
 cmb
-real    1m30.772s
-user    38m37.100s
-sys     4m17.152s
+
+* real    1m30.772s
+* user    38m37.100s
+* sys     4m17.152s
 
 noise
-real    5m30.094s
-user    157m17.716s
-sys     7m36.576s
+
+* real    5m30.094s
+* user    157m17.716s
+* sys     7m36.576s
 
 synchrotron
-real    22m10.193s
-user    1228m16.200s
-sys     8m19.556s
+
+* real    22m10.193s
+* user    1228m16.200s
+* sys     8m19.556s
 
 dust
-real    22m0.078s
-user    1215m13.356s
-sys     8m38.452s
+
+* real    22m0.078s
+* user    1215m13.356s
+* sys     8m38.452s
 
 ### 512
 
 noise
-real    0m10.580s
-user    2m0.508s
-sys     0m21.968s
+
+* real    0m10.580s
+* user    2m0.508s
+* sys     0m21.968s
 
 synchrotron
-real    0m16.012s
-user    5m42.036s
-sys     0m39.224s
+
+* real    0m16.012s
+* user    5m42.036s
+* sys     0m39.224s
 
 dust
-real    0m14.666s
-user    5m44.276s
-sys     0m37.572s
+
+* real    0m14.666s
+* user    5m44.276s
+* sys     0m37.572s
 
 cmb
-real    0m19.171s
-user    6m1.800s
-sys     0m30.992s
+
+* real    0m19.171s
+* user    6m1.800s
+* sys     0m30.992s
