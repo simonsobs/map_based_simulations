@@ -8,12 +8,12 @@ The same folder contains all the configuration files used and the scripts to cre
 
 ## Input components
 
-Each map saved separately
+Each component is saved separately, all maps are in `uK_CMB`, IQU, single precision (`float32`)
 
 * Gaussian synchrotron, see the [`GaussianSynchrotron` PySM component documentation](https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html#gaussiansynchrotron) and the input parameters in `synchrotron.cfg`
 * Gaussian dust, see the [`GaussianDust` PySM component documentation](https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html#gaussiandust) and the input parameters in `dust.cfg`
-* Lensed CMB FIXME
-* Noise from power spectra released on 20180822, see [`SO_Noise_Calculator_Public_20180822.py`](https://github.com/simonsobs/mapsims/tag/0.1.0/mapsims/SO_Noise_Calculator_Public_20180822.py)
+* Lensed CMB, see the [`SOPrecomputedCMB` class in `mapsims`](https://mapsims.readthedocs.io/en/latest/api/mapsims.SOPrecomputedCMB.html#mapsims.SOPrecomputedCMB).
+* Noise from power spectra released on 20180822, see [`SO_Noise_Calculator_Public_20180822.py`](https://github.com/simonsobs/mapsims/tag/0.1.0/mapsims/SO_Noise_Calculator_Public_20180822.py), the [`SONoiseSimulator` class in `mapsims`](https://mapsims.readthedocs.io/en/0.1.0/api/mapsims.SONoiseSimulator.html#mapsims.SONoiseSimulator).
 
 ## Available maps
 
@@ -24,6 +24,17 @@ Low resolution maps just for channels of the Small Aperture telescopes, initiall
 **Location at NERSC**:
 
     /project/projectdirs/sobs/v4_sims/mbs/201901_gaussian_fg_lensed_cmb_realistic_noise
+
+The naming convention is:
+
+    {output_nside}/{content}/{num:04d}/simonsobs_{content}_uKCMB_{telescope}{band:03d}_nside{nside}_{num:04d}.fits"
+
+where:
+
+* `content` is in `[cmb, synchtrotron, noise, dust]`
+* `num` is `0`-`9` for high resolution simulations and `10`-`109` for low resolution simulations.
+* `telescope` is `sa` or `la`
+* `band` is the channel frequency in GHz
 
 ## Software
 
