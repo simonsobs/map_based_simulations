@@ -6,6 +6,8 @@ maintained by the Map-Based Simulation Pipeline Working Group (MBS), [Wiki page,
 
 Slack channel: `#pwg-mbs`
 
+This repository hosts configuration files and documentation for the simulation runs completed and in progress.
+
 Maintained repositories:
 
 * [`so_pysm_models`: PySM models for Simons Observatory](https://github.com/simonsobs/so_pysm_models)
