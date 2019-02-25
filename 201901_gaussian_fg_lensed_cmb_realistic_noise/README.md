@@ -38,6 +38,8 @@ where:
 
 Total disk space used is 1.1 T for the 4096 simulations and 43 GB for the 512 simulations.
 
+Backed up to tape in `~zonca/sobs/mbs/201901_gaussian_fg_lensed_cmb_realistic_noise`.
+
 ## Software
 
 * The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 0.1.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/0.1.dev)
