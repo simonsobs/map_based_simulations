@@ -37,6 +37,15 @@ where:
 
 Backed up to tape in `~zonca/sobs/mbs/201903_highres_foregrounds`.
 
+## Plots
+
+See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
+
+* [Temperature NSIDE 512](https://gist.github.com/240377264d49c2122c9521e0256b0388)
+* [Temperature NSIDE 4096](https://gist.github.com/zonca/ce3e58f964ff63ddcc4ef8ac8db74205)
+* [Polarization NSIDE 512](https://gist.github.com/25f3947f9d44d88b82e15127441f7bfb)
+* [Polarization NSIDE 4096](https://gist.github.com/zonca/35f5d2ed6ff27e8d2f788258218da47c)
+
 ## Software
 
 * The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 0.2.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/0.2.dev)
