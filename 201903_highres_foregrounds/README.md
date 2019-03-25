@@ -1,7 +1,7 @@
 High resolution foregrounds with spectral index not varying spatially
 =====================================================================
 
-Release date March 2019
+Release date 25 March 2019
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds).
 The same folder contains all the configuration files used and the scripts to create SLURM jobs.
