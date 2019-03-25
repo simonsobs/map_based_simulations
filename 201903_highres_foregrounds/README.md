@@ -37,6 +37,10 @@ where:
 
 Backed up to tape in `~zonca/sobs/mbs/201903_highres_foregrounds`.
 
+## Issues or feedback
+
+In case of any problem with the maps or the documentation or request more/different runs, [open an issue on the `map_based_simulations` repo](https://github.com/simonsobs/map_based_simulations/issues)
+
 ## Plots
 
 See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
