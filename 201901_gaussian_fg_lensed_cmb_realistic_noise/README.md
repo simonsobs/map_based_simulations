@@ -19,6 +19,9 @@ Each component is saved separately, all maps are in `uK_CMB`, IQU, single precis
 
 HEALPix maps at high resolution (nside 4096), initially 10 realizations of all the input components
 
+Reference frame for noise maps is **Equatorial**, Gaussian foregrounds and CMB have no intrinsic reference frame.
+Bandpass for each channel is a delta function centered at the reference frequency.
+
 Low resolution maps just for channels of the Small Aperture telescopes, initially 100 realizations of noise and CMB, only 1 realization of Synchtron and Dust.
 
 **Location at NERSC**:
