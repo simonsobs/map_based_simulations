@@ -1,7 +1,7 @@
 import configobj
 
-all_simulations = ["dust", "synchrotron", "ame", "freefree"]
-model = "0"
+all_simulations = ["dust", "synchrotron", "ame"]
+model = "1"
 
 for nside in [512, 4096]:
     small_scale = "s" if nside > 512 else ""
