@@ -1,8 +1,6 @@
 High resolution foregrounds with spectral index not varying spatially
 =====================================================================
 
-Maps are in **Galactic** reference frame
-
 Release date 25 March 2019
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds).
@@ -21,6 +19,10 @@ Another option, if you are interested only in the sky cut, is to use the [`SONoi
 
 HEALPix maps at high resolution (nside 4096) and low resolution (nside 512), these models are deterministic, so we have
 a set for each resolution for all channels.
+
+Reference frame for the maps is **Galactic**.
+Bandpass for each channel is a **delta function** centered at the reference frequency.
+Beams as defined in the [`SO_Noise_Calculator`](https://github.com/simonsobs/mapsims/blob/master/mapsims/SO_Noise_Calculator_Public_20180822.py) released in October 2018.
 
 **Location at NERSC**:
 
