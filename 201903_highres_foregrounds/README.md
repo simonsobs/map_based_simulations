@@ -1,6 +1,8 @@
 High resolution foregrounds with spectral index not varying spatially
 =====================================================================
 
+Maps are in **Galactic** reference frame
+
 Release date 25 March 2019
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds).
