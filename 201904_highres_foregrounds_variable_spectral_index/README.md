@@ -34,7 +34,7 @@ The naming convention is:
 
 where:
 
-* `content` is in `[cmb, synchtrotron, freefree, ame]`
+* `content` is in `[cmb, synchtrotron, ame]`
 * `num` is `0`
 * `telescope` is `sa` or `la`
 * `band` is the channel frequency in GHz
@@ -49,7 +49,7 @@ In case of any problem with the maps or the documentation or request more/differ
 
 See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
-* [NSIDE 512]() not available yet
+* [NSIDE 512](https://gist.github.com/2484fae3500fff71ea6e86a904e99e45)
 * [NSIDE 4096]() not available yet
 
 ## Software
