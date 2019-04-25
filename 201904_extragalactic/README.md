@@ -49,8 +49,8 @@ In case of any problem with the maps or the documentation or request more/differ
 
 See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
-* [NSIDE 512]() not available yet
-* [NSIDE 4096]() not available yet
+* [NSIDE 512](https://gist.github.com/zonca/b0fd1fe3f698000c81be57b69636e4a4)
+* [NSIDE 4096](https://gist.github.com/0ef102bf777b541c3d669d0d7b22555c)
 
 ## Software
 
