@@ -3,7 +3,7 @@ from pathlib import Path
 template = open("submit.slurm").read()
 
 for nside in [4096]:
-    for simulation_type in ["dust", "synchrotron", "freefree", "ame"]:
+    for simulation_type in ["cib", "tsz", "ksz"]:
         folder = Path(f"output/{nside}/{simulation_type}")
         folder.mkdir(exist_ok=True, parents=True)
         hours = 2
