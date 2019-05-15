@@ -1,0 +1,9 @@
+output_nside = 512
+output_folder = output/{nside}/{content}/0000
+output_filename_template="simonsobs_{content}_uKCMB_{telescope}{band:03d}_nside{nside}_0000.fits"
+channels = all
+unit = uK_CMB
+mapsims_version = "0.3.0"
+so_pysm_models_version = "0.3.0"
+[pysm_components]
+pysm_output_reference_frame = "C"
