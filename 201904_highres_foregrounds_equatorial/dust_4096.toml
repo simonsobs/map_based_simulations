@@ -1,3 +1,4 @@
-content = dust
+tag = "dust"
+
 [pysm_components]
-pysm_components_string = SO_d0s
+pysm_components_string = "SO_d0s"

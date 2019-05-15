@@ -1,3 +1,4 @@
-content = synchrotron
+tag = "synchrotron"
+
 [pysm_components]
-pysm_components_string = SO_s0
+pysm_components_string = "SO_s0"

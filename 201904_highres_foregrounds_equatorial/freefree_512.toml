@@ -1,3 +1,4 @@
-content = freefree
+tag = "freefree"
+
 [pysm_components]
-pysm_components_string = SO_f0
+pysm_components_string = "SO_f0"
