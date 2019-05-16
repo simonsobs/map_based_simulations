@@ -1,15 +1,18 @@
 from pathlib import Path
 
 template = open("submit.slurm").read()
+folder = Path(f"jobs")
+folder.mkdir(exist_ok=True, parents=True)
 
-for nside in [4096]:
+print("cd jobs")
+for nside in [512, 4096]:
     for simulation_type in ["dust", "synchrotron", "freefree", "ame"]:
-        folder = Path(f"output/{nside}/{simulation_type}")
-        folder.mkdir(exist_ok=True, parents=True)
-        hours = 2
+        hours = 5
         minutes = 30
-        with open(folder / "submit.slurm", "w") as f:
-            print("writing", f.name)
+        num = 0
+        filename = f"job_{simulation_type}_{nside}_{num:04d}.slurm"
+        with open(folder / filename, "w") as f:
+            print("sbatch", filename)
             f.write(template.format(
                 simulation_type=simulation_type,
                 nside=nside,
