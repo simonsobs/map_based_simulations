@@ -58,3 +58,7 @@ See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
 * The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 0.3.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/0.3.dev)
 * The noise component and the runner script are available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 0.3.0, see the [documentation](https://mapsims.readthedocs.io/en/0.3.dev)
+
+## Performance
+
+At 4096 with lmax to `2*nside`: 115 minutes for synchrotron and dust, 95 minutes for freefree and ame, single node on Popeye (SDSC)
