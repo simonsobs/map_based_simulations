@@ -2,9 +2,9 @@
 #SBATCH --partition=soap
 #SBATCH --time={hours}:{minutes}:00
 #SBATCH --nodes=1
-#SBATCH --job-name=mapsims_{simulation_type}_{nside}
+#SBATCH --job-name=mapsims_{simulation_type}_{nside}_{channels}
 #SBATCH --mail-user
 #SBATCH --error=mapsims_{simulation_type}_{nside}_%j.err
 #SBATCH --output=mapsims_{simulation_type}_{nside}_%j.out
 
-time mapsims_run ../common_{nside}.toml ../{simulation_type}_{nside}.toml
+time mapsims_run --nside {nside} --channels {channels} ../common.toml ../{simulation_type}_{nside}.toml
