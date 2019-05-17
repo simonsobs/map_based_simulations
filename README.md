@@ -12,3 +12,4 @@ Maintained repositories:
 
 * [`so_pysm_models`: PySM models for Simons Observatory](https://github.com/simonsobs/so_pysm_models)
 * [`mapsims`: Map-based simulation package based on PySM + SO noise simulations](https://github.com/simonsobs/mapsims)
+* [`pysm`: Development version of PySM 3](https://github.com/healpy/pysm)
