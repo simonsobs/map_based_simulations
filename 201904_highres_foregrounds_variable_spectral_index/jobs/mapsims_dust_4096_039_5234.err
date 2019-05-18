@@ -1,0 +1,20 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/variable_spectral_index/beta_dust_ns4096_1deg.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/variable_spectral_index/temperature_dust_ns4096_1deg.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/dust_T_ns4096.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/dust_Q_ns4096.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/dust_U_ns4096.fits
+  warnings.warn(f"Access data from {full_path}")
+
+real	75m14.312s
+user	3445m5.006s
+sys	61m47.780s
