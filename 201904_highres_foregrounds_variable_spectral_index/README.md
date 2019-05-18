@@ -12,7 +12,7 @@ The same folder contains all the configuration files used and the scripts to cre
 
 Each component is saved separately, all maps are in `uK_CMB`, IQU or I, single precision (`float32`)
 
-Dust, synchrotron, free-free and anomalous microwave emission using the "1" models, i.e. `SO_d1`, `SO_s1`, and `SO_a1`, see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/1.0.dev/highres_templates.html#details-about-individual-models).
+Dust, synchrotron, free-free and anomalous microwave emission using the "1" models, i.e. `SO_d1`, `SO_s1`, and `SO_a1`, see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/highres_templates.html#details-about-individual-models).
 
 These maps are full-sky, you can get the noise maps from [the `201901_gaussian_fg_lensed_cmb_realistic_noise` simulations](https://github.com/simonsobs/map_based_simulations/tree/master/201901_gaussian_fg_lensed_cmb_realistic_noise) to add noise and apply the cut from the scanning strategy.
 Another option, if you are interested only in the sky cut, is to use the [`SONoiseSimulator` class from `mapsims`](https://mapsims.readthedocs.io/en/latest/api/mapsims.SONoiseSimulator.html#mapsims.SONoiseSimulator), select `nside` and `scanning_strategy` and access the `hitmap` attribute.
@@ -57,8 +57,8 @@ See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
 ## Software
 
-* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 1.0.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/1.0.dev)
-* The noise component and the runner script are available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 0.3.0, see the [documentation](https://mapsims.readthedocs.io/en/1.0.dev)
+* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 1.0.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/latest)
+* The noise component and the runner script are available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 0.3.0, see the [documentation](https://mapsims.readthedocs.io/en/latest)
 
 ## Performance
 
