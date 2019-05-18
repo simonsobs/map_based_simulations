@@ -66,4 +66,4 @@ See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
 At 4096 with lmax to `2*nside` **all 6 frequency channels**: 115 minutes for synchrotron and dust, 95 minutes for freefree and ame, single node on Popeye (SDSC)
 
-At 4096 with lmax to `3*nside` **each frequency channel** (e.g. `LA_27`, `SA_27`): 75 minutes for synchrotron and dust, 60 minutes for freefree and ame, single node on Popeye (SDSC)
+At 4096 with lmax to `3*nside-1` **each frequency channel** (e.g. `LA_27`, `SA_27`): 75 minutes for synchrotron and dust, 60 minutes for freefree and ame, single node on Popeye (SDSC)
