@@ -1,0 +1,7 @@
+nside = 512
+output_folder = "/simons/scratch/zonca/simonsobs/map_based_simulations/201904_highres_foregrounds_equatorial/{nside}/{tag}/0000"
+output_filename_template="simonsobs_{tag}_uKCMB_{telescope}{band:03d}_nside{nside}_0000.fits"
+channels = "all"
+unit = "uK_CMB"
+mapsims_version = "1.0.0"
+so_pysm_models_version = "1.0.0"

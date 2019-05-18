@@ -1,0 +1,18 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/variable_spectral_index/beta_synch_ns512_1deg.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/synch_T_ns512.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/synch_Q_ns512.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/synch_U_ns512.fits
+  warnings.warn(f"Access data from {full_path}")
+
+real	1m3.114s
+user	47m22.962s
+sys	0m48.858s

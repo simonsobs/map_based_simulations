@@ -1,0 +1,5 @@
+tag = "ame"
+
+[pysm_components]
+pysm_components_string = "SO_a0"
+pysm_output_reference_frame = "C"
