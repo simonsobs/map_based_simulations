@@ -1,0 +1,22 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0027.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0039.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0093.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0145.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0225.fits
+  warnings.warn(f"Access data from {full_path}")
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0280.fits
+  warnings.warn(f"Access data from {full_path}")
+
+real	0m58.614s
+user	6m55.925s
+sys	0m36.905s

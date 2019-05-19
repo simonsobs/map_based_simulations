@@ -1,0 +1,20 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/anaconda/envs/pysm3/lib/python3.7/site-packages/toml/decoder.py:129: UserWarning: Non-existent filename in list with at least one valid filename
+  warn("Non-existent filename in list with at least one valid "
+Traceback (most recent call last):
+  File "/home/zonca/anaconda/envs/pysm3/bin/mapsims_run", line 11, in <module>
+    load_entry_point('mapsims', 'console_scripts', 'mapsims_run')()
+  File "/home/zonca/p/software/mapsims/mapsims/runner.py", line 33, in command_line_script
+    simulator = from_config(res.config, override={"nside":res.nside, "channels":res.channels})
+  File "/home/zonca/p/software/mapsims/mapsims/runner.py", line 76, in from_config
+    tag=config["tag"],
+KeyError: 'tag'
+
+real	0m1.054s
+user	0m0.764s
+sys	0m0.229s
