@@ -1,0 +1,12 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/lensed_alm_seed1.fits
+  warnings.warn(f"Access data from {full_path}")
+
+real	3m22.507s
+user	121m37.050s
+sys	1m30.033s
