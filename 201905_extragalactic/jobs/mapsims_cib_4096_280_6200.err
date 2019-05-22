@@ -1,0 +1,12 @@
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+
+WARNING: version mismatch between CFITSIO header (v3.37) and linked library (v3.36).
+
+/home/zonca/p/software/so_pysm_models/so_pysm_models/utils/__init__.py:24: UserWarning: Access data from /simons/scratch/zonca/simonsobs/so_pysm_models_data/websky/0.3/cib_0280.fits
+  warnings.warn(f"Access data from {full_path}")
+
+real	1m1.713s
+user	26m48.616s
+sys	0m31.745s
