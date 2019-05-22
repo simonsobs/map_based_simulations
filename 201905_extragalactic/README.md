@@ -10,7 +10,9 @@ The same folder contains all the configuration files used and the scripts to cre
 
 Each component is saved separately, all maps are in `uK_CMB`, I, single precision (`float32`)
 
-The CIB, KSZ and TSZ models are created from WebSky cosmological simulations, see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky).
+The CIB, KSZ and TSZ models are created from WebSky cosmological simulations, 
+we also include one CMB realization generated with the same cosmological parameters used in the WebSky simulations both unlensed and lensed with the potential from the WebSky simulations,
+see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky).
 
 These maps are full-sky, you can get the noise maps from [the `201901_gaussian_fg_lensed_cmb_realistic_noise` simulations](https://github.com/simonsobs/map_based_simulations/tree/master/201901_gaussian_fg_lensed_cmb_realistic_noise) to add noise and apply the cut from the scanning strategy.
 Another option, if you are interested only in the sky cut, is to use the [`SONoiseSimulator` class from `mapsims`](https://mapsims.readthedocs.io/en/latest/api/mapsims.SONoiseSimulator.html#mapsims.SONoiseSimulator), select `nside` and `scanning_strategy` and access the `hitmap` attribute.
@@ -35,7 +37,7 @@ The naming convention is:
 
 where:
 
-* `content` is in `[cib, ksz, tsz]`
+* `content` is in `[cib, ksz, tsz, cmb, cmb_unlensed]`
 * `num` is `0`
 * `telescope` is `sa` or `la`
 * `band` is the channel frequency in GHz
