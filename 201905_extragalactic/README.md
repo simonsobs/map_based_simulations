@@ -8,7 +8,7 @@ The same folder contains all the configuration files used and the scripts to cre
 
 ## Input components
 
-Each component is saved separately, all maps are in `uK_CMB`, I, single precision (`float32`)
+Each component is saved separately, all maps are in `uK_CMB`, I or IQU, single precision (`float32`)
 
 The CIB, KSZ and TSZ models are created from WebSky cosmological simulations, 
 we also include one CMB realization generated with the same cosmological parameters used in the WebSky simulations both unlensed and lensed with the potential from the WebSky simulations,
@@ -64,4 +64,4 @@ See the `plot_maps.ipynb` notebook in the folder, executed notebooks:
 
 ## Performance
 
-At 4096 with lmax to `3*nside` **each frequency channel** (e.g. `LA_27`, `SA_27`): 1 minute  single node on Popeye (SDSC), possibly very quick because it is temperature only. At 512 1 minute **all channels**.
+CIB/KSZ/TSZ at 4096 with lmax to `3*nside` **each frequency channel** (e.g. `LA_27`, `SA_27`): 1 minute  single node on Popeye (SDSC), possibly very quick because it is temperature only. At 512 1 minute **all channels**.
