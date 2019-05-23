@@ -46,6 +46,12 @@ where:
 
 Backed up to tape in `~zonca/sobs/mbs/201904_highres_foregrounds_equatorial`.
 
+## Available Galactic masks
+
+In Equatorial coordinates
+
+    /project/projectdirs/sobs/v4_sims/mbs/201904_highres_foregrounds_equatorial/{output_nside}/masks
+
 ## Issues or feedback
 
 In case of any problem with the maps or the documentation or request more/different runs, [open an issue on the `map_based_simulations` repo](https://github.com/simonsobs/map_based_simulations/issues)
