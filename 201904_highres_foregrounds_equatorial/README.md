@@ -64,6 +64,8 @@ or
 the obtained masks are further smoothed with a gaussian kernel at 10 degree in order to get regular mask edges.
 The `thr` parameter ranges from `1` to `4.5`. The final masks cover a fraction of the sky (evaluated over the full sky) between `0.28`and `0.75`
 
+See the Python scripts used to generate the masks in the `create_masks` folder.
+
 ## Issues or feedback
 
 In case of any problem with the maps or the documentation or request more/different runs, [open an issue on the `map_based_simulations` repo](https://github.com/simonsobs/map_based_simulations/issues)
