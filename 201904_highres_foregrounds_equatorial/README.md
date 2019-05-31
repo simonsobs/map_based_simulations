@@ -51,6 +51,18 @@ Backed up to tape in `~zonca/sobs/mbs/201904_highres_foregrounds_equatorial`.
 In Equatorial coordinates
 
     /project/projectdirs/sobs/v4_sims/mbs/201904_highres_foregrounds_equatorial/{output_nside}/masks
+    
+Masks are optimized for polarization.
+
+They are generate comparing synchrotron+dust polarized signal at 93 GHz with the CMB standard deviation at one degree angular resolution.
+
+Sky is masked wherever:
+    `abs(FG_Q) > thr * std(CMB_Q)` 
+or 
+    `abs(FG_U) > thr * std(CMB_U)`
+
+the obtained masks are further smoothed with a gaussian kernel at 10 degree in order to get regular mask edges.
+The `thr` parameter ranges from `1` to `4.5`. The final masks cover a fraction of the sky (evaluated over the full sky) between `0.28`and `0.75`
 
 ## Issues or feedback
 
