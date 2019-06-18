@@ -1,0 +1,20 @@
+
+tag = "noise"
+
+[ other_components ]
+
+    [ other_components.noise ]
+
+    class = "mapsims.SONoiseSimulator"
+    return_uK_CMB = true
+    sensitivity_mode = "baseline"
+    apply_beam_correction = false
+    apply_kludge_correction = true
+    scanning_strategy = "classical"
+    no_power_below_ell = 30
+    LA_number_LF = 1
+    LA_number_MF = 4
+    LA_number_UHF = 2
+    SA_years_LF = 1
+    SA_one_over_f_mode = "pessimistic"
+    ell_max = 12288
