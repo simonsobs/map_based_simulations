@@ -22,7 +22,9 @@ Another option, if you are interested only in the sky cut, is to use the [`SONoi
 HEALPix maps at high resolution (nside 4096) and low resolution (nside 512), these models are deterministic, so we have
 a set for each resolution for all channels.
 
-Reference frame for the maps is **Equatorial**.
+Reference frame for the maps is **Equatorial**. No coordinate transformation was applied in running the simulations from the input websky, websky has no intrinsinc connection with any reference frame, so we chose to use it as Equatorial.
+This looked like a good idea, however it creates an issue, if someone now runs a PySM simulation with a galactic component, let's say `SO_d0` and `WebSkyCIB` and choose output in equatorial, `WebSkyCIB` will be different from these simulations.
+
 Bandpass for each channel is a **delta function** centered at the reference frequency.
 Beams as defined in the [`SO_Noise_Calculator`](https://github.com/simonsobs/mapsims/blob/master/mapsims/SO_Noise_Calculator_Public_20180822.py) released in October 2018.
 The `ell_max` for the harmonics transform is `3*Nside-1`
