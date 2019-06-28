@@ -45,6 +45,7 @@ Backed up to tape in `~zonca/sobs/mbs/201906_noise_no_lowell`.
 
 Relative hitmaps for LAT and SAT are available in the `hitmaps` subfolder of the release. They are normalized to a maximum of 1.
 Hitmaps are provided both for `classical` and `opportunistic` scanning strategies, simulations use only the `classical` scanning strategy.
+Hitmaps were created using the `create_hitmaps.py` script.
 
 ## Software
 
