@@ -41,6 +41,11 @@ Total disk space used is 1.1 T for the 4096 simulations and 43 GB for the 512 si
 
 Backed up to tape in `~zonca/sobs/mbs/201906_noise_no_lowell`.
 
+## Hitmaps
+
+Relative hitmaps for LAT and SAT are available in the `hitmaps` subfolder of the release. They are normalized to a maximum of 1.
+Hitmaps are provided both for `classical` and `opportunistic` scanning strategies, simulations use only the `classical` scanning strategy.
+
 ## Software
 
 * The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 1.0.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/1.0.dev)
