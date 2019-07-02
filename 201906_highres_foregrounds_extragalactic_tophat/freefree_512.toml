@@ -1,0 +1,5 @@
+tag = "freefree"
+
+[pysm_components]
+pysm_components_string = "SO_f0"
+pysm_output_reference_frame = "C"
