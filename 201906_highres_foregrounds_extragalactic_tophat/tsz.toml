@@ -1,7 +1,7 @@
 tag = "tsz"
 
 [pysm_components]
-pysm_output_reference_frame = "G"
+pysm_output_reference_frame = "C"
 
   [ pysm_components.tsz ]
   class = "so_pysm_models.WebSkySZ"

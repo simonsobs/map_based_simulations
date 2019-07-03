@@ -1,7 +1,7 @@
 tag = "ksz"
 
 [pysm_components]
-pysm_output_reference_frame = "G"
+pysm_output_reference_frame = "C"
 
   [ pysm_components.ksz ]
   class = "so_pysm_models.WebSkySZ"
