@@ -1,7 +1,7 @@
 Tophat bandpasses simulation: high resolution foregrounds with spectral index not varying spatially and extragalactic
 =====================================================================================================================
 
-Release date 5 July 2019
+Released on 5 July 2019 by @zonca
 
 This is a re-run of the [`201903_highres_foregrounds`](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds) simulations in **Equatorial** coordinates instead of **Galactic**. The only other difference is that `hp.smoothing` now uses `use_pixel_weights=True`, i.e. the spherical harmonics transform should be of slightly better quality.
 
@@ -66,7 +66,7 @@ LAT beams are unchanged.
 ## Available maps
 
 HEALPix maps at high resolution (nside 4096) and low resolution (nside 512), these models are deterministic, so we have
-a set for each resolution for all channels.
+a set for each resolution for all channels. All maps are full-sky, see [the `201906_noise_no_lowell`  release for hitmaps](https://github.com/simonsobs/map_based_simulations/tree/master/201906_noise_no_lowell).
 
 Reference frame for the maps is **Equatorial**.
 The `ell_max` for the harmonics transform is `3*Nside-1`.
@@ -82,13 +82,21 @@ The naming convention is:
 where:
 
 * `content` is in `[dust, synchtrotron, freefree, ame]` for galactic components and `[ksz, tsz, cib]` for extragalactic components
-* `content` for the available CMB is `[cmb, cmb_unlensed, cmb_lensed_solardipole]`, it is the same CMB realization, see the [WebSky documentation for details](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky), `cmb` is the lensed version and `cmb_lensed_solardipole` is equal to `cmb` with the dipole component replaced by the [HFI 2018 solar dipole](https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/Map-making#HFI_2018_Solar_dipole)
+* `content` for the available CMB is `[cmb, cmb_unlensed, cmb_lensed_solardipole]`, it is the same CMB realization, see the [WebSky documentation for details](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky), `cmb` is the lensed version and `cmb_lensed_solardipole` is equal to `cmb` with the dipole component replaced by the [HFI 2018 solar dipole](https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/Map-making#HFI_2018_Solar_dipole), this was
+  [requested by @keskitalo to highligh temperature to polarization leakage in LAT](https://github.com/simonsobs/so_pysm_models/issues/32#issuecomment-504481401). 
 * CIB map for LF1 is missing, see [issue on Github](https://github.com/simonsobs/map_based_simulations/issues/17)
 * `num` is `0`
 * `telescope` is `sa` or `la`
 * `band` is the channel band, the options are: 
 
 [TODO] backup to tape. Backed up to tape in `~zonca/sobs/mbs/201906_highres_foregrounds_extragalactic_tophat`.
+
+## Combined maps
+
+Also created a single set of maps which is the sum of all components (for CMB `cmb_lensed_solardipole`) to be used as input to some of the TOD simulations (which don't require running PySM on the fly).
+They are in the same folder and same naming convention with `content` equal to `combined_solardip`, e.g.:
+
+    /global/project/projectdirs/sobs/v4_sims/mbs/201906_highres_foregrounds_extragalactic_tophat/512/combined_solardip/0000/simonsobs_combined_solardip_uKCMB_laMFF1_nside512_0000.fits
 
 ## Galactic masks
 
@@ -100,5 +108,7 @@ In case of any problem with the maps or the documentation or request more/differ
 
 ## Software
 
-* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 2.0.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/2.0.dev)
-* The runner script is available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 2.0.0, see the [documentation](https://mapsims.readthedocs.io/en/2.0.dev)
+* PySM 3 is available at <https://github.com/healpy/pysm>, need to create the documentation and release 3.0.0, used commit `7e65e94`
+* [`sotodlib`](https://github.com/simonsobs/sotodlib) version `7290c1b`
+* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 2.0.0 to be released after updating documentation(`b1cd9be`), see the [documentation](https://so-pysm-models.readthedocs.io/en/2.0.dev)
+* The runner script is available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 2.0.0 to be released after updating documentation (`0ad98ec`), see the [documentation](https://mapsims.readthedocs.io/en/2.0.dev)
