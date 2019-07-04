@@ -6,7 +6,7 @@ tag = "cmb"
 pysm_output_reference_frame = "C"
 
     [ pysm_components.cmb ]
-    class  =  "so_pysm_models.WebSkyCMB"
+    class  =  "so_pysm_models.WebSkyCMBMap"
     websky_version = "0.3"
     lensed = true
     seed = 1
