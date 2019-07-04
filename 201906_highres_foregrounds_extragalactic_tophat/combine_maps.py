@@ -3,8 +3,7 @@ import healpy as hp
 import numpy as np
 
 components = {
-"201906_highres_foregrounds_extragalactic_tophat" : ["dust", "synchrotron", "freefree", "ame"],
-"201906_highres_foregrounds_extragalactic_tophat" : ["cib", "ksz", "tsz", "cmb_lensed_solardipole"],
+"201906_highres_foregrounds_extragalactic_tophat" : ["dust", "synchrotron", "freefree", "ame"] + ["cib", "ksz", "tsz", "cmb_lensed_solardipole"],
 }
 
 num = 0
@@ -22,14 +21,13 @@ for nside in [512, 4096]:
                         print(filename)
                         if band == "LF1" and content == "cib":
                             continue
-                        m = hp.read_map(filename, dtype=np.float32)
-                        if m.shape[0] != 3:
-                            combined_map[0] += m
+                        try:
+                            combined_map += hp.read_map(filename, dtype=np.float32, field=(0,1,2))
+                        except IndexError:
                             print("T only map")
-                        else:
-                            assert m.shape == combined_map.shape
-                            combined_map += m
+                            combined_map[0] += hp.read_map(filename, dtype=np.float32, field=0)
                 os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+                combined_map = hp.reorder(combined_map, r2n=True)
                 hp.write_map(output_filename, combined_map, nest=True, coord="C", column_units="uK_CMB", overwrite=True)
                 print(20*"*")
                 print(output_filename)
