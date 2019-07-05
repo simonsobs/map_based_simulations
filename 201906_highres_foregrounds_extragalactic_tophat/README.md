@@ -20,6 +20,9 @@ The CIB, KSZ and TSZ models are created from WebSky cosmological simulations,
 we also include one CMB realization generated with the same cosmological parameters used in the WebSky simulations both unlensed and lensed with the potential from the WebSky simulations,
 see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky).
 
+I also created a version of the lensed CMB realization with the dipole component replaced by the [HFI 2018 solar dipole](https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/Map-making#HFI_2018_Solar_dipole), this was
+  [requested by @keskitalo to highligh temperature to polarization leakage in LAT](https://github.com/simonsobs/so_pysm_models/issues/32#issuecomment-504481401). 
+
 ## Instrument properties
 
 Bandpass for each channel is based on the figures in `sotodlib`, PySM executes 10 equally spaced points between the low and the high limit, including both and integrates with the trapezoidal rule. Weighting is performed in `Jy/sr`, the same as PySM 2.
@@ -81,13 +84,12 @@ The naming convention is:
 
 where:
 
-* `content` is in `[dust, synchtrotron, freefree, ame]` for galactic components and `[ksz, tsz, cib]` for extragalactic components
-* `content` for the available CMB is `[cmb, cmb_unlensed, cmb_lensed_solardipole]`, it is the same CMB realization, see the [WebSky documentation for details](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky), `cmb` is the lensed version and `cmb_lensed_solardipole` is equal to `cmb` with the dipole component replaced by the [HFI 2018 solar dipole](https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/Map-making#HFI_2018_Solar_dipole), this was
-  [requested by @keskitalo to highligh temperature to polarization leakage in LAT](https://github.com/simonsobs/so_pysm_models/issues/32#issuecomment-504481401). 
+* `content` is `[dust, synchtrotron, freefree, ame]` for galactic components and `[ksz, tsz, cib]` for extragalactic components
+* `content` for the available CMB is `[cmb, cmb_unlensed, cmb_lensed_solardipole]`
 * CIB map for LF1 is missing, see [issue on Github](https://github.com/simonsobs/map_based_simulations/issues/17)
 * `num` is `0`
 * `telescope` is `sa` or `la`
-* `band` is the channel band, the options are: 
+* `band` is the channel band, the options are: `LF1,LF2,MFF1,MFF2,MFS1,MFS2,UHF1,UHF2`
 
 [TODO] backup to tape. Backed up to tape in `~zonca/sobs/mbs/201906_highres_foregrounds_extragalactic_tophat`.
 
