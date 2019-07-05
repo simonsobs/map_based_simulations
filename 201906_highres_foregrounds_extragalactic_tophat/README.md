@@ -3,9 +3,9 @@ Tophat bandpasses simulation: high resolution foregrounds with spectral index no
 
 Released on 5 July 2019 by @zonca
 
-This is a re-run of the [`201903_highres_foregrounds`](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds) simulations in **Equatorial** coordinates instead of **Galactic**. The only other difference is that `hp.smoothing` now uses `use_pixel_weights=True`, i.e. the spherical harmonics transform should be of slightly better quality.
-
-Also, this is the first set of simulations which uses the development version of [PySM 3](https://github.com/healpy/pysm).
+This is the first release using tophat bandpasses, all previous releases used Dirac delta bandpasses at the reference
+frequency. It includes all galactic high resolution components with index not varying spatially and the extragalactic
+components based on WebSky.
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201906_highres_foregrounds_extragalactic_tophat).
 The same folder contains all the configuration files used and the scripts to create SLURM jobs.
