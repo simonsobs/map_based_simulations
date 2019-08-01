@@ -1,0 +1,12 @@
+
+tag = "cmb"
+
+[ pysm_components ]
+# do not apply any rotation
+pysm_output_reference_frame = "C"
+
+    [ pysm_components.cmb ]
+    class  =  "so_pysm_models.WebSkyCMBMap"
+    websky_version = "0.3"
+    lensed = true
+    seed = 1

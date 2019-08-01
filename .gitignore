@@ -108,3 +108,5 @@ venv.bak/
 *.ipynb
 
 output
+*.err
+*.out

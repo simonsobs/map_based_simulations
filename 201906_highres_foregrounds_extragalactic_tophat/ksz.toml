@@ -1,0 +1,9 @@
+tag = "ksz"
+
+[pysm_components]
+pysm_output_reference_frame = "C"
+
+  [ pysm_components.ksz ]
+  class = "so_pysm_models.WebSkySZ"
+  version = "0.3"
+  sz_type = "kinetic"
