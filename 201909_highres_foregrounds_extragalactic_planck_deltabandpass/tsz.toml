@@ -1,0 +1,9 @@
+tag = "tsz"
+
+[pysm_components]
+pysm_output_reference_frame = "C"
+
+  [ pysm_components.tsz ]
+  class = "so_pysm_models.WebSkySZ"
+  version = "0.3"
+  sz_type = "thermal"

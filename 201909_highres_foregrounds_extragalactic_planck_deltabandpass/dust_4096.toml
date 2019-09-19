@@ -1,0 +1,5 @@
+tag = "dust"
+
+[pysm_components]
+pysm_components_string = "SO_d0s"
+pysm_output_reference_frame = "C"

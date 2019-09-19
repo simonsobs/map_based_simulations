@@ -1,0 +1,10 @@
+tag = "cib"
+
+[pysm_components]
+# do not apply any rotation
+pysm_output_reference_frame = "C"
+
+  [ pysm_components.cib ]
+  class = "so_pysm_models.WebSkyCIB"
+  websky_version = "0.3"
+  interpolation_kind = "linear"

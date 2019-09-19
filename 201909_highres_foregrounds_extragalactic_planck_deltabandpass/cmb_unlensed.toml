@@ -1,0 +1,12 @@
+
+tag = "cmb_unlensed"
+
+[ pysm_components ]
+# do not apply any rotation
+pysm_output_reference_frame = "C"
+
+    [ pysm_components.cmb ]
+    class  =  "so_pysm_models.WebSkyCMB"
+    websky_version = "0.3"
+    lensed = false
+    seed = 1

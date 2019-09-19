@@ -1,0 +1,8 @@
+nside = 512
+output_folder = "/simons/scratch/zonca/simonsobs/map_based_simulations/201909_highres_foregrounds_extragalactic_planck_deltabandpass/{nside}/{tag}/0000"
+output_filename_template="planck_deltabandpass_{tag}_uKCMB_{telescope}{band:0>3}_nside{nside}_0000.fits"
+channels = "all"
+instrument_parameters = "planck_deltabandpass"
+unit = "uK_CMB"
+mapsims_version = "2.1.0"
+so_pysm_models_version = "2.1.0"
