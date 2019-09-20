@@ -33,7 +33,7 @@ Each component is saved separately, all maps are in `uK_CMB`, IQU or I, single p
 
 Dust, synchrotron, free-free and anomalous microwave emission using the "0" models, i.e. `SO_d0`, `SO_s0`, `SO_f0`, and `SO_a0`, see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/highres_templates.html#details-about-individual-models).
 
-The CIB, KSZ and TSZ models are created from WebSky cosmological simulations, 
+The CIB, KSZ and TSZ models are created from WebSky cosmological simulations,
 we also include one CMB realization generated with the same cosmological parameters used in the WebSky simulations both unlensed and lensed with the potential from the WebSky simulations,
 see more details in [in the documentation](https://so-pysm-models.readthedocs.io/en/latest/models.html#websky).
 
@@ -59,7 +59,9 @@ where:
 * `content` for the available CMB is `[cmb, cmb_unlensed]`
 * `num` is `0`
 * `telescope` is `planck`
-* `band` is the channel band, the options are: `030,044,070,100,143,217,545,857`
+* `band` is the channel band, the options are: `030,044,070,100,143,217,353,545,857`
+
+**NOTE** on CIB: CIB templates are available only up to 857 GHz, but the highest Planck channel frequency is actually 866.8 GHz, so just for CIB I reduced the center frequency of this channel to 857 GHz.
 
 Backed up to tape in `~zonca/sobs/mbs/201909_highres_foregrounds_extragalactic_planck_deltabandpass`.
 
