@@ -10,7 +10,7 @@ Example:
     In [2]: f = h5py.File("planck_deltabandpass.h5")
 
     In [3]: f.keys()
-    Out[3]: <KeysViewHDF5 ['100', '143', '217', '30', '353', '44', '545', '70', '857']>
+    Out[3]: <KeysViewHDF5 ['030', '044', '070', '100', '143', '217', '353', '545', '857']>
 
     In [4]: f["143"].attrs
     Out[4]: <Attributes of HDF5 object at 46913457708992>
