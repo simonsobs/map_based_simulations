@@ -70,6 +70,11 @@ Backed up to tape in `~zonca/sobs/mbs/201909_highres_foregrounds_extragalactic_p
 Also created a single set of maps which is the sum of all components (for CMB `cmb`, which is the lensed version). 
 They are in the same folder and same naming convention with `content` equal to `combined`, e.g.:
 
+## Plots of power spectra
+
+You can also download the notebooks, update paths and modify them:
+
+* [nside 512 input maps](https://gist.github.com/zonca/237fde577156076288bbec923e5b748e)
 
 ## Galactic masks
 
