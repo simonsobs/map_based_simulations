@@ -74,7 +74,7 @@ They are in the same folder and same naming convention with `content` equal to `
 
 You can also download the notebooks, update paths and modify them:
 
-* [nside 512 input maps](https://gist.github.com/zonca/237fde577156076288bbec923e5b748e)
+* [nside 512 input maps](https://nbviewer.jupyter.org/gist/zonca/237fde577156076288bbec923e5b748e), get notebook from [this gist](https://gist.github.com/zonca/237fde577156076288bbec923e5b748e)
 
 ## Galactic masks
 
