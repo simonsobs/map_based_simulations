@@ -70,6 +70,8 @@ Backed up to tape in `~zonca/sobs/mbs/201909_highres_foregrounds_extragalactic_p
 Also created a single set of maps which is the sum of all components (for CMB `cmb`, which is the lensed version). 
 They are in the same folder and same naming convention with `content` equal to `combined`, e.g.:
 
+    /global/project/projectdirs/sobs/v4_sims/mbs/201909_highres_foregrounds_extragalactic_planck_deltabandpass/4096/combined/0000/planck_deltabandpass_combined_uKCMB_planck070_nside4096_0000.fits
+
 ## Plots of power spectra
 
 You can also download the notebooks, update paths and modify them:
