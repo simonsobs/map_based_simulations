@@ -1,6 +1,8 @@
 Extragalactic emission with Websky
 ==================================
 
+Tag: `mbs-s0005-20190520`
+
 Release date 20 May 2019
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201905_extragalactic).

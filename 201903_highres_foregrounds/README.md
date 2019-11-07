@@ -1,6 +1,8 @@
 High resolution foregrounds with spectral index not varying spatially
 =====================================================================
 
+Tag: `mbs-s0002-20190325`
+
 Release date 25 March 2019
 
 These simulations are in **Galactic coordinates**

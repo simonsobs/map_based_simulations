@@ -1,6 +1,8 @@
 Planck delta bandpasses: high resolution foregrounds with spectral index not varying spatially and extragalactic
 =====================================================================================================================
 
+Tag: `mbs-s0008-20190919`
+
 Released on 19 September 2019 by @zonca
 
 Planck frequency channels with Dirac delta bandpasses and gaussian beams, extracted from the [Planck instrument models for the 2018 release](https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/The_RIMO). See the `planck_deltabandpass.h5` file in the `data` folder of the `mapsims` package at: <https://github.com/simonsobs/mapsims/blob/master/mapsims/data/planck_deltabandpass.h5>.

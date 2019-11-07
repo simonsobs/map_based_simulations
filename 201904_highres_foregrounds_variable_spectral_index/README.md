@@ -1,6 +1,8 @@
 High resolution foregrounds in Equatorial with spectral index varying spatially
 ===============================================================================
 
+Tag: `mbs-s0004-20190610`
+
 Release date 17 May 2019, **released again on June 10th after input template fixes**
 
 Also, this is the first set of simulations which uses the development version of [PySM 3](https://github.com/healpy/pysm).

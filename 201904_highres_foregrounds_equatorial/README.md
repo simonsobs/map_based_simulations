@@ -1,6 +1,8 @@
 High resolution foregrounds in Equatorial with spectral index not varying spatially
 ===================================================================================
 
+Tag: `mbs-s0003-20190517`
+
 Release date 17 May 2019
 
 This is a re-run of the [`201903_highres_foregrounds`](https://github.com/simonsobs/map_based_simulations/tree/master/201903_highres_foregrounds) simulations in **Equatorial** coordinates instead of **Galactic**. The only other difference is that `hp.smoothing` now uses `use_pixel_weights=True`, i.e. the spherical harmonics transform should be of slightly better quality.

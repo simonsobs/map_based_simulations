@@ -1,6 +1,8 @@
 Realistic noise with no power below ell 30
 ==========================================
 
+Tag: `mbs-s0007-20190618`
+
 Release date 18 June 2019
 
 This is a re-run of the noise from the [`201901_gaussian_fg_lensed_cmb_realistic_noise` release](https://github.com/simonsobs/map_based_simulations/tree/master/201901_gaussian_fg_lensed_cmb_realistic_noise) but setting the noise power spectrum ell < 30 to zero.
