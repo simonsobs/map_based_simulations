@@ -1,6 +1,8 @@
 Gaussian foregrouds, lensed CMB, realistic noise map based simulations
 ======================================================================
 
+Tag: `mbs-s0001-20190220`
+
 Release date 20 February 2019
 
 The last version of this file is [available on Github](https://github.com/simonsobs/map_based_simulations/tree/master/201901_gaussian_fg_lensed_cmb_realistic_noise).

@@ -1,6 +1,8 @@
 Tophat bandpasses simulation: high resolution foregrounds with spectral index not varying spatially and extragalactic
 =====================================================================================================================
 
+Tag: `mbs-s0006-20190705`
+
 Released on 5 July 2019 by @zonca
 
 This is the first release using tophat bandpasses, all previous releases used Dirac delta bandpasses at the reference
