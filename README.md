@@ -24,5 +24,6 @@ Maintained repositories:
 * [`mbs-s0006-20190705`](201906_highres_foregrounds_extragalactic_tophat/README.md): Tophat bandpasses simulation: high resolution foregrounds with spectral index not varying spatially and extragalactic
 * [`mbs-s0007-20190618`](201906_noise_no_lowell/README.md): Realistic noise with no power below ell 30
 * [`mbs-s0008-20190919`](201909_highres_foregrounds_extragalactic_planck_deltabandpass/README.md): Planck delta bandpasses: high resolution foregrounds with spectral index not varying spatially and extragalactic
+* [`mbs-s0009-20191107`](201911_lensed_cmb/README.md): 100 CMB realizations lensed with gaussian potential
 
 List of releases also available on the [`maps2params` page, restricted](http://simonsobservatory.wikidot.com/cross-group:maps2params)

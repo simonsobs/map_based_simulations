@@ -1,6 +1,8 @@
 CMB realizations lensed with gaussian potential
 ===============================================
 
+Tag: `mbs-s0009-20191107`
+
 Released on 7 November 2019 by @zonca
 
 **100** CMB realizations for all channels from [`alms`](https://mapsims.readthedocs.io/en/latest/models.html#available-cosmic-microwave-background-simulations) with best-fit Planck cosmology and gaussian lensing potential.
