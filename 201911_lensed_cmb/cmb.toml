@@ -1,0 +1,18 @@
+
+tag = "cmb"
+
+[ other_components ]
+
+    [ other_components.cmb ]
+    class  =  "mapsims.SOStandalonePrecomputedCMB"
+    lensed = true
+    # num is then overridden by command line option to mapsims_run
+    num = 0
+    aberrated = false
+    has_polarization = true
+    cmb_set = 0
+    # At NERSC use:
+    # cmb_dir = "/global/project/projectdirs/sobs/v4_sims/mbs/cmb"
+    # On Popeye use:
+    cmb_dir = "/simons/scratch/zonca/simonsobs/lensed_cmb"
+    input_units = "uK_CMB"

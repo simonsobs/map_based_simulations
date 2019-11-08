@@ -1,0 +1,7 @@
+nside = 16
+output_folder = "/simons/scratch/zonca/simonsobs/map_based_simulations/201911_lensed_cmb/{nside}/{tag}/{num:04d}"
+output_filename_template="simonsobs_{tag}_uKCMB_{telescope}{band}_nside{nside}_{num:04d}.fits"
+channels = "all"
+unit = "uK_CMB"
+mapsims_version = "2.1.1"
+so_pysm_models_version = "2.1.1"
