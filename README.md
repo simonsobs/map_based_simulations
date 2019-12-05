@@ -14,6 +14,10 @@ Maintained repositories:
 * [`mapsims`: Map-based simulation package based on PySM + SO noise simulations](https://github.com/simonsobs/mapsims)
 * [`pysm`: Development version of PySM 3](https://github.com/healpy/pysm)
 
+## Logbook
+
+Check [the Logbook](LOGBOOK.md) for the latest information about Map Based Simulations.
+
 ## Available simulations
 
 * [`mbs-s0001-20190220`](201901_gaussian_fg_lensed_cmb_realistic_noise/README.md): Gaussian foregrouds, lensed CMB, realistic noise map based simulations
