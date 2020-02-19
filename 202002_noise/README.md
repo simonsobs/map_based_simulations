@@ -1,9 +1,9 @@
 Realistic noise version 3.1.1 with MSS1 hitmaps
 ===============================================
 
-Tag: `mbs-s0008-20200207`
+Tag: `mbs-s0008-20200221`
 
-Release date 7 Feb 2020
+Release date 21 Feb 2020
 
 New noise release using version 3.1.1 of the noise curves from [`so_noise_models`](https://github.com/simonsobs/so_noise_models).
 
@@ -14,7 +14,7 @@ Compared to previous releases:
 * Uses new hitmaps from the MSS1 time domain simulations
 * Supports noise splits
 * Variable Nside based on channels
-* Released in HEALPix and CAR
+* Released in HEALPix and (later) in CAR 
 
 ## Input components
 
@@ -27,34 +27,45 @@ For all available options refer to the [`SONoiseSimulator` class in `mapsims`](h
 
 Only 1 realizations of the full mission and 1 realization of 4 splits are made available as maps.
 
-Reference frame for noise maps is **Equatorial**.
+Reference frame for noise maps is assumed to be **Equatorial**.
 
 **Location at NERSC**:
 
-    /project/projectdirs/sobs/v4_sims/mbs/201906_noise_no_lowell
+    /project/projectdirs/sobs/v4_sims/mbs/202002_noise
 
 The naming convention is:
 
-    {output_nside}/{content}/{num:04d}/simonsobs_{content}_uKCMB_{telescope}{band:03d}_nside{nside}_{num:04d}.fits"
+    {num:04d}/simonsobs_{content}_uKCMB_{tube}_{band}_nside{nside}_{num:04d}_{split}_of_{nsplits}.fits"
 
 where:
 
-* `content` is in `[noise]`
-* `num` is `0`-`9` for high resolution simulations and `10`-`109` for low resolution simulations.
-* `telescope` is `sa` or `la`
-* `band` is the channel frequency in GHz
+* `content` is `noise`
+* `num` is the realization number (seed) and currently only `0`
+* `tube` is `LT0`-`LT6` or `ST0`-`ST3`
+* `band` is one of the available bandpasses (available inside `mapsims.so_utils`):
 
-Total disk space used is 1.1 T for the 4096 simulations and 43 GB for the 512 simulations.
+        bands = ("LF1", "LF2", "MFF1", "MFF2", "MFS1", "MFS2", "UHF1", "UHF2")
+        frequencies = (27, 39, 93, 145, 93, 145, 225, 280)
 
-Backed up to tape in `~zonca/sobs/mbs/201906_noise_no_lowell`.
+* `nsplits` is the number of splits, 1 for full mission, 4 for the splits, `split` is 1 based split ID.
+
+For example: `0000/simonsobs_noise_uKCMB_ST2_MFS2_nside512_0000_1_of_1.fits`
+
+Total disk space used is 345 GB for one realization of full mission and splits.
+
+Backed up to tape in `~zonca/sobs/mbs/202002_noise`.
 
 ## Hitmaps
 
-Relative hitmaps for LAT and SAT are available in the `hitmaps` subfolder of the release. They are normalized to a maximum of 1.
-Hitmaps are provided both for `classical` and `opportunistic` scanning strategies, simulations use only the `classical` scanning strategy.
-Hitmaps were created using the `create_hitmaps.py` script.
+Hitmaps are used un-normalized to scale the pixel-by-pixel noise.
+They are available at NERSC in:
+
+    /global/project/projectdirs/sobs/www/so_mapsims_data/v0.2
+
+Or [via web through NERSC](https://portal.nersc.gov/project/sobs/so_mapsims_data/v0.2/)
+
+Or they can be accessed through the `load_hitmaps` method of `mapsims.SONoiseSimulator`.
 
 ## Software
 
-* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 1.0.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/1.0.dev)
-* The noise component and the runner script are available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 1.0.0, see the [documentation](https://mapsims.readthedocs.io/en/1.0.dev)
+* The noise component and the runner script are available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 2.1.0, see the [documentation](https://mapsims.readthedocs.io/en/2.1.dev)
