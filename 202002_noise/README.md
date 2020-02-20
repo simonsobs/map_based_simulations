@@ -1,7 +1,7 @@
 Realistic noise version 3.1.1 with MSS1 hitmaps
 ===============================================
 
-Tag: `mbs-s0008-20200221`
+Tag: `mbs-s0010-20200221`
 
 Release date 21 Feb 2020
 
