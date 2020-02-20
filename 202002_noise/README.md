@@ -51,7 +51,7 @@ where:
 
 For example: `0000/simonsobs_noise_uKCMB_ST2_MFS2_nside512_0000_1_of_1.fits`
 
-Total disk space used is 345 GB for one realization of full mission and splits.
+Total disk space used is 548 GB for one realization of full mission and splits.
 
 Backed up to tape in `~zonca/sobs/mbs/202002_noise`.
 
