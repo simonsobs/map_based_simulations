@@ -1,0 +1,8 @@
+output_folder = "/simons/scratch/zonca/simonsobs/map_based_simulations/202002_noise/{tag}/{num:04d}"
+output_filename_template="simonsobs_{tag}_uKCMB_{telescope}_{band}_nside{nside}_{num:04d}_{split}_of_{nsplits}.fits"
+channels = "ST3"
+unit = "uK_CMB"
+mapsims_version = "2.1.0"
+so_pysm_models_version = "2.1.0"
+num = 0
+nsplits = 1
