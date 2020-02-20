@@ -55,6 +55,14 @@ Total disk space used is 345 GB for one realization of full mission and splits.
 
 Backed up to tape in `~zonca/sobs/mbs/202002_noise`.
 
+## Generate other realizations on the fly
+
+More noise realizations should be generated on-the-fly and never written to disk using the `mapsims` package, check the documentation at <https://mapsims.readthedocs.io> for installation instructions.
+
+Then check the [`run_mapsims_onthefly.ipynb`](run_mapsims_onthefly.ipynb) notebook.
+
+The interface of `mapsims` for on-the-fly simulations is still work in progress, in the next weeks we will also release the capability of running foregrounds + cmb + noise maps and we will also improve the interface to make it easier to only create a single `mapsims.MapSim` object and loop easily through channels and noise realizations.
+
 ## Hitmaps
 
 Hitmaps are used un-normalized to scale the pixel-by-pixel noise.
