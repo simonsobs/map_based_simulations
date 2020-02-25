@@ -2,6 +2,11 @@
 
 Date based updates from the map based simulation team
 
+## 20 Feb 2020 - Released new noise simulations
+
+Released new noise simulation, partly as maps on disk (currently only 1 with splits) and partly to be simulated on the fly with the `mapsims` package. See <https://github.com/simonsobs/map_based_simulations/tree/master/202002_noise> for more details.
+Discussion and feedback at <https://github.com/simonsobs/map_based_simulations/issues/21>
+
 ## 4 Dec 2019 - Overview of currently available simulations
 
 Current the best full-sky signal simulations for the Simons Observatory are the tophat simulations [`mbs-s0006-20190705`](201906_highres_foregrounds_extragalactic_tophat/README.md),
