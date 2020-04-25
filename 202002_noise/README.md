@@ -1,5 +1,8 @@
-Realistic noise version 3.1.1 with MSS1 hitmaps
-===============================================
+[BROKEN] Realistic noise version 3.1.1 with MSS1 hitmaps 
+========================================================
+
+**DO NOT USE** this release, found out that I used the total noise curves for each single tube.
+therefore for some bands there is a factor of 4 less noise in this release. See the [relevant issue for more details](https://github.com/simonsobs/mapsims/issues/43). Working on a fix, a new version of this release will be made available in the following weeks. In fact, the spectra plots below display the issue, I am comparing the tube-by-tube results to the full mission noise curves.
 
 Tag: `mbs-s0010-20200221`
 
