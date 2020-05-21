@@ -4,7 +4,7 @@ Date based updates from the map based simulation team
 
 ## 24 Apr 2020 - new noise simulations release `mbs-s0010-20200221` is broken
 
-We fould out that the realistic noise simulations [`mbs-s0010-20200221`](202002_noise/README.md) are broken and should not be used, refer to their page for more details.
+We fould out that the realistic noise simulations [`mbs-s0010-20200221`](202002_noise/README.md) are broken and should not be used, refer to their page for more details. We will need to rerun it.
 
 ## 20 Feb 2020 - Released new noise simulations
 
