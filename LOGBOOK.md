@@ -2,6 +2,10 @@
 
 Date based updates from the map based simulation team
 
+## 24 Apr 2020 - new noise simulations release `mbs-s0010-20200221` is broken
+
+We fould out that the realistic noise simulations [`mbs-s0010-20200221`](202002_noise/README.md) are broken and should not be used, refer to their page for more details.
+
 ## 20 Feb 2020 - Released new noise simulations
 
 Released new noise simulation, partly as maps on disk (currently only 1 with splits) and partly to be simulated on the fly with the `mapsims` package. See <https://github.com/simonsobs/map_based_simulations/tree/master/202002_noise> for more details.
