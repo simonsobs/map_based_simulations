@@ -2,6 +2,10 @@
 
 Date based updates from the map based simulation team
 
+## 2 Jun 2020 - CMB tensor modes from websky
+
+BB spectrum compatible with WebSky is available, see https://so-pysm-models.readthedocs.io/en/latest/models.html#websky
+
 ## 24 Apr 2020 - new noise simulations release `mbs-s0010-20200221` is broken
 
 We fould out that the realistic noise simulations [`mbs-s0010-20200221`](202002_noise/README.md) are broken and should not be used, refer to their page for more details. We will need to rerun it.
