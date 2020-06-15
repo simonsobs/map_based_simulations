@@ -1,0 +1,29 @@
+
+tag = "noise"
+
+[ other_components ]
+
+    [ other_components.noise ]
+
+    class = "mapsims.SONoiseSimulator"
+    telescopes = ["LA", "SA"]
+    return_uK_CMB = true
+    sensitivity_mode = "baseline"
+    apply_beam_correction = false
+    apply_kludge_correction = true
+    scanning_strategy = "classical" # not used for hitmaps v0.2
+    rolloff_ell = 50
+    survey_efficiency = 0.2
+    full_covariance = true
+    LA_years = 5
+    LA_number_LF = 1
+    LA_number_MF = 4
+    LA_number_UHF = 2
+    LA_noise_model = "SOLatV3point1"
+    elevation = 50
+    SA_years = 5
+    SA_number_LF = 0.4
+    SA_number_MF = 1.6
+    SA_number_UHF = 1
+    SA_one_over_f_mode = "pessimistic"
+    hitmap_version = "v0.2"
