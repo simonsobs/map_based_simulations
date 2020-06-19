@@ -20,7 +20,8 @@ Check [the Logbook](LOGBOOK.md) for the latest information about Map Based Simul
 
 ## Available simulations
 
-* [`mbs-s0010-20200221`](202002_noise/README.md): Realistic noise version 3.1.1 with MSS1 hitmaps
+* [`mbs-s0011-20200618`](202006_noise/README.md): Reran of realistic noise version 3.1.1 with MSS1 hitmaps
+* [`mbs-s0010-20200221`](202002_noise/README.md): **Broken** Realistic noise version 3.1.1 with MSS1 hitmaps
 * [`mbs-s0009-20191107`](201911_lensed_cmb/README.md): 100 CMB realizations lensed with gaussian potential
 * [`mbs-s0008-20190919`](201909_highres_foregrounds_extragalactic_planck_deltabandpass/README.md): Planck delta bandpasses: high resolution foregrounds with spectral index not varying spatially and extragalactic
 * [`mbs-s0007-20190618`](201906_noise_no_lowell/README.md): Realistic noise with no power below ell 30
