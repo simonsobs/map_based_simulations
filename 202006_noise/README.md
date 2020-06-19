@@ -89,6 +89,10 @@ Spectra were generated with the `compute_cl_noise_full.py` and `compute_cl_noise
 
 ### LAT Temperature
 
+Blue is the input spectra by `so_noise_models`,
+orange and green are TT and BB/EE spectra.
+All plots have the same vertical scale.
+
 ![LAT T](plots/LAT_T.png)
 
 ### LAT Polarization
