@@ -61,7 +61,7 @@ Backed up to tape in `~zonca/sobs/mbs/202002_noise`.
 
 More noise realizations should be generated on-the-fly and never written to disk using the `mapsims` package, check the documentation at <https://mapsims.readthedocs.io> for installation instructions.
 
-Then check the [`run_mapsims_onthefly.ipynb`](run_mapsims_onthefly.ipynb) notebook. See also an [executed version of the notebook on Gist](https://gist.github.com/zonca/5cc4e2d27cbd8422f16e1af3e5e29bfd).
+Then check the [`run_mapsims_onthefly.ipynb`](run_mapsims_onthefly.ipynb) notebook. See also an [executed version of the notebook on Gist](https://gist.github.com/zonca/5d920fe8269831e0d1aecd88ec7d9d50).
 
 ## Hitmaps
 
