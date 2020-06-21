@@ -1,0 +1,9 @@
+output_folder = "output/{tag}/{num:04d}"
+output_filename_template="simonsobs_{tag}_uKCMB_{telescope}_{band}_nside{nside}_{num:04d}_{split}_of_{nsplits}.fits"
+channels = "tube:ST3"
+unit = "uK_CMB"
+mapsims_version = "2.3.0"
+so_pysm_models_version = "2.3.0"
+num = 0
+nsplits = 1
+instrument_parameters = "simonsobs_instrument_parameters_2020.06"

@@ -2,6 +2,10 @@
 
 Date based updates from the map based simulation team
 
+## 18 Jun 2020 - Released fixed noise simulation
+
+Released new noise simulation, partly as maps on disk (currently only 1 with splits) and partly to be simulated on the fly with the `mapsims` package. See <https://github.com/simonsobs/map_based_simulations/tree/master/202006_noise> for more details.
+
 ## 2 Jun 2020 - CMB tensor modes from websky
 
 BB spectrum compatible with WebSky is available, see https://so-pysm-models.readthedocs.io/en/latest/models.html#websky
