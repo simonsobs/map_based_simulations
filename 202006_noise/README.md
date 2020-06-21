@@ -112,11 +112,6 @@ Blue is the input spectra by `so_noise_models`,
 orange and green are TT and BB/EE spectra.
 All plots have the same vertical scale.
 
-Unfortunately the shape of the sky coverage is too
-complex for the SAT, so a simple `anafast` with sky
-fraction correction is not enough (see [`plot_cl_noise_SAT.ipynb`](plot_cl_noise_SAT.ipynb) and I get a strong bias.
-If anyone has suggestions for a method for cross-checking these spectra without running a full power estimation tool please open an issue on the repository.
-
 ![SAT T](plots/SAT_T.png)
 
 ### SAT Polarization
