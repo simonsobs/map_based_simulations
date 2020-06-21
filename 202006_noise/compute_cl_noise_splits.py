@@ -5,21 +5,44 @@ import pickle
 import numpy as np
 import sys
 
-ellmax = int(1e4)
 tube = sys.argv[1]
 folder = "output/noise/0000/"
+
+sim = mapsims.from_config(
+    ["common.toml", "noise.toml"], override={"channels": "tube:" + tube}
+)
+noise = sim.other_components["noise"]
+hitmaps, _ = noise.get_hitmaps(tube)
+
 for subset in range(1, 5):
     m = {}
     cl = []
-    for i, ch in enumerate(mapsims.parse_channels("tube:"+tube)[0]):
+    for i, ch in enumerate(mapsims.parse_channels("tube:" + tube)[0]):
         filename = glob(folder + f"*{ch.tag}*{subset}_of_4*")[0]
         print("reading " + filename)
-        m[i] = hp.read_map(filename, (0,1,2))
+        m[i] = hp.read_map(filename, (0, 1, 2))
         npix = len(m[i][0])
         nside = hp.npix2nside(npix)
-        sky_fraction=(m[i][0]>-1e30).sum()/npix
-        cl.append(np.array(hp.anafast(m[i], lmax=min(3*nside-1,ellmax), use_pixel_weights=True)) / sky_fraction)
-    cl.append(np.array(hp.anafast(m[0],m[1], lmax=min(3*nside-1,ellmax), use_pixel_weights=True)) / sky_fraction)
+        sky_fraction = hp.mask_good(m[i]).sum() / npix
+        m[i] *= hitmaps[i]
+        cl.append(
+            np.array(
+                hp.anafast(
+                    m[i], lmax=3 * nside - 1, use_pixel_weights=True
+                )
+            )
+            / np.mean(hitmaps[i] ** 2)
+            / sky_fraction
+        )
+    cl.append(
+        np.array(
+            hp.anafast(
+                m[0], m[1], lmax=3 * nside - 1, use_pixel_weights=True
+            )
+        )
+        / np.mean(hitmaps[i] ** 2)
+        / sky_fraction
+    )
 
     cl = np.array(cl)
     with open(f"output/noise/N_ell_tube_{tube}_{subset}_of_4.pkl", "wb") as f:
