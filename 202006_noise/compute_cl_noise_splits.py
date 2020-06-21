@@ -23,7 +23,7 @@ for subset in range(1, 5):
         m[i] = hp.read_map(filename, (0, 1, 2))
         npix = len(m[i][0])
         nside = hp.npix2nside(npix)
-        sky_fraction = hp.mask_good(m[i]).sum() / npix
+        sky_fraction = hp.mask_good(m[i][0]).sum() / npix
         m[i] *= hitmaps[i]
         cl.append(
             np.array(
