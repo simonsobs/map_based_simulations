@@ -4,6 +4,8 @@ Map based simulations for the Simons Observatory
 Map based simulations for Simons Observatory,
 maintained by the Map-Based Simulation Pipeline Working Group (MBS), [Wiki page, restricted access](http://simonsobservatory.wikidot.com/pwg:mbs)
 
+Github projects page for ongoing work and collaboration: https://github.com/orgs/simonsobs/projects/8
+
 Slack channel: `#pwg-mbs`
 
 This repository hosts configuration files and documentation for the simulation runs completed and in progress.
