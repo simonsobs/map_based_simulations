@@ -13,7 +13,7 @@ Compared to previous releases:
 
 * Updated noise spectra which include a fix for the atmosphere parameters
 * Includes cross-correlations between the 2 bands in the same dichroic tube
-* Uses new hitmaps from the MSS1 time domain simulations
+* Uses new hitmaps from the `MSS-0001` time domain simulations
 * Supports noise splits
 * Variable Nside based on channels
 * Released in HEALPix and (later) in CAR 
@@ -66,6 +66,7 @@ Then check the [`run_mapsims_onthefly.ipynb`](run_mapsims_onthefly.ipynb) notebo
 ## Hitmaps
 
 Hitmaps are used un-normalized to scale the pixel-by-pixel noise.
+They are the first split (of 20) of the MSS-0001 time domain simulations, see [their documentation on the Simons Observatory wiki (restricted)](http://simonsobservatory.wikidot.com/mss-0001)
 They are available at NERSC in:
 
     /global/project/projectdirs/sobs/www/so_mapsims_data/v0.2
