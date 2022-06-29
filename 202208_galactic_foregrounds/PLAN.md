@@ -55,3 +55,13 @@ Will be extracted from `sotodlib` into a table in txt format and added to `mapsi
 Ideally we want to produce in 1 run only both HEALPix and CAR, once we have alms of the output map in equatorial, we can produce both final output HEALPix and CAR.
 
 Need to implement this into `mapsims`.
+
+Variable Nside: <https://github.com/simonsobs/mapsims/blob/master/mapsims/data/so_default_resolution.csv>
+
+## File format
+
+FITS files, full sky, Equatorial, `uK_CMB`, IQU or I, single precision (float32)
+[Add more metadata to FITS headers](https://github.com/simonsobs/map_based_simulations/issues/38)
+
+Naming conventions, is there any standard SO naming convention we should follow?
+Otherwise we can use the [same used for the last noise simulation](https://github.com/simonsobs/map_based_simulations/tree/master/202006_noise#available-maps)
