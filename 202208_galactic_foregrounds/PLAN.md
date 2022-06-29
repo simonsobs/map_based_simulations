@@ -38,11 +38,11 @@ Never use `hp.ud_grade`.
 
 Use bandpasses from the [Instrument model](https://github.com/simonsobs/instrument_model/tree/master/instrument_hardware/modeled_bandpasses)
 
-Using:
+Using the same configuration of the SO v3 sensitivity calculator:
 
 * *LF*: On-chip bandpass filters
-* *MF*: On-chip bandpass filters + Gain effects + Beam effects (LAT/SAT)
-* *UHF*: On-chip bandpass filters + Gain effects + Beam effects (LAT/SAT)
+* *MF*: On-chip bandpass filters + Gain effects
+* *UHF*: On-chip bandpass filters + Gain effects
 
 Will be reformatted and added to instrument model in text format like: <https://github.com/simonsobs/mapsims/tree/master/mapsims/data/simonsobs_instrument_parameters_2020.06>
 
