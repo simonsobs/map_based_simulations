@@ -65,7 +65,7 @@ Using `ell_max = 3 Nside - 1`, write in the FITS headers the actual `ell_max` an
 
 ## Output files
 
-FITS files, full sky, Equatorial, `uK_CMB`, always IQU, even if component is I only to avoid broadcasting mistakes, single precision (float32)
+FITS files, full sky, Equatorial, `uK_CMB`, always IQU, even if component is I only to avoid broadcasting mistakes, single precision (float32), for HEALPix RING ordering.
 [Add more metadata to FITS headers](https://github.com/simonsobs/map_based_simulations/issues/38)
 
 1 map saved in FITS format for each:
