@@ -1,6 +1,9 @@
 Foreground simulation with realistic bandpasses and new Dust/Synchrotron models
 ===============================================================================
 
+Produce full sky simulations of Galactic foregrounds using PySM 3 with the new Dust and Synchrotron models, using realistic bandpasses instead of top-hat.
+CMB and Extragalactic will be in a future release, [waiting for the new run of Websky](https://github.com/galsci/pysm/issues/120)
+
 ## Foreground models
 
 The plan is to run 3 different sky models, optimistic/baseline/pessimistic, see the discussion in [this PySM 3 issue](https://github.com/galsci/pysm/issues/103#issuecomment-1081241879), for convenience here the 3 sets of models:
