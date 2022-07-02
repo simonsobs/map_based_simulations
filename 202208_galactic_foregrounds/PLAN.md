@@ -58,10 +58,21 @@ Need to implement this into `mapsims`.
 
 Variable Nside: <https://github.com/simonsobs/mapsims/blob/master/mapsims/data/so_default_resolution.csv>
 
-## File format
+Using `ell_max = 3 Nside - 1`, write in the FITS headers the actual `ell_max` and `Nside` used for modelling.
 
-FITS files, full sky, Equatorial, `uK_CMB`, IQU or I, single precision (float32)
+## Output files
+
+FITS files, full sky, Equatorial, `uK_CMB`, always IQU, even if component is I only to avoid broadcasting mistakes, single precision (float32)
 [Add more metadata to FITS headers](https://github.com/simonsobs/map_based_simulations/issues/38)
+
+1 map saved in FITS format for each:
+
+* sky model (optimistic, realistic, pessimistic)
+* sky component (dust, synchrotron, free-free, CO - only if present in band, AME, their sum)
+* frequency channel (6 LAT, 6 SAT)
+* pixelization (HEALPix and CAR)
+
+Total 3 * 6 * 12 * 2 = 432 maps
 
 Naming conventions, is there any standard SO naming convention we should follow?
 Otherwise we can use the [same used for the last noise simulation](https://github.com/simonsobs/map_based_simulations/tree/master/202006_noise#available-maps)
