@@ -30,7 +30,7 @@ In previous runs I had created Equatorial versions of all the templates to avoid
 * d9, d10, s4, s5 and s7 are available up to 8192
 * d12 to 2048
 * f1, a1, a2 to 512, however we have an extrapolation to 4096 by @NicolettaK, see <https://portal.nersc.gov/project/cmb/so_pysm_models_data/>
-* co? to 2048
+* co? to 512 (2048 are available, but maps are smoothed at 1 deg anyway)
 
 I suggest to not use the extrapolated map by @NicolettaK, because they use a different method from the new Dust and Synchrotron models. We plan in the future to have AME and Free-free maps at 8192 with small scales produced in a similar fashion to the `d10`/`s5` models.
 
