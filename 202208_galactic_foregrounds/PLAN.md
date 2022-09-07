@@ -8,9 +8,9 @@ CMB and Extragalactic will be in a future release, [waiting for the new run of W
 
 The plan is to run 3 different sky models, optimistic/baseline/pessimistic, see the discussion in [this PySM 3 issue](https://github.com/galsci/pysm/issues/103#issuecomment-1081241879), for convenience here the 3 sets of models:
 
-1. d9,s4,f1,a1,co1
-2. d10,s5,f1,a1,co3
-3. d12,s7,f1,a2,co3
+1. `optimistic`: d9,s4,f1,a1,co1
+2. `realistic`: d10,s5,f1,a1,co3
+3. `pessimistic`: d12,s7,f1,a2,co3
 
 Documentation reference:
 
