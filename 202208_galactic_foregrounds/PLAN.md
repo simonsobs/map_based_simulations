@@ -34,7 +34,7 @@ In previous runs I had created Equatorial versions of all the templates to avoid
 
 I suggest to not use the extrapolated map by @NicolettaK, because they use a different method from the new Dust and Synchrotron models. We plan in the future to have AME and Free-free maps at 8192 with small scales produced in a similar fashion to the `d10`/`s5` models.
 
-I would run the maps in PySM at the highest available resolution, then in the smoothing process, we can do a `alm2map` at the target resolution.
+I would run the maps in PySM at `min(max(2048, 2*Nside), available_resolution)`, then in the smoothing process, we can do a `alm2map` at the target resolution.
 Never use `hp.ud_grade`.
 
 ## Bandpasses
