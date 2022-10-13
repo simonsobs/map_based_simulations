@@ -47,5 +47,5 @@ In case of any problem with the maps or the documentation or request more/differ
 
 * PySM 3 is available at <https://github.com/healpy/pysm>, version 3.0
 * [`sotodlib`](https://github.com/simonsobs/sotodlib) version `7290c1b`
-* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 2.1.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/2.1.dev)
-* The runner script is available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 2.1.0, see the [documentation](https://mapsims.readthedocs.io/en/2.1.dev)
+* The PySM components are available in the [`so_pysm_models`](https://github.com/simonsobs/so_pysm_models) package, version 2.1.0, see the [documentation](https://so-pysm-models.readthedocs.io/en/2.3.dev)
+* The runner script is available in the [`mapsims`](https://github.com/simonsobs/mapsims) package, version 2.1.0, see the [documentation](https://mapsims.readthedocs.io/en/2.3.dev)
