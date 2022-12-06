@@ -1,5 +1,0 @@
-tag = "ame"
-
-[pysm_components]
-pysm_components_string = "a1"
-pysm_output_reference_frame = "G"
