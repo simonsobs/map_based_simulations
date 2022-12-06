@@ -1,8 +1,12 @@
-output_folder = "output/{tag}/0000" # output is a symlink to pessimistic/realistic/optimistic subfolder
-output_filename_template= "cmbs4_{tag}_uKCMB_{telescope}-{band}_nside{nside}_0000.fits"
+modeling_nside = 4096
+lmax_over_modeling_nside = 2.5
+healpix = true
+car = true
+output_folder = "output/{tag}"
+output_filename_template= "sobs_{tag}_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
 unit = "uK_CMB"
 num = 0
+output_reference_frame = "C"
 mapsims_version = "2.5.0"
-so_pysm_models_version = "0.0.0" #deprecated
 instrument_parameters = "../simonsobs_instrument_parameters_2022.08/simonsobs_instrument_parameters_2022.08.tbl"
 output_resolution = "../so_default_resolution.csv"
