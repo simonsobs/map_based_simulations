@@ -61,7 +61,7 @@ Need to implement this into `mapsims`.
 
 Variable Nside: <https://github.com/simonsobs/mapsims/blob/master/mapsims/data/so_default_resolution.csv>
 
-Using `ell_max = 3 Nside - 1`, write in the FITS headers the actual `ell_max` and `Nside` used for modelling.
+Using `ell_max = 2.5 Nside`, write in the FITS headers the actual `ell_max` and `Nside` used for modelling.
 
 ## Output files
 
