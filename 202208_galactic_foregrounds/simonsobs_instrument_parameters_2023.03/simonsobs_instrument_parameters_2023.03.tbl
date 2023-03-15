@@ -1,4 +1,4 @@
-\ sotodlib_version:0.4.0+519.g70028af
+\ sotodlib_version:0.4.0+1146.g8e71b1b
 \ Text file in IPAC table format, read with astropy
 \ from astropy.table import QTable
 \ QTable.read('filename.tbl', format='ascii.ipac')
