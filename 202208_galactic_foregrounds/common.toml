@@ -1,5 +1,4 @@
-modeling_nside = 4096
-lmax_over_modeling_nside = 2.5
+lmax_over_nside = 2.5
 healpix = true
 car = true
 output_folder = "output/{tag}"
