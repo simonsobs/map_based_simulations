@@ -7,5 +7,5 @@ unit = "uK_CMB"
 num = 0
 output_reference_frame = "C"
 mapsims_version = "2.5.0"
-instrument_parameters = "simonsobs_instrument_parameters_2022.08/simonsobs_instrument_parameters_2022.08.tbl"
-output_resolution = "so_default_resolution.csv"
+instrument_parameters = "simonsobs_instrument_parameters_2023.03/simonsobs_instrument_parameters_2023.03.tbl"
+output_resolution = "simonsobs_instrument_parameters_2023.03/so_default_resolution.csv"
