@@ -1,0 +1,4 @@
+tag = "cib"
+
+[pysm_components]
+pysm_components_string = "cib1"

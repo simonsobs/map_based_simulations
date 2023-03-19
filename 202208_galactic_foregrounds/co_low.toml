@@ -1,0 +1,4 @@
+tag = "co_low"
+
+[pysm_components]
+pysm_components_string = "co1"

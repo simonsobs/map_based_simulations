@@ -1,0 +1,5 @@
+tag = "cmb_unlensed_solardipole"
+
+[ pysm_components ]
+pysm_components_string = "c3"
+# modified c3 to include also solar dipole

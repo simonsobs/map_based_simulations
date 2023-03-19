@@ -1,0 +1,4 @@
+tag = "cmb"
+
+[ pysm_components ]
+pysm_components_string = "c4"

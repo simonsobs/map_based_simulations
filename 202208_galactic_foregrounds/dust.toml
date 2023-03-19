@@ -1,0 +1,4 @@
+tag = "dust"
+
+[pysm_components]
+pysm_components_string = "d10"
