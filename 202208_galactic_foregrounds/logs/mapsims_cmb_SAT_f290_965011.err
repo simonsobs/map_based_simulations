@@ -1,0 +1,36 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:51:00,498:INFO:mapsims:Parsing configuration from common.toml, cmb.toml
+2023-03-21 22:51:00,509:INFO:mapsims:Nside: 1024, Modeling Nside: 4096, Ellmax: 2560
+2023-03-21 22:51:00,513:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:51:00,514:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:00,515:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:00,516:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:00,516:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:01,742:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:02,958:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_lensed_alm_seed1_nside4096.fits
+2023-03-21 22:51:05,032:INFO:mapsims:Processing channel Channel SAT_f290
+2023-03-21 22:51:05,032:INFO:mapsims:Bandpass integration for Channel SAT_f290
+2023-03-21 22:51:07,611:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f290
+2023-03-21 22:51:07,612:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:51:13,007:INFO:pysm3:Smoothing with fwhm of 9.0 arcmin
+2023-03-21 22:51:13,227:INFO:pysm3:Rotate Alm
+2023-03-21 22:51:25,932:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:51:26,300:INFO:pysm3:Alm to map CAR
+2023-03-21 22:51:27,134:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_cmb_healpix.fits
+2023-03-21 22:51:27,134:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:51:27,169:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:51:27,978:INFO:mapsims:Writing output map
+2023-03-21 22:51:28,619:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_cmb_car.fits
+2023-03-21 22:51:28,619:INFO:mapsims:Writing output map
+
+real	0m30.939s
+user	11m9.752s
+sys	0m11.259s

@@ -1,0 +1,42 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 23:08:30,453:INFO:mapsims:Parsing configuration from common.toml, co.toml
+2023-03-21 23:08:30,465:INFO:mapsims:Nside: 2048, Modeling Nside: 2048, Ellmax: 5120
+2023-03-21 23:08:30,470:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 23:08:30,471:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 23:08:30,472:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 23:08:48,903:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:08:48,904:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:08:50,107:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:08:50,108:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:08:50,109:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:08:51,145:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:08:51,146:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2023-03-21 23:08:51,147:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2023-03-21 23:08:54,176:INFO:mapsims:Processing channel Channel LAT_f040
+2023-03-21 23:08:54,176:INFO:mapsims:Bandpass integration for Channel LAT_f040
+2023-03-21 23:08:55,012:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f040
+/mnt/home/azonca/mambaforge-pypy3/envs/so/lib/python3.10/site-packages/healpy/sphtfunc.py:414: RuntimeWarning: invalid value encountered in double_scalars
+  return realalm2alm(res[0]), res[3] / norm(maps.reshape((-1,))), res[2]
+2023-03-21 23:09:04,621:INFO:pysm3:Used map2alm_lsq, converged in 0 iterations,residual relative error nan
+2023-03-21 23:09:04,621:INFO:pysm3:Smoothing with fwhm of 5.1 arcmin
+2023-03-21 23:09:05,496:INFO:pysm3:Rotate Alm
+2023-03-21 23:10:17,917:INFO:pysm3:Alm to map HEALPix
+2023-03-21 23:10:19,529:INFO:pysm3:Alm to map CAR
+2023-03-21 23:10:22,485:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_co_healpix.fits
+2023-03-21 23:10:22,485:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 23:10:22,621:INFO:mapsims:Reorder ring to nest
+2023-03-21 23:10:26,690:INFO:mapsims:Writing output map
+2023-03-21 23:10:28,656:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_co_car.fits
+2023-03-21 23:10:28,658:INFO:mapsims:Writing output map
+
+real	2m3.241s
+user	60m35.036s
+sys	0m38.537s

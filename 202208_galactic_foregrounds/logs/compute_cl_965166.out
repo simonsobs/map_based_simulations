@@ -1,0 +1,26 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+output/freefree
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f150_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_LAT_mission_LAT_f290_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f040_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f230_freefree_healpix.fits
+reading output/freefree/sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_freefree_healpix.fits
+
+real	41m5.025s
+user	1277m38.982s
+sys	8m13.194s

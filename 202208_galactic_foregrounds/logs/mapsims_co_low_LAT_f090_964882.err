@@ -1,0 +1,34 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:35:20,765:INFO:mapsims:Parsing configuration from common.toml, co_low.toml
+2023-03-21 22:35:20,777:INFO:mapsims:Nside: 8192, Modeling Nside: 2048, Ellmax: 5120
+2023-03-21 22:35:20,779:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:35:20,780:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 22:35:20,781:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 22:35:38,831:INFO:mapsims:Processing channel Channel LAT_f090
+2023-03-21 22:35:38,831:INFO:mapsims:Bandpass integration for Channel LAT_f090
+2023-03-21 22:35:39,699:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f090
+/mnt/home/azonca/mambaforge-pypy3/envs/so/lib/python3.10/site-packages/healpy/sphtfunc.py:414: RuntimeWarning: invalid value encountered in double_scalars
+  return realalm2alm(res[0]), res[3] / norm(maps.reshape((-1,))), res[2]
+2023-03-21 22:35:49,749:INFO:pysm3:Used map2alm_lsq, converged in 0 iterations,residual relative error nan
+2023-03-21 22:35:49,749:INFO:pysm3:Smoothing with fwhm of 2.2 arcmin
+2023-03-21 22:35:50,607:INFO:pysm3:Rotate Alm
+2023-03-21 22:37:03,429:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:37:20,888:INFO:pysm3:Alm to map CAR
+2023-03-21 22:38:04,046:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_co_low_healpix.fits
+2023-03-21 22:38:04,047:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:38:07,260:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:39:10,898:INFO:mapsims:Writing output map
+2023-03-21 22:39:46,324:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_co_low_car.fits
+2023-03-21 22:39:46,368:INFO:mapsims:Writing output map
+
+real	5m17.060s
+user	67m44.038s
+sys	1m56.826s

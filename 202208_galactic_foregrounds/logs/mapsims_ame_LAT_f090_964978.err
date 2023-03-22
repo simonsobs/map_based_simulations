@@ -1,0 +1,35 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:46:11,493:INFO:mapsims:Parsing configuration from common.toml, ame.toml
+2023-03-21 22:46:11,504:INFO:mapsims:Nside: 8192, Modeling Nside: 512, Ellmax: 1280
+2023-03-21 22:46:11,506:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:46:11,507:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2023-03-21 22:46:11,552:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2023-03-21 22:46:11,593:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:46:11,599:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2023-03-21 22:46:11,639:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:46:11,643:INFO:mapsims:Processing channel Channel LAT_f090
+2023-03-21 22:46:11,643:INFO:mapsims:Bandpass integration for Channel LAT_f090
+2023-03-21 22:46:21,320:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f090
+2023-03-21 22:46:25,544:INFO:pysm3:Used map2alm_lsq, converged in 7 iterations,residual relative error 0.15
+2023-03-21 22:46:25,544:INFO:pysm3:Smoothing with fwhm of 2.2 arcmin
+2023-03-21 22:46:25,594:INFO:pysm3:Rotate Alm
+2023-03-21 22:46:27,505:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:46:41,596:INFO:pysm3:Alm to map CAR
+2023-03-21 22:47:20,598:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_ame_healpix.fits
+2023-03-21 22:47:20,598:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:47:22,950:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:48:27,667:INFO:mapsims:Writing output map
+2023-03-21 22:49:04,122:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_ame_car.fits
+2023-03-21 22:49:04,164:INFO:mapsims:Writing output map
+
+real	3m44.749s
+user	6m28.651s
+sys	2m26.066s

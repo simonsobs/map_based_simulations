@@ -1,0 +1,26 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+output/synchrotron_low
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f150_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_LAT_mission_LAT_f290_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f040_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f230_synchrotron_low_healpix.fits
+reading output/synchrotron_low/sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_synchrotron_low_healpix.fits
+
+real	41m21.235s
+user	1300m23.433s
+sys	8m32.450s

@@ -1,0 +1,27 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 23:08:30,450:INFO:mapsims:Parsing configuration from common.toml, co.toml
+2023-03-21 23:08:30,461:INFO:mapsims:Nside: 2048, Modeling Nside: 2048, Ellmax: 5120
+Traceback (most recent call last):
+  File "/mnt/home/azonca/mambaforge-pypy3/envs/so/bin/mapsims_run", line 8, in <module>
+    sys.exit(command_line_script())
+  File "/mnt/home/azonca/p/software/mapsims/mapsims/runner.py", line 176, in command_line_script
+    simulator = from_config(res.config, override=override)
+  File "/mnt/home/azonca/p/software/mapsims/mapsims/runner.py", line 259, in from_config
+    map_sim = MapSim(
+  File "/mnt/home/azonca/p/software/mapsims/mapsims/runner.py", line 437, in __init__
+    os.makedirs(self.output_folder)
+  File "/mnt/home/azonca/mambaforge-pypy3/envs/so/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'output/co'
+
+real	0m1.796s
+user	0m1.995s
+sys	0m2.009s

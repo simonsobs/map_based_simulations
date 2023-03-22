@@ -1,0 +1,35 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:47:02,667:INFO:mapsims:Parsing configuration from common.toml, ame.toml
+2023-03-21 22:47:02,692:INFO:mapsims:Nside: 128, Modeling Nside: 512, Ellmax: 320
+2023-03-21 22:47:02,716:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:47:02,717:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2023-03-21 22:47:02,796:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2023-03-21 22:47:02,840:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:47:02,845:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2023-03-21 22:47:02,888:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:47:02,890:INFO:mapsims:Processing channel Channel SAT_f030
+2023-03-21 22:47:02,891:INFO:mapsims:Bandpass integration for Channel SAT_f030
+2023-03-21 22:47:34,742:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f030
+2023-03-21 22:47:34,746:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:47:35,004:INFO:pysm3:Smoothing with fwhm of 91.0 arcmin
+2023-03-21 22:47:35,009:INFO:pysm3:Rotate Alm
+2023-03-21 22:47:35,262:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:47:35,267:INFO:pysm3:Alm to map CAR
+2023-03-21 22:47:35,378:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_ame_healpix.fits
+2023-03-21 22:47:35,378:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:47:35,379:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:47:35,390:INFO:mapsims:Writing output map
+2023-03-21 22:47:35,414:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_ame_car.fits
+2023-03-21 22:47:35,415:INFO:mapsims:Writing output map
+
+real	0m38.615s
+user	0m56.143s
+sys	0m13.119s

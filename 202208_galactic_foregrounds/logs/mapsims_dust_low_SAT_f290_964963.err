@@ -1,0 +1,31 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:42:39,256:INFO:mapsims:Parsing configuration from common.toml, dust_low.toml
+2023-03-21 22:42:39,267:INFO:mapsims:Nside: 1024, Modeling Nside: 2048, Ellmax: 2560
+2023-03-21 22:42:39,280:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:42:39,281:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/dust_gnilc/gnilc_dust_template_nside2048.fits
+2023-03-21 22:42:40,934:INFO:mapsims:Processing channel Channel SAT_f290
+2023-03-21 22:42:40,934:INFO:mapsims:Bandpass integration for Channel SAT_f290
+2023-03-21 22:46:23,067:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f290
+2023-03-21 22:46:23,069:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:46:24,736:INFO:pysm3:Smoothing with fwhm of 9.0 arcmin
+2023-03-21 22:46:24,948:INFO:pysm3:Rotate Alm
+2023-03-21 22:46:37,253:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:46:37,644:INFO:pysm3:Alm to map CAR
+2023-03-21 22:46:38,478:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_dust_low_healpix.fits
+2023-03-21 22:46:38,478:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:46:38,512:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:46:39,325:INFO:mapsims:Writing output map
+2023-03-21 22:46:39,814:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_dust_low_car.fits
+2023-03-21 22:46:39,815:INFO:mapsims:Writing output map
+
+real	4m3.191s
+user	16m5.074s
+sys	1m25.817s

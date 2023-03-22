@@ -1,0 +1,36 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:49:11,281:INFO:mapsims:Parsing configuration from common.toml, cmb_unlensed.toml
+2023-03-21 22:49:11,292:INFO:mapsims:Nside: 512, Modeling Nside: 4096, Ellmax: 1280
+2023-03-21 22:49:11,294:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:49:11,295:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:11,296:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:11,297:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:11,298:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:13,197:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:17,259:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_unlensed_alm_seed1_nside4096.fits
+2023-03-21 22:49:19,906:INFO:mapsims:Processing channel Channel SAT_f150
+2023-03-21 22:49:19,906:INFO:mapsims:Bandpass integration for Channel SAT_f150
+2023-03-21 22:49:22,494:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f150
+2023-03-21 22:49:22,494:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:49:27,412:INFO:pysm3:Smoothing with fwhm of 17.0 arcmin
+2023-03-21 22:49:27,471:INFO:pysm3:Rotate Alm
+2023-03-21 22:49:29,781:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:49:29,869:INFO:pysm3:Alm to map CAR
+2023-03-21 22:49:30,387:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_cmb_unlensed_healpix.fits
+2023-03-21 22:49:30,387:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:49:30,397:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:49:30,622:INFO:mapsims:Writing output map
+2023-03-21 22:49:30,781:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_cmb_unlensed_car.fits
+2023-03-21 22:49:30,782:INFO:mapsims:Writing output map
+
+real	0m22.164s
+user	2m29.484s
+sys	0m10.018s

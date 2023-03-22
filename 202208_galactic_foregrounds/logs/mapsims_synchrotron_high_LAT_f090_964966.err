@@ -1,0 +1,33 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:43:28,405:INFO:mapsims:Parsing configuration from common.toml, synchrotron_high.toml
+2023-03-21 22:43:28,415:INFO:mapsims:Nside: 8192, Modeling Nside: 8192, Ellmax: 16384
+2023-03-21 22:43:28,417:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:43:28,418:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_template_nside8192_2023.02.25.fits
+2023-03-21 22:44:06,274:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_beta_nside8192.fits
+2023-03-21 22:44:16,489:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_curvature_nside8192.fits
+2023-03-21 22:44:30,780:INFO:mapsims:Processing channel Channel LAT_f090
+2023-03-21 22:44:30,780:INFO:mapsims:Bandpass integration for Channel LAT_f090
+2023-03-21 22:49:16,057:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f090
+2023-03-21 22:57:34,536:INFO:pysm3:Used map2alm_lsq, converged in 2 iterations,residual relative error 0.0019
+2023-03-21 22:57:34,537:INFO:pysm3:Smoothing with fwhm of 2.2 arcmin
+2023-03-21 22:57:43,251:INFO:pysm3:Rotate Alm
+2023-03-22 00:11:24,278:INFO:pysm3:Alm to map HEALPix
+2023-03-22 00:12:04,509:INFO:pysm3:Alm to map CAR
+2023-03-22 00:13:01,377:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_synchrotron_high_healpix.fits
+2023-03-22 00:13:01,377:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-22 00:13:04,541:INFO:mapsims:Reorder ring to nest
+2023-03-22 00:14:07,542:INFO:mapsims:Writing output map
+2023-03-22 00:14:44,941:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_synchrotron_high_car.fits
+2023-03-22 00:14:44,986:INFO:mapsims:Writing output map
+
+real	92m12.157s
+user	2021m45.696s
+sys	11m3.957s

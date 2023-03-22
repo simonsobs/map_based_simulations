@@ -1,0 +1,26 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+output/cmb_unlensed
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f150_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_LAT_mission_LAT_f290_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f040_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f230_cmb_unlensed_healpix.fits
+reading output/cmb_unlensed/sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_cmb_unlensed_healpix.fits
+
+real	42m47.991s
+user	1350m52.926s
+sys	8m38.139s
