@@ -1,7 +1,13 @@
 
 
 
-Known issues
-============
+
+## Verification
+
+Interactive power spectra plots for all components except CO and radio galaxies, the source notebooks are available in the `verification/` folder:
+
+* [SAT TT](https://nbviewer.org/gist/zonca/7da37d301ee75096ce0e70e7f15457f1)
+
+## Known issues
 
 * Websky Radio sources are available only down to 18.7 GHz, the lowest Simons Observatory channels have bandpasses to 10 Ghz, so I created a copy of 18.7 GHz and renamed it to 1.0 GHz. This is the border of the band, should not matter much.
