@@ -6,7 +6,8 @@
 
 Interactive power spectra plots for all components except CO and radio galaxies, the source notebooks are available in the `verification/` folder:
 
-* [SAT TT](https://nbviewer.org/gist/zonca/7da37d301ee75096ce0e70e7f15457f1)
+* [SAT TT](https://nbviewer.org/gist/zonca/3645fe8042c7d913213f3dbd647be0d5)
+* [LAT TT](https://nbviewer.org/gist/zonca/7026e5f4fd9ef304a89f1c171e43f2ce)
 
 ## Known issues
 
