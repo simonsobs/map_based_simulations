@@ -52,9 +52,58 @@ See [`common.toml`](common.toml) for the naming convention.
 
 Each of the 17 components is available separately, see the TOML files in this repository for the configuration used to run PySM for each component.
 
-**Location at NERSC**:
+The available combination maps are 4, (see the [`combine_maps.py` script](combine_maps.py)):
+
+* `galactic_foregrounds_mediumcomplexity`
+* `galactic_foregrounds_lowcomplexity`
+* `galactic_foregrounds_highcomplexity`
+* `extragalactic`
+
+Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`.
+
+In case you only need 1 single set of maps with all the components, you should sum `galactic_foregrounds_mediumcomplexity`, `cmb` and `extragalactic`.
+
+**Location at NERSC**, this folder on the Simons Observatory project space only includes the 4 combination maps and the 2 CMB maps due to space contraints:
 
     /project/projectdirs/sobs/v4_sims/mbs/mbs-s0012-20230321
+
+Individual components are available on Cori scratch (accessible from Cori and from the Cori JupyterHub node, it needs membership to the `sobs` group for read access):
+
+    /global/cscratch1/sd/zonca/mbs-s0012-20230321
+
+Please [open an issue here](https://github.com/galsci/pysm/issues/new) for any data access problems.
+
+## Metadata
+
+Most useful metadata is available in the FITS header of the HEALPix maps, for example:
+
+```
+TTYPE1  = 'TEMPERATURE'                                                         
+TFORM1  = '1024E   '                                                            
+TUNIT1  = 'uK_CMB  '                                                            
+TTYPE2  = 'Q_POLARISATION'                                                      
+TFORM2  = '1024E   '                                                            
+TUNIT2  = 'uK_CMB  '                                                            
+TTYPE3  = 'U_POLARISATION'                                                      
+TFORM3  = '1024E   '                                                            
+TUNIT3  = 'uK_CMB  '                                                            
+PIXTYPE = 'HEALPIX '           / HEALPIX pixelisation                           
+ORDERING= 'NESTED  '           / Pixel ordering scheme, either RING or NESTED   
+COORDSYS= 'C       '           / Ecliptic, Galactic or Celestial (equatorial)   
+EXTNAME = 'xtension'           / name of this binary table extension            
+NSIDE   =                 1024 / Resolution parameter of HEALPIX                
+FIRSTPIX=                    0 / First pixel # (0 based)                        
+LASTPIX =             12582911 / Last pixel # (0 based)                         
+INDXSCHM= 'IMPLICIT'           / Indexing: IMPLICIT or EXPLICIT                 
+OBJECT  = 'FULLSKY '           / Sky coverage, either FULLSKY or PARTIAL        
+TELESCOP= 'SAT     '                                                            
+BAND    = 'SAT_f230'                                                            
+TAG     = 'synchrotron'                                                         
+NUM     =                    0                                                  
+ELL_MAX =                 2560                                                  
+NSPLITS =                    1                                                  
+SPLIT   =                    1                                                  
+```
 
 ## Model execution
 
