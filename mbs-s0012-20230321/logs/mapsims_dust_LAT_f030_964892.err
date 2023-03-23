@@ -1,0 +1,33 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:35:25,348:INFO:mapsims:Parsing configuration from common.toml, dust.toml
+2023-03-21 22:35:25,375:INFO:mapsims:Nside: 2048, Modeling Nside: 4096, Ellmax: 5120
+2023-03-21 22:35:25,396:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:35:25,397:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/dust_gnilc/gnilc_dust_template_nside4096.fits
+2023-03-21 22:35:37,133:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/dust_gnilc/gnilc_dust_beta_nside4096.fits
+2023-03-21 22:35:40,795:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/dust_gnilc/gnilc_dust_Td_nside4096.fits
+2023-03-21 22:35:44,354:INFO:mapsims:Processing channel Channel LAT_f030
+2023-03-21 22:35:44,354:INFO:mapsims:Bandpass integration for Channel LAT_f030
+2023-03-21 23:14:07,345:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f030
+2023-03-21 23:14:07,349:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 23:14:14,178:INFO:pysm3:Smoothing with fwhm of 7.4 arcmin
+2023-03-21 23:14:15,051:INFO:pysm3:Rotate Alm
+2023-03-21 23:15:36,569:INFO:pysm3:Alm to map HEALPix
+2023-03-21 23:15:38,225:INFO:pysm3:Alm to map CAR
+2023-03-21 23:15:41,261:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_dust_healpix.fits
+2023-03-21 23:15:41,261:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 23:15:41,406:INFO:mapsims:Reorder ring to nest
+2023-03-21 23:15:45,548:INFO:mapsims:Writing output map
+2023-03-21 23:15:48,138:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_dust_car.fits
+2023-03-21 23:15:48,140:INFO:mapsims:Writing output map
+
+real	40m32.810s
+user	153m36.377s
+sys	13m21.350s

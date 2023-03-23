@@ -1,0 +1,40 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 23:09:13,447:INFO:mapsims:Parsing configuration from common.toml, co.toml
+2023-03-21 23:09:13,458:INFO:mapsims:Nside: 8192, Modeling Nside: 2048, Ellmax: 5120
+2023-03-21 23:09:13,460:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 23:09:13,461:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 23:09:13,462:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2023-03-21 23:09:30,361:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:09:30,362:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:09:30,845:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2023-03-21 23:09:30,846:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:09:30,847:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:09:31,308:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2023-03-21 23:09:31,309:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2023-03-21 23:09:31,309:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2023-03-21 23:09:33,539:INFO:mapsims:Processing channel Channel LAT_f230
+2023-03-21 23:09:33,539:INFO:mapsims:Bandpass integration for Channel LAT_f230
+2023-03-21 23:09:38,070:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f230
+2023-03-21 23:11:06,986:WARNING:pysm3:hp.map2alm_lsq did not converge in 10 iterations, residual relative error is 0.48
+2023-03-21 23:11:06,986:INFO:pysm3:Smoothing with fwhm of 1.0 arcmin
+2023-03-21 23:11:07,899:INFO:pysm3:Rotate Alm
+2023-03-21 23:12:34,617:INFO:pysm3:Alm to map HEALPix
+2023-03-21 23:12:51,344:INFO:pysm3:Alm to map CAR
+2023-03-21 23:13:31,817:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_co_healpix.fits
+2023-03-21 23:13:31,818:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 23:13:34,300:INFO:mapsims:Reorder ring to nest
+2023-03-21 23:14:37,377:INFO:mapsims:Writing output map
+2023-03-21 23:15:12,783:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_co_car.fits
+2023-03-21 23:15:12,821:INFO:mapsims:Writing output map
+
+real	6m48.621s
+user	86m46.993s
+sys	4m42.178s

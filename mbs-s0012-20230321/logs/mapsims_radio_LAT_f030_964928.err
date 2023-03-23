@@ -1,0 +1,86 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:35:30,121:INFO:mapsims:Parsing configuration from common.toml, radio.toml
+2023-03-21 22:35:30,145:INFO:mapsims:Nside: 2048, Modeling Nside: 4096, Ellmax: 5120
+2023-03-21 22:35:30,171:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:35:30,836:INFO:mapsims:Processing channel Channel LAT_f030
+2023-03-21 22:35:30,836:INFO:mapsims:Bandpass integration for Channel LAT_f030
+2023-03-21 22:35:31,186:INFO:pysm3:Frequencies considered: [ 1.  18.7 21.6 24.5 27.3 30.  35.9 41.7 44.  47.4 63.9]
+2023-03-21 22:35:31,331:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0001.0.fits
+2023-03-21 22:35:31,331:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0001.0.fits
+2023-03-21 22:35:31,332:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0001.0.fits
+2023-03-21 22:35:39,680:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0001.0.fits
+2023-03-21 22:35:43,867:INFO:pysm3:Mean emission at 1.0 GHz in I: 4.338e+04 uK_RJ
+2023-03-21 22:35:43,962:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0018.7.fits
+2023-03-21 22:35:43,962:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0018.7.fits
+2023-03-21 22:35:43,963:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0018.7.fits
+2023-03-21 22:35:51,905:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0018.7.fits
+2023-03-21 22:35:55,828:INFO:pysm3:Mean emission at 18.7 GHz in I: 124 uK_RJ
+2023-03-21 22:35:55,830:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0021.6.fits
+2023-03-21 22:35:55,830:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0021.6.fits
+2023-03-21 22:35:55,830:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0021.6.fits
+2023-03-21 22:36:00,753:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0021.6.fits
+2023-03-21 22:36:04,610:INFO:pysm3:Mean emission at 21.6 GHz in I: 76.8 uK_RJ
+2023-03-21 22:36:04,612:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0024.5.fits
+2023-03-21 22:36:04,612:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0024.5.fits
+2023-03-21 22:36:04,613:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0024.5.fits
+2023-03-21 22:36:09,952:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0024.5.fits
+2023-03-21 22:36:13,843:INFO:pysm3:Mean emission at 24.5 GHz in I: 51.37 uK_RJ
+2023-03-21 22:36:13,845:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0027.3.fits
+2023-03-21 22:36:13,845:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0027.3.fits
+2023-03-21 22:36:13,846:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0027.3.fits
+2023-03-21 22:36:20,058:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0027.3.fits
+2023-03-21 22:36:23,980:INFO:pysm3:Mean emission at 27.3 GHz in I: 36.88 uK_RJ
+2023-03-21 22:36:23,981:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0030.0.fits
+2023-03-21 22:36:23,982:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0030.0.fits
+2023-03-21 22:36:23,982:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0030.0.fits
+2023-03-21 22:36:29,527:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0030.0.fits
+2023-03-21 22:36:33,445:INFO:pysm3:Mean emission at 30.0 GHz in I: 27.97 uK_RJ
+2023-03-21 22:36:33,447:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0035.9.fits
+2023-03-21 22:36:33,447:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0035.9.fits
+2023-03-21 22:36:33,448:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0035.9.fits
+2023-03-21 22:36:38,316:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0035.9.fits
+2023-03-21 22:36:41,443:INFO:pysm3:Mean emission at 35.9 GHz in I: 17.11 uK_RJ
+2023-03-21 22:36:41,444:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0041.7.fits
+2023-03-21 22:36:41,444:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0041.7.fits
+2023-03-21 22:36:41,445:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0041.7.fits
+2023-03-21 22:36:46,858:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0041.7.fits
+2023-03-21 22:36:51,021:INFO:pysm3:Mean emission at 41.7 GHz in I: 11.53 uK_RJ
+2023-03-21 22:36:51,022:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0044.0.fits
+2023-03-21 22:36:51,022:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0044.0.fits
+2023-03-21 22:36:51,023:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0044.0.fits
+2023-03-21 22:36:56,761:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0044.0.fits
+2023-03-21 22:37:00,839:INFO:pysm3:Mean emission at 44.0 GHz in I: 9.978 uK_RJ
+2023-03-21 22:37:00,841:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0047.4.fits
+2023-03-21 22:37:00,841:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0047.4.fits
+2023-03-21 22:37:00,842:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0047.4.fits
+2023-03-21 22:37:05,776:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0047.4.fits
+2023-03-21 22:37:09,812:INFO:pysm3:Mean emission at 47.4 GHz in I: 8.142 uK_RJ
+2023-03-21 22:37:09,813:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0063.9.fits
+2023-03-21 22:37:09,813:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0063.9.fits
+2023-03-21 22:37:09,814:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0063.9.fits
+2023-03-21 22:37:14,425:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/radio/radio_0063.9.fits
+2023-03-21 22:37:18,537:INFO:pysm3:Mean emission at 63.9 GHz in I: 3.532 uK_RJ
+2023-03-21 22:41:21,309:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f030
+2023-03-21 22:41:21,314:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:41:26,880:INFO:pysm3:Smoothing with fwhm of 7.4 arcmin
+2023-03-21 22:41:27,375:INFO:pysm3:Rotate Alm
+2023-03-21 22:42:14,265:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:42:15,714:INFO:pysm3:Alm to map CAR
+2023-03-21 22:42:18,136:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_radio_healpix.fits
+2023-03-21 22:42:18,136:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:42:18,258:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:42:21,594:INFO:mapsims:Writing output map
+2023-03-21 22:42:24,412:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_radio_car.fits
+2023-03-21 22:42:24,414:INFO:mapsims:Writing output map
+
+real	7m4.621s
+user	43m3.769s
+sys	2m4.728s

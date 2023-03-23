@@ -1,0 +1,26 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+output/co
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f030_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f040_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f090_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f150_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_LAT_mission_LAT_f290_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f030_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f040_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f230_co_healpix.fits
+reading output/co/sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_co_healpix.fits
+
+real	35m8.851s
+user	1240m4.887s
+sys	5m12.843s

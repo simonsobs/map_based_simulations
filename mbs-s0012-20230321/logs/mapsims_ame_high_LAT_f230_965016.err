@@ -1,0 +1,43 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:51:35,183:INFO:mapsims:Parsing configuration from common.toml, ame_high.toml
+2023-03-21 22:51:35,194:INFO:mapsims:Nside: 8192, Modeling Nside: 512, Ellmax: 1280
+2023-03-21 22:51:35,196:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:51:35,197:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2023-03-21 22:51:35,231:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2023-03-21 22:51:35,261:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:51:35,265:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2023-03-21 22:51:35,316:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2023-03-21 22:51:35,317:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2023-03-21 22:51:35,363:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2023-03-21 22:51:35,424:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2023-03-21 22:51:35,457:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:51:35,461:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2023-03-21 22:51:35,496:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2023-03-21 22:51:35,497:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2023-03-21 22:51:35,531:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2023-03-21 22:51:35,592:INFO:mapsims:Processing channel Channel LAT_f230
+2023-03-21 22:51:35,592:INFO:mapsims:Bandpass integration for Channel LAT_f230
+2023-03-21 22:52:29,141:INFO:mapsims:Smoothing and coord-transform for Channel LAT_f230
+2023-03-21 22:52:33,248:INFO:pysm3:Used map2alm_lsq, converged in 7 iterations,residual relative error 0.19
+2023-03-21 22:52:33,248:INFO:pysm3:Smoothing with fwhm of 1.0 arcmin
+2023-03-21 22:52:33,297:INFO:pysm3:Rotate Alm
+2023-03-21 22:52:35,751:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:52:49,650:INFO:pysm3:Alm to map CAR
+2023-03-21 22:53:27,370:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_ame_high_healpix.fits
+2023-03-21 22:53:27,370:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:53:29,547:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:54:30,574:INFO:mapsims:Writing output map
+2023-03-21 22:55:02,275:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_LAT_mission_LAT_f230_ame_high_car.fits
+2023-03-21 22:55:02,312:INFO:mapsims:Writing output map
+
+real	4m18.497s
+user	8m10.204s
+sys	2m44.280s

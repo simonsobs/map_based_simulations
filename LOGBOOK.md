@@ -2,6 +2,11 @@
 
 Date based updates from the map based simulation team
 
+## 21 March 2023 - Released MBS simulation 12
+
+Galactic, extragalactic and CMB with realistic bandpasses.
+For noise simulations, see <https://github.com/simonsobs/mnms>
+
 ## 18 Jun 2020 - Released fixed noise simulation
 
 Released new noise simulation, partly as maps on disk (currently only 1 with splits) and partly to be simulated on the fly with the `mapsims` package. See <https://github.com/simonsobs/map_based_simulations/tree/master/202006_noise> for more details.

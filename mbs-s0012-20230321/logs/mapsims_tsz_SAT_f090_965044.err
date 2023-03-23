@@ -1,0 +1,32 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:58:37,699:INFO:mapsims:Parsing configuration from common.toml, tsz.toml
+2023-03-21 22:58:37,709:INFO:mapsims:Nside: 512, Modeling Nside: 8192, Ellmax: 1280
+2023-03-21 22:58:37,711:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:58:37,713:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/tsz_8192_hp.fits
+2023-03-21 22:58:37,714:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/tsz_8192_hp.fits
+2023-03-21 22:58:44,058:INFO:mapsims:Processing channel Channel SAT_f090
+2023-03-21 22:58:44,058:INFO:mapsims:Bandpass integration for Channel SAT_f090
+2023-03-21 22:59:53,023:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f090
+2023-03-21 22:59:53,024:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 23:00:12,764:INFO:pysm3:Smoothing with fwhm of 30.0 arcmin
+2023-03-21 23:00:12,818:INFO:pysm3:Rotate Alm
+2023-03-21 23:00:14,782:INFO:pysm3:Alm to map HEALPix
+2023-03-21 23:00:14,867:INFO:pysm3:Alm to map CAR
+2023-03-21 23:00:15,449:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_tsz_healpix.fits
+2023-03-21 23:00:15,449:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 23:00:15,456:INFO:mapsims:Reorder ring to nest
+2023-03-21 23:00:15,692:INFO:mapsims:Writing output map
+2023-03-21 23:00:15,841:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f090_tsz_car.fits
+2023-03-21 23:00:15,841:INFO:mapsims:Writing output map
+
+real	1m40.890s
+user	4m47.148s
+sys	1m14.470s

@@ -1,0 +1,32 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:35:29,805:INFO:mapsims:Parsing configuration from common.toml, synchrotron.toml
+2023-03-21 22:35:29,828:INFO:mapsims:Nside: 1024, Modeling Nside: 2048, Ellmax: 2560
+2023-03-21 22:35:29,831:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:35:29,832:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_template_nside2048_2023.02.25.fits
+2023-03-21 22:35:34,410:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_beta_nside2048.fits
+2023-03-21 22:35:35,279:INFO:mapsims:Processing channel Channel SAT_f290
+2023-03-21 22:35:35,279:INFO:mapsims:Bandpass integration for Channel SAT_f290
+2023-03-21 22:38:11,807:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f290
+2023-03-21 22:38:11,809:INFO:pysm3:Using map2alm with pixel weights
+2023-03-21 22:38:13,583:INFO:pysm3:Smoothing with fwhm of 9.0 arcmin
+2023-03-21 22:38:13,800:INFO:pysm3:Rotate Alm
+2023-03-21 22:38:26,813:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:38:27,202:INFO:pysm3:Alm to map CAR
+2023-03-21 22:38:28,053:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_synchrotron_healpix.fits
+2023-03-21 22:38:28,053:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:38:28,087:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:38:28,919:INFO:mapsims:Writing output map
+2023-03-21 22:38:29,554:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f290_synchrotron_car.fits
+2023-03-21 22:38:29,555:INFO:mapsims:Writing output map
+
+real	3m5.911s
+user	35m48.506s
+sys	3m2.773s

@@ -1,0 +1,35 @@
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+
+WARNING: version mismatch between CFITSIO header (v3.47) and linked library (v4.02).
+
+2023-03-21 22:47:35,379:INFO:mapsims:Parsing configuration from common.toml, ame.toml
+2023-03-21 22:47:35,390:INFO:mapsims:Nside: 512, Modeling Nside: 512, Ellmax: 1280
+2023-03-21 22:47:35,392:INFO:mapsims:Initializing the PySM Sky object
+2023-03-21 22:47:35,394:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2023-03-21 22:47:35,459:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2023-03-21 22:47:35,501:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:47:35,505:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2023-03-21 22:47:35,542:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2023-03-21 22:47:35,545:INFO:mapsims:Processing channel Channel SAT_f150
+2023-03-21 22:47:35,546:INFO:mapsims:Bandpass integration for Channel SAT_f150
+2023-03-21 22:47:46,762:INFO:mapsims:Smoothing and coord-transform for Channel SAT_f150
+2023-03-21 22:47:51,294:INFO:pysm3:Used map2alm_lsq, converged in 7 iterations,residual relative error 0.19
+2023-03-21 22:47:51,294:INFO:pysm3:Smoothing with fwhm of 17.0 arcmin
+2023-03-21 22:47:51,345:INFO:pysm3:Rotate Alm
+2023-03-21 22:47:53,949:INFO:pysm3:Alm to map HEALPix
+2023-03-21 22:47:54,023:INFO:pysm3:Alm to map CAR
+2023-03-21 22:47:54,567:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_ame_healpix.fits
+2023-03-21 22:47:54,567:INFO:mapsims:Replace NaN with UNSEEN
+2023-03-21 22:47:54,576:INFO:mapsims:Reorder ring to nest
+2023-03-21 22:47:54,794:INFO:mapsims:Writing output map
+2023-03-21 22:47:54,965:INFO:mapsims:Writing output map sobs_mbs-s0012-20230321_SAT_mission_SAT_f150_ame_car.fits
+2023-03-21 22:47:54,965:INFO:mapsims:Writing output map
+
+real	0m22.614s
+user	3m46.659s
+sys	1m5.854s
