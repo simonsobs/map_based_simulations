@@ -1,0 +1,74 @@
+BaseNoiseModel:
+  calibrated: false
+  catalog_name: null
+  data_model_name: so_scan_s0003
+  differenced: false
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - num_splits
+  filter_kwargs:
+    post_filt_rel_downgrade: 2
+    ell_lows:
+      - 100
+    ell_highs:
+      - 200
+    profile: cosine
+  iso_filt_method: harmonic
+  ivar_filt_method: scaledep
+  ivar_fwhms:
+    - 0.25
+    - 0.25
+  ivar_lmaxs:
+    - 100
+    - null
+  kfilt_lbounds: null
+  mask_est_name: so_scan_s0003_mask.fits
+  mask_obs_name: null
+  possible_subproduct_kwargs: null
+  qid_names_template: '{array}_{freq}'
+  srcfree: false
+  subproduct: default
+
+FDWNoiseModel:
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  lamb: 1.6
+  n: 36
+  nback:
+  - 0
+  nforw:
+  - 0
+  - 6
+  - 6
+  - 6
+  - 6
+  - 12
+  - 12
+  - 12
+  - 12
+  - 24
+  - 24
+  p: 2
+  pback:
+  - 0
+  pforw:
+  - 0
+  - 6
+  - 4
+  - 2
+  - 2
+  - 12
+  - 8
+  - 4
+  - 2
+  - 12
+  - 8
+  w_lmax: 10800
+  w_lmax_j: 5300
+  w_lmin: 10
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num}'
