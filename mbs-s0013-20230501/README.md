@@ -1,6 +1,6 @@
 # Map-based noise simulations based on `scan-s0003` time-domain simulations
 
-Tag: `mbs-s0003-20230501`
+Tag: `mbs-s0013-20230501`
 
 ## Updates
 
@@ -30,11 +30,11 @@ Maps are available in the CAR (Fejer1 variant) pixelization. As above, the maps 
 
 The maps are located here:
 
-    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0003-20230501/sims
+    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0013-20230501/sims
 
 and have the following naming convention:
 
-    so_scan_s0003_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num}.fits
+    so_scan_s0003_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num:04}.fits
 
 where `bands` is in `[lf_f030_lf_f040, mf_f090_mf_f150, uhf_f230_uhf_f290]`, `split_num` is in `[0-3]` and `sim_num` is in `[0000-0299]`.
 
@@ -44,7 +44,7 @@ Please [open an issue here](https://github.com/simonsobs/map_based_simulations/i
 
 The covariance matrices from which simulations are drawn are available here: 
 
-    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0003-20230501/models
+    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0013-20230501/models
 
 Due to issues with the Clenshaw-Curtis vs. Fejer1 geometry, they do not currently support drawing additional realizations.
 
@@ -90,20 +90,20 @@ We give some minimum working examples:
 ```python
 import numpy as np
 from pixell import enmap, curvesky
-from os.path import join as opj
+from os.path import join
 
 # first get some basic info like the path and the filename template
-fdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0003-20230501/sims'
-fbase_template = 'so_scan_s0003_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num}.fits'
+fdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0013-20230501/sims'
+fbase_template = 'so_scan_s0003_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num:04}.fits'
 
 # let's load the sim for e.g. f150, split 2, sim 123
 bands = 'mf_f090_mf_f150'
 band_idx = 1                # f090 is 0, f150 is 1
 split_num = 2
-sim_num = str(123).zfill(4) # has 4 digits (leading 0's)
+sim_num = 123               # has 4 digits (leading 0's), but padding done for us in template
 
 sim = enmap.read_map(
-    opj(fdir, fbase_template.format(
+    join(fdir, fbase_template.format(
         bands=bands,
         split_num=split_num,
         sim_num=sim_num)
@@ -133,7 +133,7 @@ curvedsky.alm2map(curvedsky.map2alm(sim, lmax=5400), sim_fullres)
 
 ## Known issues
 
-* Large-scale TT (l ~< 300) has excess noise power of >~ 10% in `f030-f090`, see [these slides](https://drive.google.com/drive/folders/1-VHHW8YbRubNix0qza3MfPqHRVey0eAX).
+* Large-scale TT (l < 300) has excess noise power of > 10% in `f030-f090`, see [these slides](https://drive.google.com/drive/folders/1-VHHW8YbRubNix0qza3MfPqHRVey0eAX).
 
 ## Feedback
 
