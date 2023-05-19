@@ -16,7 +16,7 @@ This release is based on the LAT `scan-s0003` time-domain simulations, available
 
     /global/cfs/cdirs/sobs/sims/scan-s0003/output/combined/processed/fejer1
 
-These time-domain simulations implement the type-1.2.1 high-cadence 3-elevation scan-strategy (see scan-strategy [repo](https://github.com/simonsobs/pwg-scripts/tree/master/pwg-tds/scan-strategy-sims-2023) and [ICD](https://docs.google.com/presentation/d/1hInPLZYGQrO1E7j9FxR6UlH5RZarJsQ3mDHzlU0i7I8/edit#slide=id.p)). These maps provide a single realization of the noise in each split of each frequency band. More information is also available on the SO [productdb](https://www.productdb.simonsobservatory.org/product/simulation/scan-s0003).
+These time-domain simulations implement the type-1.2.1 high-cadence 3-elevation scan-strategy (see scan-strategy [repo](https://github.com/simonsobs/pwg-scripts/tree/master/pwg-tds/scan-strategy-sims-2023) and [ICD](https://docs.google.com/presentation/d/1hInPLZYGQrO1E7j9FxR6UlH5RZarJsQ3mDHzlU0i7I8/edit#slide=id.p)). These maps provide a single realization of the noise in each split of each frequency band. More information is also available on the SO [productdb](https://www.productdb.simonsobservatory.org/product/simulation/scan-s0003) and [confluence](https://simonsobs.atlassian.net/wiki/spaces/PRO/pages/96862289/scan-s0003+-+Scanning+strategy+simulations).
 
 Using [`mnms`](https://github.com/simonsobs/mnms) (commit `d4afb9d`), we generate 300 realizations of the noise using map-based methods. Specifically, we use the directional wavelet model, governed by the configured [parameters](parameters/so_scan_s0003.yaml).
 
