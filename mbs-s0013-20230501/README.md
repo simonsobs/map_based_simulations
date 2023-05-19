@@ -1,4 +1,4 @@
-# Map-based noise simulations based on `scan-s0003` time-domain simulations
+# Map-based noise simulations based on the LAT `scan-s0003` time-domain simulations
 
 Tag: `mbs-s0013-20230501`
 
@@ -8,11 +8,11 @@ Tag: `mbs-s0013-20230501`
 
 ## Summary
 
-300 realistic realizations of the map noise, given the single realization of the time-domain simulations. Simulations cover the full LAT footprint to a bandlimit of `lmax=5400`, and utilize the directional wavelet noise model.
+300 realistic realizations of the LAT map noise, given the single realization of the time-domain simulations. Simulations cover the full LAT footprint to a bandlimit of `lmax=5400`, and utilize the directional wavelet noise model.
 
 ## Noise model
 
-This release is based on the `scan-s0003` time-domain simulations, available on `NERSC` at:
+This release is based on the LAT `scan-s0003` time-domain simulations, available on `NERSC` at:
 
     /global/cfs/cdirs/sobs/sims/scan-s0003/output/combined/processed/fejer1
 
@@ -89,7 +89,7 @@ RADESYS = 'ICRS'               / Equatorial coordinate system                   
 We give some minimum working examples:
 ```python
 import numpy as np
-from pixell import enmap, curvedsky
+from pixell import enmap, curvedsky, enplot
 from os.path import join
 
 # first get some basic info like the path and the filename template
@@ -129,6 +129,14 @@ sim_fullres = enmap.empty((*sim.shape[:-2], *shape[-2:]), wcs, sim.dtype)
 
 # project sim to alm, then from alm to map
 curvedsky.alm2map(curvedsky.map2alm(sim, lmax=5400), sim_fullres)
+```
+Finally, we can plot the sim:
+```python
+# can also plot all three components in one call, but the colorbar will
+# be shared for all three plots. this is visually nicer for components
+# with very different dynamic range, as in this case
+for pol in range(3):
+    enplot.pshow(sim_fullres[pol], downgrade=32, colorbar=True, ticks=15)
 ```
 
 ## Known issues

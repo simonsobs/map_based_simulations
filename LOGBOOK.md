@@ -2,9 +2,9 @@
 
 Date based updates from the map based simulation team
 
-## 9 May 2023 - Released realistic map-based noise simulations
+## 9 May 2023 - Released realistic LAT map-based noise simulations
 
-Based the time-domain `scan-s0003` simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
+Based the LAT time-domain `scan-s0003` simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
 
 ## 21 March 2023 - Released MBS simulation 12
 
