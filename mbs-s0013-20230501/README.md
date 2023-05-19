@@ -89,7 +89,7 @@ RADESYS = 'ICRS'               / Equatorial coordinate system                   
 We give some minimum working examples:
 ```python
 import numpy as np
-from pixell import enmap, curvesky
+from pixell import enmap, curvedsky
 from os.path import join
 
 # first get some basic info like the path and the filename template
