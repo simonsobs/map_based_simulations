@@ -4,6 +4,7 @@ Tag: `mbs-s0012-20230321`
 
 ## Updates
 
+* 2023-06-27: rerun of `dust` and `dust_low` and all combined map due to update from PySM `3.4.0b8` to `b9`
 * 2023-03-21: first release
 
 ## Summary
