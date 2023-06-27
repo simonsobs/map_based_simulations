@@ -130,6 +130,7 @@ Interactive power spectra plots for all components except CO and radio galaxies,
 ## Known issues
 
 * Websky Radio sources are available only down to 18.7 GHz, the lowest Simons Observatory channels have bandpasses to 10 Ghz, so I created a copy of 18.7 GHz and renamed it to 1.0 GHz. This is the border of the band, should not matter much.
+* Maps of dust created in the first release were erroneously generated with beta and Td ellmax of 2048 due to a bug in PySM, this has been fixed in PySM `3.4.0b9`.
 
 ## Feedback
 
