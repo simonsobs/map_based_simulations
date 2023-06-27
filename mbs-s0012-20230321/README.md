@@ -60,17 +60,17 @@ The available combination maps are 4, (see the [`combine_maps.py` script](combin
 * `galactic_foregrounds_highcomplexity`
 * `extragalactic`
 
-Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`.
+Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`, the CMB maps have no solar dipole.
 
 In case you only need 1 single set of maps with all the components, you should sum `galactic_foregrounds_mediumcomplexity`, `cmb` and `extragalactic`.
 
 **Location at NERSC**, this folder on the Simons Observatory project space only includes the 4 combination maps and the 2 CMB maps (total of .75TB) due to space constraints:
 
-    /project/projectdirs/sobs/v4_sims/mbs/mbs-s0012-20230321
+    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0012-20230321
 
 Individual components (2.2 TB) are available on Cori scratch (accessible from Cori and from the Cori JupyterHub node, it needs membership to the `sobs` group for read access):
 
-    /global/cscratch1/sd/zonca/mbs-s0012-20230321
+    /pscratch/sd/z/zonca/mbs-s0012-20230321
 
 Please [open an issue here](https://github.com/galsci/pysm/issues/new) for any data access problems.
 
