@@ -25,9 +25,9 @@ if os.path.exists(output_filename):
 
 for ch in chs:
     try:
-        filename = glob(folder + f"/*{ch['band']}*healpix*")[0]
+        filename = glob(folder + f"/*{ch['tag']}*healpix*")[0]
     except IndexError:
-        print(folder + f"*{ch['band']}*healpix* NOT FOUND " + ("*" * 20))
+        print(folder + f"*{ch['tag']}*healpix* NOT FOUND " + ("*" * 20))
         break
     print("reading " + filename)
     try:
@@ -40,7 +40,7 @@ for ch in chs:
     # if m.shape[0] == 3 and m[1].sum() == 0:
     #    m = m[0]
 
-    cl[ch["band"]] = hp.anafast(m, lmax=int(3 * nside -1), use_pixel_weights=False)
+    cl[ch["tag"]] = hp.anafast(m, lmax=int(2.5 * nside), use_pixel_weights=False)
 
 if cl:  # empty dicts are false
     with open(output_filename, "wb") as f:
