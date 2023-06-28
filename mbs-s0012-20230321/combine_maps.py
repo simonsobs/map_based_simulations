@@ -4,8 +4,6 @@ import numpy as np
 from astropy.table import QTable
 from pixell import enmap
 
-# Dipole needs to be the last component, I remove dipole
-# from previous map before adding dipole
 all_combined = {
     "galactic_foregrounds_mediumcomplexity": [
         "dust",

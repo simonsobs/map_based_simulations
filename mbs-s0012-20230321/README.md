@@ -4,6 +4,7 @@ Tag: `mbs-s0012-20230321`
 
 ## Updates
 
+* 2023-06-27: rerun of `dust` and `dust_low` and all combined map due to update from PySM `3.4.0b8` to `b9`
 * 2023-03-21: first release
 
 ## Summary
@@ -59,17 +60,17 @@ The available combination maps are 4, (see the [`combine_maps.py` script](combin
 * `galactic_foregrounds_highcomplexity`
 * `extragalactic`
 
-Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`.
+Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`, the CMB maps have no solar dipole.
 
 In case you only need 1 single set of maps with all the components, you should sum `galactic_foregrounds_mediumcomplexity`, `cmb` and `extragalactic`.
 
 **Location at NERSC**, this folder on the Simons Observatory project space only includes the 4 combination maps and the 2 CMB maps (total of .75TB) due to space constraints:
 
-    /project/projectdirs/sobs/v4_sims/mbs/mbs-s0012-20230321
+    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0012-20230321
 
 Individual components (2.2 TB) are available on Cori scratch (accessible from Cori and from the Cori JupyterHub node, it needs membership to the `sobs` group for read access):
 
-    /global/cscratch1/sd/zonca/mbs-s0012-20230321
+    /pscratch/sd/z/zonca/mbs-s0012-20230321
 
 Please [open an issue here](https://github.com/galsci/pysm/issues/new) for any data access problems.
 
@@ -129,6 +130,7 @@ Interactive power spectra plots for all components except CO and radio galaxies,
 ## Known issues
 
 * Websky Radio sources are available only down to 18.7 GHz, the lowest Simons Observatory channels have bandpasses to 10 Ghz, so I created a copy of 18.7 GHz and renamed it to 1.0 GHz. This is the border of the band, should not matter much.
+* Maps of dust created in the first release were erroneously generated with beta and Td ellmax of 2048 due to a bug in PySM, this has been fixed in PySM `3.4.0b9`.
 
 ## Feedback
 
