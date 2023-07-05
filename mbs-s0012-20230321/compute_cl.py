@@ -25,9 +25,10 @@ if os.path.exists(output_filename):
 
 for ch in chs:
     try:
-        filename = glob(folder + f"/*{ch['tag']}*healpix*")[0]
+        filename_template = folder + f"/*{ch['telescope']}*{ch['band']}*healpix*"
+        filename = glob(filename_template)[0]
     except IndexError:
-        print(folder + f"*{ch['tag']}*healpix* NOT FOUND " + ("*" * 20))
+        print(filename_teamplate + " NOT FOUND " + ("*" * 20))
         break
     print("reading " + filename)
     try:
