@@ -118,7 +118,9 @@ Given that each channel requested a different resolution, we have followed some 
 
 ## Verification
 
-Interactive power spectra plots for all components except CO and radio galaxies, the source notebook is available in the `verification/` folder:
+Interactive power spectra plots for all components except CO and radio galaxies, the source notebook is available in the `verification/` folder,
+the B Spectra of the CMB components are affected by high noise due to `ud_grade` performed in the on-the-fly run with PySM inside the notebook.
+If the run is properly executed at Nside 4096, no artificial noise is visible anymore:
 
 * [SAT TT](https://nbviewer.org/gist/zonca/3645fe8042c7d913213f3dbd647be0d5)
 * [LAT TT](https://nbviewer.org/gist/zonca/7026e5f4fd9ef304a89f1c171e43f2ce)
