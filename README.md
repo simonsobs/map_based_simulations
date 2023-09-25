@@ -7,7 +7,7 @@ Slack channel: `#dm-simulations`
 
 ## Available simulations
 
-* [`mbs-s0014-20230920`](mbs-s0013-20230920/README.md): Map-based noise simulations based on the SAT `mbs-noise-sims-sat` time-domain simulations
+* [`mbs-s0014-20230920`](mbs-s0014-20230920/README.md): Map-based noise simulations based on the SAT `mbs-noise-sims-sat` time-domain simulations
 * [`mbs-s0013-20230501`](mbs-s0013-20230501/README.md): Map-based noise simulations based on the LAT `scan-s0003` time-domain simulations
 * [`mbs-s0012-20230321`](mbs-s0012-20230321/README.md): Galactic, extragalactic, CMB with realistic bandpasses.
 * [`mbs-s0011-20200618`](202006_noise/README.md): Reran of realistic noise version 3.1.1 with MSS1 hitmaps
