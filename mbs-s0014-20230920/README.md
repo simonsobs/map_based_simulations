@@ -16,18 +16,31 @@ This release is based on the [mbs-noise-sims-sat](https://github.com/simonsobs/p
 
     /global/cfs/cdirs/sobs/sims/sat-noise-sims/v1
 
-These time-domain simulations include detector and atmospheric noise scaled to match a full year of sensitivity split into two disjoint maps for each frequency band. 
+These **noise-only** time-domain simulations include detector and atmospheric noise scaled to match a full year of sensitivity split into two disjoint maps for each frequency band. In more detail:
+* One year, three calendar days per month
+* Full SAT focalplanes
+* HWP demodulation
+* Variable mapmaking resolution
+    * NSide=128 for 30 and 40GHz (LF)
+    * NSide=512 for 90 and 150GHz (MF)
+    * NSide=1024 for 230 and 290Ghz (HF)
+* Up to hour-long uninterrupted observations
+* Two time-domain filters:
+    * 20th order ground polynomial filter
+    * 1st order subscan polynomial filter
+* Noise and atmosphere scaled to match full year of sensitivity split into two disjoint maps
 
 Using [`mnms`](https://github.com/simonsobs/mnms), we generate 300 realizations of the noise using map-based methods. Specifically, we use the tiled model, governed by the configured [parameters](parameters/so_sat_v1_f1.yaml).
 
 Notes:
+* The following releases were used: [`mnms v0.0.4`](https://github.com/simonsobs/mnms/tree/v0.0.4) and [`sofind v0.0.4`](https://github.com/simonsobs/sofind/tree/v0.0.4)
 * Both time-domain and map-domain simulations are stored in HEALPix format. See [examples](#example-usage) below for further guidance.
 * A mask has been applied to the map-domain simulations. The masks are stored here: `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0014_20230920/car/masks/coadd_SAT_{bands}_mask_obs_hp.fits`.
 * See these [slides](https://drive.google.com/file/d/1ZkwpjYQVCkmbRk5RWOp0Qq4CPsynBH31/view?usp=sharing) for validation of the map-based simulations.
 
 ## Available maps
 
-Maps are available in the HEALPix format. Maps are in Equatorial Coordinates, `K_CMB` units, FITS format.
+Maps are available in the HEALPix format. Maps are in Equatorial Coordinates, `K_CMB` units, FITS format. 
 
 The maps are available on `NERSC` at:
 
@@ -39,7 +52,9 @@ and have the following naming convention:
 so_sat_v1_f1_tile_{band}_2way_set{split_num}_noise_sim_map{sim_num:04}.fits
 ```
 
-where `band` is in `[f030, f040, f090, f150, f230, f290]`, `split_num` is in `[0-1]` and `sim_num` is in `[0000-0299]`. Note that the `split_num` is 0-indexed for the map-based sims, while it is 1-indexed for the TOD sims.
+where `band` is in `[f030, f040, f090, f150, f230, f290]`, `split_num` is in `[0-1]` and `sim_num` is in `[0000-0299]`. Note that the `split_num` is 0-indexed for the map-based sims, while it is 1-indexed for the TOD sims. 
+
+The maps take up 215 GB.
 
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
 
