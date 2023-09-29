@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=check00
+#SBATCH --partition=cmbas
+#SBATCH --constraint=rome
+#SBATCH --nodes=1
+
+#SBATCH --ntasks-per-node=25
+#SBATCH --cpus-per-task=5
+
+#SBATCH --time=02:00:00
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+module load adri_gcc
+module load adri_base
+
+source /mnt/home/aduivenvoorden/.pyenv/versions/enki/bin/activate
+
+srun -u python /mnt/home/aduivenvoorden/analysis/so/20230524_sat_noise/check_sims_hp.py

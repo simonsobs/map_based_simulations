@@ -1,0 +1,69 @@
+#!/bin/bash
+#SBATCH --job-name=run00
+#SBATCH --partition=cmbas
+#SBATCH --constraint=rome
+#SBATCH --nodes=1
+
+#SBATCH --ntasks-per-node=60
+#SBATCH --cpus-per-task=2
+
+#SBATCH --time=01:20:00
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+module load adri_gcc
+module load adri_base
+
+source /mnt/home/aduivenvoorden/.pyenv/versions/enki/bin/activate
+
+TAG=run00
+MNMSDIR="/mnt/home/aduivenvoorden/local/mnms/scripts"
+SCRIPTDIR="/mnt/home/aduivenvoorden/analysis/so/20230524_sat_noise"
+SIMDIR="/mnt/home/aduivenvoorden/project/actpol/maps/mnms/sims"
+CARDIR="/mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/car"
+ODIR="/mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/out/${TAG}"
+
+CONFIG="so_sat_v1_f1"
+OMAP_TEMPLATE="so_sat_v1_f1_tile_{freq}_2way_set{sidx}_noise_sim_map{sim_num:04d}.fits"
+
+SIMS_END=299
+
+for FTYPE in 'lf' 'mf' 'uhf'
+do
+    if [ ${FTYPE} = 'lf' ]
+    then
+        QIDS="lfa lfb"
+	LMAX=405
+	NOISEMODEL="tile_lf"
+	declare -a FREQS=("f030" "f040")
+	MASK_OBS="${CARDIR}/masks/coadd_SAT_f030_f040_mask_obs_hp.fits"
+	NSIDE=128
+    fi
+    if [ ${FTYPE} = 'mf' ]
+    then
+        QIDS="mfa mfb"
+	LMAX=1620
+	NOISEMODEL="tile_mf"
+	declare -a FREQS=("f090" "f150")
+	MASK_OBS="${CARDIR}/masks/coadd_SAT_f090_f150_mask_obs_hp.fits"
+	NSIDE=512	
+    fi
+    if [ ${FTYPE} = 'uhf' ]
+    then
+        QIDS="uhfa uhfb"
+	LMAX=3240
+	NOISEMODEL="tile_uhf"
+	declare -a FREQS=("f230" "f290")
+	MASK_OBS="${CARDIR}/masks/coadd_SAT_f230_f290_mask_obs_hp.fits"
+	NSIDE=1024	
+    fi
+    
+    srun -u python ${MNMSDIR}/noise_gen.py --config-name ${CONFIG} --noise-model-name ${NOISEMODEL} --qid ${QIDS} --lmax ${LMAX} --use-mpi
+
+    srun -u python ${MNMSDIR}/noise_sim.py --config-name ${CONFIG} --noise-model-name ${NOISEMODEL} --qid ${QIDS} --lmax ${LMAX} --use-mpi --maps-start 0 --maps-end ${SIMS_END}
+
+    for SIDX in 0 1
+    do
+	srun -u python ${SCRIPTDIR}/project2healpix.py  --config-name ${CONFIG} --noise-model-name ${NOISEMODEL} --qid ${QIDS} --maps-start 0 --maps-end ${SIMS_END} --mask-obs ${MASK_OBS} --odir ${ODIR} --split-idx ${SIDX} --oname-template ${OMAP_TEMPLATE} --lmax ${LMAX}
+    done
+done
