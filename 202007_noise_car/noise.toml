@@ -1,0 +1,23 @@
+
+tag = "noise"
+
+[ other_components ]
+
+    [ other_components.noise ]
+
+    class = "mapsims.SONoiseSimulator"
+    return_uK_CMB = true
+    sensitivity_mode = "baseline"
+    apply_beam_correction = false
+    apply_kludge_correction = true
+    homogeneous = false
+    rolloff_ell = 50
+    survey_efficiency = 0.2
+    full_covariance = true
+    LA_years = 5
+    LA_noise_model = "SOLatV3point1"
+    elevation = 50
+    SA_years = 5
+    SA_one_over_f_mode = "pessimistic"
+    cache_hitmaps = true
+    boolean_sky_fraction = false
