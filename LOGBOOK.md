@@ -2,13 +2,17 @@
 
 Date based updates from the map based simulation team
 
+## 8 Juli 2024 - Released LAT map-based noise simulations
+
+Based on the LAT time-domain ``mss0002`` mission scale simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
+
 ## 20 Sep 2023 - Released realistic SAT map-based noise simulations
 
-Based the SAT time-domain ``mbs-noise-sims-sat`` simulations, using the tiled noise model of [`mnms`](https://github.com/simonsobs/mnms).
+Based on the SAT time-domain ``mbs-noise-sims-sat`` simulations, using the tiled noise model of [`mnms`](https://github.com/simonsobs/mnms).
 
 ## 9 May 2023 - Released realistic LAT map-based noise simulations
 
-Based the LAT time-domain `scan-s0003` simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
+Based on the LAT time-domain `scan-s0003` simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
 
 ## 21 March 2023 - Released MBS simulation 12
 
