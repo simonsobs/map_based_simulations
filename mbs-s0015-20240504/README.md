@@ -22,6 +22,9 @@ Using [`mnms`](https://github.com/simonsobs/mnms), we generate 300 realizations 
 
 Notes:
 * Simulations are bandlimited to `lmax=5400`. To save space, the simulations for the f090, f150, f230 and f280 bands are stored in a pixelization that is downgraded by a factor of 4 relative to the time-domain simulations (no downgrading was needed for the f030 and f040 maps) (`shape=(..., 2640, 10800)`, 2 arcmin resolution vs. `shape=(..., 10560, 43200)` 0.5 arcmin resolution). See [examples](#example-usage) below for further guidance.
+* The following releases were used: [`mnms v0.0.7`](https://github.com/simonsobs/mnms/tree/v0.0.7) and [`sofind v0.0.6`](https://github.com/simonsobs/sofind/tree/v0.0.6)
+* A mask has been applied to the map-domain simulations that removes a small amount of noisy pixels at the edges of the maps. The masks are stored here: `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/masks/LAT_{bands}_mask_obs.fits`.
+* See these [slides](https://drive.google.com/file/d/1ua8AmFIUonuAgn67LnM8IgIHIxONSawP/view?usp=sharing) for validation of the map-based simulations.
 
 ## Available maps
 
@@ -36,6 +39,8 @@ and have the following naming convention:
     so_lat_mbs_mss0002_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num:04}.fits
 
 where `bands` is in `[lf_f030_lf_f040, mf_f090_mf_f150, uhf_f230_uhf_f290]`, `split_num` is in `[0-3]` and `sim_num` is in `[0000-0299]`.
+
+The simulations take up 2.3 TB.
 
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
 
@@ -138,7 +143,7 @@ for pol in range(3):
 
 ## Known issues
 
-* Small scales (l > 4000) f030/f040 has excess noise power. Large scales (l < 1000) in f030/f040 has excess TT noise power. Large scales (l < 500) in f150 has excess TT noise power and large scales (l < 1000) in f290 has excess TT noise power. See [these slides](https://drive.google.com/file/d/1ua8AmFIUonuAgn67LnM8IgIHIxONSawP/view?usp=sharing).
+* Small scales (l > 4000) f030/f040 has excess noise power. Large scales (l < 1000) in f030/f040 has excess TT noise power. Large scales (l < 500) in f150 has excess TT noise power and large scales (l < 1000) in f290 has excess TT noise power. All relatively small amounts. See [these slides](https://drive.google.com/file/d/1ua8AmFIUonuAgn67LnM8IgIHIxONSawP/view?usp=sharing).
 
 ## Feedback
 
