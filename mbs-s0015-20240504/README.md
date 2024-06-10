@@ -140,6 +140,30 @@ Finally, we can plot the sim:
 for pol in range(3):
     enplot.pshow(sim_fullres[pol], downgrade=32, colorbar=True, ticks=15)
 ```
+### Additional simulations
+
+If your analysis needs more simulations, it is possible to draw additional simulations from the provided noise models. This requires installing the [`mnms`](https://github.com/simonsobs/mnms) and [`sofind`](https://github.com/simonsobs/sofind) python libraries. Follow the "quick setup" described in the sofind readme.
+
+Loading or simulating additional maps using mnms:
+```python
+
+from mnms import noise_models as nm
+
+config_name = 'so_lat_mbs_mss0002'
+noise_model_name = 'fdw_mf' # For LF use "fdw_lf", for MF use "fdw_mf" and for UHF use "fdw_uhf"
+qids = ['mfa', 'mfb'] # Simulate f090 and f150 jointly.
+lmax = 5400
+
+model = nm.BaseNoiseModel.from_config(config_name, noise_model_name, qids)
+
+# Draw the simulation. This can be repeated for different sim_idx values.
+sim_idx = 300
+split_idx = 0 # Pick 0, 1, 2 or 3.
+sim = model.get_sim(split_idx, sim_idx, lmax, alm=False, write=False, verbose=True)
+```
+
+For an example of how to generate a larger set of simulations on a cluster, see the [run01](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/runs/run01) script.
+For reference, drawing the simulations provided here took approximately 5 hours using 20 MPI tasks distributed over 5 128-core nodes.
 
 ## Known issues
 
