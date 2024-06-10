@@ -22,7 +22,7 @@ Using [`mnms`](https://github.com/simonsobs/mnms), we generate 300 realizations 
 
 Notes:
 * Simulations are bandlimited to `lmax=5400`. To save space, the simulations for the f090, f150, f230 and f280 bands are stored in a pixelization that is downgraded by a factor of 4 relative to the time-domain simulations (no downgrading was needed for the f030 and f040 maps) (`shape=(..., 2640, 10800)`, 2 arcmin resolution vs. `shape=(..., 10560, 43200)` 0.5 arcmin resolution). See [examples](#example-usage) below for further guidance.
-* The following releases were used: [`mnms v0.0.7`](https://github.com/simonsobs/mnms/tree/v0.0.7) and [`sofind v0.0.6`](https://github.com/simonsobs/sofind/tree/v0.0.6)
+* The following releases were used: [`mnms v0.0.7`](https://github.com/simonsobs/mnms/tree/v0.0.7) and [`sofind v0.0.5`](https://github.com/simonsobs/sofind/tree/v0.0.5)
 * A mask has been applied to the map-domain simulations that removes a small amount of noisy pixels at the edges of the maps. The masks are stored here: `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/masks/LAT_{bands}_mask_obs.fits`.
 * See these [slides](https://drive.google.com/file/d/1ua8AmFIUonuAgn67LnM8IgIHIxONSawP/view?usp=sharing) for validation of the map-based simulations.
 
