@@ -50,6 +50,8 @@ The covariance matrices from which simulations are drawn are available here:
 
     /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/models
 
+The `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed` directory contains ancillary map files needed to draw from the covariance matrices or to generate new matrices. See the [preprocess_maps.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/preprocess_maps.py) script to see how these files were generated.
+
 ## Metadata
 
 The models correlate pairs of frequency bands on the same detector wafer. Therefore, the simulations are stored in a similar paired format. Thus, the shape of a given simulation file is `(2, 1, 3, 2640, 10800)`:
@@ -88,79 +90,13 @@ RADESYS = 'ICRS'               / Equatorial coordinate system                   
 
 ## Example usage
 
-We give some minimum working examples:
-```python
-import numpy as np
-from pixell import enmap, curvedsky, enplot
-from os.path import join
+For a simple example that loads and interacts with the simulations, see the [example_usage.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/example_usage.py) script.
 
-# first get some basic info like the path and the filename template
-fdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/sims'
-fbase_template = 'so_lat_mbs_mss0002_fdw_{bands}_lmax5400_4way_set{split_num}_noise_sim_map{sim_num:04}.fits'
-
-# let's load the sim for e.g. f150, split 2, sim 123
-bands = 'mf_f090_mf_f150'
-band_idx = 1                # f090 is 0, f150 is 1
-split_num = 2
-sim_num = 123               # has 4 digits (leading 0's), but padding done for us in template
-
-sim = enmap.read_map(
-    join(fdir, fbase_template.format(
-        bands=bands,
-        split_num=split_num,
-        sim_num=sim_num)
-        ),
-    sel=np.s_[band_idx, 0]  # just load f150, remove split axis
-    )
-print(sim.geometry, sim.dtype)
-```
-This should give:
-```python
-((3, 2640, 10800), car:{cdelt:[-0.03333,0.03333],crval:[180,0],crpix:[5400.62,1890.50]}) float32
-```
-As discussed, the `sim` only contains noise power to the Nyquist frequency of the pixelization (for 2 arcmin pixels, `lmax=5400`). But what if we wanted to work with objects in map-space defined at the full resolution of the data, for example a sky mask defined at 0.5 arcmin resolution? We need to project the `sim` to our desired geometry.
-
-Because the `sim` is bandlimited, we can do this losslessly with a spherical harmonic transforms:
-```python
-# first we need the geometry of the pixelization.
-# we can get this from one of the time-domain simulations
-shape, wcs = enmap.read_map_geometry('/global/cfs/cdirs/sobs/sims/mss-0002/RC1.r01/sobs_RC1.r01_LAT_mission_f150_4way_split1_noise_map_car.fits')
-
-# allocate an empty map to hold the sim at full resolution
-sim_fullres = enmap.empty((*sim.shape[:-2], *shape[-2:]), wcs, sim.dtype)
-
-# project sim to alm, then from alm to map
-curvedsky.alm2map(curvedsky.map2alm(sim, lmax=5400), sim_fullres)
-```
-Finally, we can plot the sim:
-```python
-# can also plot all three components in one call, but the colorbar will
-# be shared for all three plots. this is visually nicer for components
-# with very different dynamic range, as in this case
-for pol in range(3):
-    enplot.pshow(sim_fullres[pol], downgrade=32, colorbar=True, ticks=15)
-```
 ### Additional simulations
 
 If your analysis needs more simulations, it is possible to draw additional simulations from the provided noise models. This requires installing the [`mnms`](https://github.com/simonsobs/mnms) and [`sofind`](https://github.com/simonsobs/sofind) python libraries. Follow the "quick setup" described in the sofind readme.
 
-Loading or simulating additional maps using mnms:
-```python
-
-from mnms import noise_models as nm
-
-config_name = 'so_lat_mbs_mss0002'
-noise_model_name = 'fdw_mf' # For LF use "fdw_lf", for MF use "fdw_mf" and for UHF use "fdw_uhf"
-qids = ['mfa', 'mfb'] # Simulate f090 and f150 jointly.
-lmax = 5400
-
-model = nm.BaseNoiseModel.from_config(config_name, noise_model_name, qids)
-
-# Draw the simulation. This can be repeated for different sim_idx values.
-sim_idx = 300
-split_idx = 0 # Pick 0, 1, 2 or 3.
-sim = model.get_sim(split_idx, sim_idx, lmax, alm=False, write=False, verbose=True)
-```
+An example of loading or simulating additional maps using `mnms` is provded in the [additional_simulations.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/additional_simulations.py) script.
 
 For an example of how to generate a larger set of simulations on a cluster, see the [run01](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/runs/run01) script.
 For reference, drawing the simulations provided here took approximately 5 hours using 20 MPI tasks distributed over 5 128-core nodes.

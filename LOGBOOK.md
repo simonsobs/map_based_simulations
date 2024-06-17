@@ -2,7 +2,7 @@
 
 Date based updates from the map based simulation team
 
-## 8 Juli 2024 - Released LAT map-based noise simulations
+## 8 July 2024 - Released LAT map-based noise simulations
 
 Based on the LAT time-domain ``mss0002`` mission scale simulations, using the directional wavelet noise model of [`mnms`](https://github.com/simonsobs/mnms).
 
