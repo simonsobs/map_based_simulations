@@ -1,6 +1,9 @@
+from packaging.version import Version
 import numpy as np
 from pixell import enmap, curvedsky, enplot
 from os.path import join
+
+assert Version(pixell.__version__) >= Version('0.19'), "We require pixell version > 0.19 (change from libsharp to ducc)"
 
 # Note, this script it set up to be run on NERSC.
 
