@@ -1,0 +1,46 @@
+#!/bin/bash
+#SBATCH --job-name=run01
+#SBATCH --partition=cmbas
+#SBATCH --constraint=rome
+#SBATCH --nodes=5
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=32
+#SBATCH --time=05:00:00
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+module load adri_gcc
+module load adri_base
+
+source /mnt/home/aduivenvoorden/.pyenv/versions/enki/bin/activate
+
+TAG=run01
+MNMSDIR="/mnt/home/aduivenvoorden/local/mnms/scripts"
+
+CONFIG="so_lat_mbs_mss0002"
+LMAX=5400
+
+SIMS_END=299
+
+for FTYPE in 'lf' 'mf' 'uhf'
+do
+    if [ ${FTYPE} = 'lf' ]
+    then
+        QIDS="lfa lfb"
+	NOISEMODEL="fdw_lf"
+    fi
+    if [ ${FTYPE} = 'mf' ]
+    then
+        QIDS="mfa mfb"
+	NOISEMODEL="fdw_mf"
+    fi
+    if [ ${FTYPE} = 'uhf' ]
+    then
+        QIDS="uhfa uhfb"
+	NOISEMODEL="fdw_uhf"
+    fi
+    
+    srun -u --cpu-bind=cores -c $SLURM_CPUS_PER_TASK python ${MNMSDIR}/noise_gen.py --config-name ${CONFIG} --noise-model-name ${NOISEMODEL} --qid ${QIDS} --lmax ${LMAX} --use-mpi
+    srun -u --cpu-bind=cores -c $SLURM_CPUS_PER_TASK python ${MNMSDIR}/noise_sim.py --config-name ${CONFIG} --noise-model-name ${NOISEMODEL} --qid ${QIDS} --lmax ${LMAX} --use-mpi --maps-start 0 --maps-end ${SIMS_END}
+
+done
