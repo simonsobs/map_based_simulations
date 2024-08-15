@@ -118,21 +118,12 @@ Given that each channel requested a different resolution, we have followed some 
 
 ## Verification
 
-Interactive power spectra plots for all components except CO and radio galaxies, the source notebook is available in the `verification/` folder,
-the B Spectra of the CMB components are affected by high noise due to `ud_grade` performed in the on-the-fly run with PySM inside the notebook.
-If the run is properly executed at Nside 4096, no artificial noise is visible anymore:
-
-* [SAT TT](https://nbviewer.org/gist/zonca/3645fe8042c7d913213f3dbd647be0d5)
-* [LAT TT](https://nbviewer.org/gist/zonca/7026e5f4fd9ef304a89f1c171e43f2ce)
-* [SAT EE](https://nbviewer.org/gist/zonca/612defba6ad8d4137781661cda110bd9)
-* [LAT EE](https://nbviewer.org/gist/zonca/242527ea6bc1bc67085a7f2ae480e2df)
-* [SAT BB](https://nbviewer.org/gist/zonca/c08d6bcdd5b920b459eac77256c1d36b)
-* [LAT BB](https://nbviewer.org/gist/zonca/e9f3eebb8304583f9874cd61da95aeed)
+See [the README in the verification folder](verification/README.md)
 
 ## Known issues
 
 * Websky Radio sources are available only down to 18.7 GHz, the lowest Simons Observatory channels have bandpasses to 10 Ghz, so I created a copy of 18.7 GHz and renamed it to 1.0 GHz. This is the border of the band, should not matter much.
-* Maps of dust created in the first release were erroneously generated with beta and Td ellmax of 2048 due to a bug in PySM, this has been fixed in PySM `3.4.0b9`.
+* Maps of dust created in the first release were erroneously generated with beta and Td ellmax of 2048 due to a bug in PySM, this has been fixed in PySM `3.4.0b9`. See the verification plots before the fix: [SAT TT](https://nbviewer.org/gist/zonca/3645fe8042c7d913213f3dbd647be0d5), [LAT TT](https://nbviewer.org/gist/zonca/7026e5f4fd9ef304a89f1c171e43f2ce), [SAT EE](https://nbviewer.org/gist/zonca/612defba6ad8d4137781661cda110bd9), [LAT EE](https://nbviewer.org/gist/zonca/242527ea6bc1bc67085a7f2ae480e2df), [SAT BB](https://nbviewer.org/gist/zonca/c08d6bcdd5b920b459eac77256c1d36b), [LAT BB](https://nbviewer.org/gist/zonca/e9f3eebb8304583f9874cd61da95aeed)
 
 ## Feedback
 

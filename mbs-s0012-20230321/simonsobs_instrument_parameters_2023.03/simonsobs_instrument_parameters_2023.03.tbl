@@ -2,19 +2,19 @@
 \ Text file in IPAC table format, read with astropy
 \ from astropy.table import QTable
 \ QTable.read('filename.tbl', format='ascii.ipac')
-|telescope|band|  fwhm|center_frequency|low_frequency|high_frequency|nside|car_resol|    bandpass_file|
-|     char|char|double|          double|       double|        double| long|   double|             char|
-|         |    |arcmin|             GHz|          GHz|           GHz|     |   arcmin|                 |
-|     null|null|  null|            null|         null|          null| null|     null|             null|
-       LAT f030    7.4             25.7          21.7           29.7  2048       2.0 bandpass_f030.tbl 
-       LAT f040    5.1             38.9          30.9           46.9  2048       2.0 bandpass_f040.tbl 
-       LAT f090    2.2             92.0          79.0          105.0  8192       0.5 bandpass_f090.tbl 
-       LAT f150    1.4            147.5         130.0          165.0  8192       0.5 bandpass_f150.tbl 
-       LAT f230    1.0            225.7         196.7          254.7  8192       0.5 bandpass_f230.tbl 
-       LAT f290    0.9            285.4         258.4          312.4  8192       0.5 bandpass_f290.tbl 
-       SAT f030   91.0             25.7          21.7           29.7   128      12.0 bandpass_f030.tbl 
-       SAT f040   63.0             38.9          30.9           46.9   128      12.0 bandpass_f040.tbl 
-       SAT f090   30.0             92.0          79.0          105.0   512       4.0 bandpass_f090.tbl 
-       SAT f150   17.0            147.5         130.0          165.0   512       4.0 bandpass_f150.tbl 
-       SAT f230   11.0            225.7         196.7          254.7  1024       4.0 bandpass_f230.tbl 
-       SAT f290    9.0            285.4         258.4          312.4  1024       4.0 bandpass_f290.tbl 
+|telescope|band|     tag|  fwhm|center_frequency|low_frequency|high_frequency|nside|car_resol|    bandpass_file|
+|     char|char|    char|double|          double|       double|        double| long|   double|             char|
+|         |    |        |arcmin|             GHz|          GHz|           GHz|     |   arcmin|                 |
+|     null|null|        |  null|            null|         null|          null| null|     null|             null|
+       LAT f030 LAT_f030    7.4             25.7          21.7           29.7  2048       2.0 bandpass_f030.tbl 
+       LAT f040 LAT_f040    5.1             38.9          30.9           46.9  2048       2.0 bandpass_f040.tbl 
+       LAT f090 LAT_f090    2.2             92.0          79.0          105.0  8192       0.5 bandpass_f090.tbl 
+       LAT f150 LAT_f150    1.4            147.5         130.0          165.0  8192       0.5 bandpass_f150.tbl 
+       LAT f230 LAT_f230    1.0            225.7         196.7          254.7  8192       0.5 bandpass_f230.tbl 
+       LAT f290 LAT_f290    0.9            285.4         258.4          312.4  8192       0.5 bandpass_f290.tbl 
+       SAT f030 SAT_f030   91.0             25.7          21.7           29.7   128      12.0 bandpass_f030.tbl 
+       SAT f040 SAT_f040   63.0             38.9          30.9           46.9   128      12.0 bandpass_f040.tbl 
+       SAT f090 SAT_f090   30.0             92.0          79.0          105.0   512       4.0 bandpass_f090.tbl 
+       SAT f150 SAT_f150   17.0            147.5         130.0          165.0   512       4.0 bandpass_f150.tbl 
+       SAT f230 SAT_f230   11.0            225.7         196.7          254.7  1024       4.0 bandpass_f230.tbl 
+       SAT f290 SAT_f290    9.0            285.4         258.4          312.4  1024       4.0 bandpass_f290.tbl 
