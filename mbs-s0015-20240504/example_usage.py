@@ -1,5 +1,6 @@
 from packaging.version import Version
 import numpy as np
+import pixell
 from pixell import enmap, curvedsky, enplot
 from os.path import join
 
@@ -60,7 +61,9 @@ sim_fullres = enmap.empty((*sim.shape[:-2], *shape[-2:]), wcs, sim.dtype)
 # Low res version for quick testing:
 curvedsky.alm2map(curvedsky.map2alm(sim, lmax=300), sim_fullres)
 
-# Finally, we can plot the sim:
-for pol in range(3):
-    plot = enplot.plot(sim_fullres[pol], downgrade=32, colorbar=True, ticks=15)
+# Finally, we can save plots of the I, Q and U components of the simulated map as png files.
+# Note that if you are working in an interactive notebook, you can replace the
+# "enplot.plot" and "enplot.write" calls with "enplot.pshow" to just show the plots.
+for pidx, pol in enumerate(['I', 'Q', 'U']):
+    plot = enplot.plot(sim_fullres[pidx], downgrade=32, colorbar=True, ticks=15)
     enplot.write(f'example_plot_{pol}', plot)
