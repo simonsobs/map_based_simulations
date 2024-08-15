@@ -8,10 +8,17 @@ from mnms import utils
 opj = os.path.join
 comm = MPI.COMM_WORLD
 
+# NOTE, these are paths on the CCA rusty cluster.
 imapdir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/renamed'
 simdir = '/mnt/home/aduivenvoorden/project/actpol/maps/mnms/sims'
 maskdir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/masks'
 imgdir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/compared'
+
+# Paths on NERSC would be:
+# imapdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed'
+# simdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/sims'
+# maskdir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/masks'
+# imgdir = 'path/to/your/dir'
 
 os.makedirs(imgdir, exist_ok=True)
 

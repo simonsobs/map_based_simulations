@@ -11,8 +11,14 @@ from mnms import utils
 
 opj = os.path.join
 
+# NOTE, these are paths on the CCA rusty cluster.
 idir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002/RC1.r01'
 odir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/renamed'
+
+# Paths on NERSC would be:
+# idir = '/global/cfs/cdirs/sobs/sims/mss-0002/RC1.r01'
+# odir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed'
+
 os.makedirs(odir, exist_ok=True)
 
 freqs = ['f030', 'f040', 'f090', 'f150', 'f230', 'f290']

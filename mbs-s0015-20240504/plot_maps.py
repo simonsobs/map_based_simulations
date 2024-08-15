@@ -7,8 +7,13 @@ from pixell import enmap, enplot
 comm = MPI.COMM_WORLD
 opj = os.path.join
 
+# NOTE, these are paths on the CCA rusty cluster.
 idir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002/RC1.r01'
 imgdir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/input/img'
+
+# Paths on NERSC would be:
+# idir = '/global/cfs/cdirs/sobs/sims/mss-0002/RC1.r01'
+# imgdir = 'your/own/path'
 
 if comm.rank == 0:
     os.makedirs(imgdir, exist_ok=True)

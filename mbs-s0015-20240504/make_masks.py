@@ -9,8 +9,14 @@ from pixell import enmap, enplot
 comm = MPI.COMM_WORLD
 opj = os.path.join
 
+# NOTE, these are paths on the CCA rusty cluster.
 idir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002/RC1.r01'
 odir = '/mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/masks'
+
+# Paths on NERSC would be:
+# idir = '/global/cfs/cdirs/sobs/sims/mss-0002/RC1.r01'
+# odir = '/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/masks'
+
 imgdir = opj(odir, 'img')
 
 if comm.rank == 0:
