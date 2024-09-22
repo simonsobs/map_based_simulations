@@ -50,7 +50,7 @@ The covariance matrices from which simulations are drawn are available here:
 
     /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/models
 
-The `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed` directory contains ancillary map files needed to draw from the covariance matrices or to generate new matrices. See the [preprocess_maps.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/preprocess_maps.py) script to see how these files were generated.
+The `/global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed` directory contains ancillary map files needed to draw from the covariance matrices or to generate new matrices. See the [preprocess_maps.py](https://github.com/simonsobs/map_based_simulations/blob/master/mbs-s0015-20240504/preprocess_maps.py) script to see how these files were generated.
 
 ## Metadata
 
@@ -90,15 +90,15 @@ RADESYS = 'ICRS'               / Equatorial coordinate system                   
 
 ## Example usage
 
-For a simple example that loads and interacts with the simulations, see the [example_usage.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/example_usage.py) script.
+For a simple example that loads and interacts with the simulations, see the [example_usage.py](https://github.com/simonsobs/map_based_simulations/blob/master/mbs-s0015-20240504/example_usage.py) script.
 
 ### Additional simulations
 
 If your analysis needs more simulations, it is possible to draw additional simulations from the provided noise models. This requires installing the [`mnms`](https://github.com/simonsobs/mnms) and [`sofind`](https://github.com/simonsobs/sofind) python libraries. Follow the "quick setup" described in the sofind readme.
 
-An example of loading or simulating additional maps using `mnms` is provded in the [additional_simulations.py](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/additional_simulations.py) script.
+An example of loading or simulating additional maps using `mnms` is provded in the [additional_simulations.py](https://github.com/simonsobs/map_based_simulations/blob/master/mbs-s0015-20240504/additional_simulations.py) script.
 
-For an example of how to generate a larger set of simulations on a cluster, see the [run01](https://github.com/simonsobs/map_based_simulations/blob/mbs_s0015_20240504/mbs-s0015-20240504/runs/run01) script.
+For an example of how to generate a larger set of simulations on a cluster, see the [run01](https://github.com/simonsobs/map_based_simulations/blob/master/mbs-s0015-20240504/runs/run01) script.
 For reference, drawing the simulations provided here took approximately 5 hours using 20 MPI tasks distributed over 5 128-core nodes.
 
 ## Known issues
