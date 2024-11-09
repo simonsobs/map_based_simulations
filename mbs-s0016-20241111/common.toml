@@ -1,9 +1,10 @@
 lmax_over_nside = 2.5
 healpix = true
-car = false
+car = true
 output_folder = "output/{tag}"
 output_filename_template= "cmbs4_{tag}_uKCMB_{band}_nside{nside}.fits"
+output_filename_template= "sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
 unit = "uK_CMB"
 num = 0
 output_reference_frame = "C"
-instrument_parameters = "instrument_model/cmbs4_instrument_model.tbl"
+instrument_parameters = "instrument_model/instrument_model.tbl"
