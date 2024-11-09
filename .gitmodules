@@ -1,3 +1,3 @@
 [submodule "mbs-s0016-20241111/bandpass_sampler"]
-	path = mbs-s0016-20241111/bandpass_sampler
+	path = mbs-s0016-20241111/instrument_model/bandpass_sampler
 	url = https://github.com/simonsobs/bandpass_sampler/
