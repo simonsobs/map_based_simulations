@@ -1,0 +1,4 @@
+tag = "radio_rg2"
+
+[pysm_components]
+pysm_components_string = "rg2"

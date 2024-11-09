@@ -1,0 +1,9 @@
+lmax_over_nside = 2.5
+healpix = true
+car = false
+output_folder = "output/{tag}"
+output_filename_template= "cmbs4_{tag}_uKCMB_{band}_nside{nside}.fits"
+unit = "uK_CMB"
+num = 0
+output_reference_frame = "C"
+instrument_parameters = "instrument_model/cmbs4_instrument_model.tbl"
