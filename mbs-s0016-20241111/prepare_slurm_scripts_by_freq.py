@@ -19,6 +19,8 @@ import toml
 config = toml.load("common.toml")
 
 chs = parse_channels(instrument_parameters=config["instrument_parameters"])
+max_jobs = 500
+i_job = 1
 for simulation_type in sims:
     os.makedirs(config["output_folder"].format(tag=simulation_type), exist_ok=True)
     config_file = simulation_type
@@ -35,7 +37,9 @@ for simulation_type in sims:
             nside=channel.nside,
             pixelization="car"
         )
-        if not os.path.exists(output_filename):
+        if os.path.exists(output_filename):
+            print("SKIP", output_filename)
+        else:
             tag = channel.tag.replace(" ", "_")
             filename = f"job_{simulation_type}_{tag}.slurm"
             with open(folder / filename, "w") as f:
@@ -52,3 +56,8 @@ for simulation_type in sims:
                 )
 
             subprocess.run(["sbatch", f"jobs/{filename}"])
+            if i_job == max_jobs:
+                print(f"Submitted {max_jobs} jobs")
+                sys.exit(0)
+            i_job += 1
+
