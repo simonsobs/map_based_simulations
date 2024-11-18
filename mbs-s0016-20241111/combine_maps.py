@@ -6,8 +6,6 @@ from pixell import enmap
 
 extragalactic = ["ksz_ksz1", "tsz_tsz1"]
 all_combined = {
-    "combined_cmb_unlensed_dipole": ["cmb_c3", "dipole"],
-    "combined_cmb_lensing_signal": ["cmb_c4", "-cmb_c3"],
     "combined_foregrounds_mediumcomplexity_norg_nocib": [
         "dust_d10",
         "synchrotron_s5",
@@ -48,7 +46,7 @@ for pixelization in ["healpix", "car"]:
             output_folder = f"output/{tag}/"
             output_filename = (
                 output_folder
-                + f"mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
+                + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
             )
             if not os.path.exists(output_filename):
                 print(20 * "*")
@@ -59,7 +57,7 @@ for pixelization in ["healpix", "car"]:
                     folder = f"output/{content}/"
                     filename = (
                         folder
-                        + f"mbs-s0016-20241111_{telescope}_mission_{band}_{content}_{pixelization}.fits"
+                        + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{content}_{pixelization}.fits"
                     )
                     print("Read", filename)
                     if pixelization == "healpix":
