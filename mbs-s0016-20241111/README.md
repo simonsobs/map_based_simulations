@@ -2,6 +2,12 @@
 
 Tag: `mbs-s0016-20241111`
 
+## TODO
+
+* Run spectra validation scripts
+* Run the new Websky Radio Galaxies Catalog-based components (`rg2` and `rg3`)
+* Create new `extragalactic` combined map
+
 ## Updates
 
 * 2024-11-18: Finished map execution, also reconfigured `f1`, `a2` and `a1` to use `ud_grade` instead of spherical harmonics transforms to avoid ringing in the maps
