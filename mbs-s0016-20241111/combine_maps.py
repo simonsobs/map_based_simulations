@@ -6,30 +6,28 @@ from pixell import enmap
 
 extragalactic = ["ksz_ksz1", "tsz_tsz1"]
 all_combined = {
-    "combined_foregrounds_mediumcomplexity_norg_nocib": [
+    "galactic_foregrounds_mediumcomplexity": [
         "dust_d10",
         "synchrotron_s5",
         "freefree_f1",
         "ame_a1",
         "co_co3",
-    ]
-    + extragalactic,
-    "combined_foregrounds_lowcomplexity_norg_nocib": [
+    ],
+    "galactic_foregrounds_lowcomplexity": [
         "dust_d9",
         "synchrotron_s4",
         "freefree_f1",
         "ame_a1",
         "co_co1",
-    ]
-    + extragalactic,
-    "combined_foregrounds_highcomplexity_norg_nocib": [
+    ],
+    "galactic_foregrounds_highcomplexity": [
         "dust_d12",
         "synchrotron_s7",
         "freefree_f1",
         "ame_a2",
         "co_co3",
-    ]
-    + extragalactic,
+    ],
+    "extragalactic_norg_nocib": extragalactic,
 }
 
 chs = QTable.read(
@@ -37,8 +35,10 @@ chs = QTable.read(
     format="ascii.ipac",
 )
 
-for pixelization in ["healpix", "car"]:
-    # for pixelization in ["car"]:
+pixelizations = ["healpix", "car"]
+pixelizations = ["car"]
+pixelizations = ["healpix"]
+for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
             band = row["band"]
