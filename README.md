@@ -7,6 +7,7 @@ Slack channel: `#dm-simulations`
 
 ## Available simulations
 
+* [`mbs-s0016-20241111`](mbs-s0016-20241111/README.md): Galactic, extragalactic, CMB with simulated wafer by wafer bandpasses
 * [`mbs-s0015-20240504`](mbs-s0015-20240504/README.md): Map-based noise simulations based on the LAT `mss-0002` mission scale time-domain simulations
 * [`mbs-s0014-20230920`](mbs-s0014-20230920/README.md): Map-based noise simulations based on the SAT `mbs-noise-sims-sat` time-domain simulations
 * [`mbs-s0013-20230501`](mbs-s0013-20230501/README.md): Map-based noise simulations based on the LAT `scan-s0003` time-domain simulations
