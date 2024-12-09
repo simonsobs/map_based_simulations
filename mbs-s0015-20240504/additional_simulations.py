@@ -5,7 +5,7 @@ noise_model_name = 'fdw_mf' # For LF use "fdw_lf", for MF use "fdw_mf" and for U
 qids = ['mfa', 'mfb'] # Simulate f090 and f150 jointly.
 lmax = 5400
 
-model = nm.BaseNoiseModel.from_config(config_name, noise_model_name, qids)
+model = nm.BaseNoiseModel.from_config(config_name, noise_model_name, *qids)
 
 # Draw the simulation. This can be repeated for different sim_idx values.
 sim_idx = 300
