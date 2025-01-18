@@ -13,6 +13,10 @@ all_combined = {
         "ame_a1",
         "co_co3",
     ],
+    "galactic_foregrounds_d1s1": [
+        "dust_d1",
+        "synchrotron_s1",
+    ],
     "galactic_foregrounds_lowcomplexity": [
         "dust_d9",
         "synchrotron_s4",
