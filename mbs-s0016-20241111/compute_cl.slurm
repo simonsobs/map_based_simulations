@@ -13,5 +13,4 @@ export NUMBA_NUM_THREADS=$OMP_NUM_THREADS
 export HDF5_USE_FILE_LOCKING=FALSE
 export PYTHONUNBUFFERED=1
 
-micromamba activate cmb
 time python compute_cl.py
