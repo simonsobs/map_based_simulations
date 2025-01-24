@@ -8,22 +8,26 @@ import os.path
 
 from astropy.table import QTable
 
-ID = int(os.environ["SLURM_ARRAY_TASK_ID"])
-
 chs = QTable.read(
     "instrument_model/instrument_model.tbl",
     format="ascii.ipac",
 )
-folder = [f for f in glob("output/*") if not f.endswith("pkl")][ID]
-cl = {}
+
+import sys
+if len(sys.argv) > 1:
+    folder = sys.argv[1]
+else:
+    ID = int(os.environ["SLURM_ARRAY_TASK_ID"])
+    folder = [f for f in glob("output/*") if not f.endswith("pkl")][ID]
 print(folder)
 component = os.path.basename(folder)
 
-output_filename = f"output/C_ell_{component}.pkl"
+output_filename = f"output/C_ell/C_ell_{component}.pkl"
 if os.path.exists(output_filename):
     print(f"{output_filename} already exists")
     sys.exit(0)
 
+cl = {}
 for ch in chs:
     try:
         filename = glob(folder + f"/*{ch['band']}*healpix*")[0]
