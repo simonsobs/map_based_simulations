@@ -6,12 +6,11 @@
 #SBATCH --error=logs/compute_cl_%j.out
 #SBATCH --output=logs/compute_cl_%j.out
 #SBATCH --cpus-per-task=48
-#SBATCH --array=0-19
+#SBATCH --array=0-22
 
 export OMP_NUM_THREADS=48
 export NUMBA_NUM_THREADS=$OMP_NUM_THREADS
 export HDF5_USE_FILE_LOCKING=FALSE
 export PYTHONUNBUFFERED=1
 
-micromamba activate cmb
 time python compute_cl.py
