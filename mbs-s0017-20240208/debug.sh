@@ -1,0 +1,9 @@
+export PYTHONUNBUFFERED=1
+export OMP_NUM_THREADS=48
+cfg=cib_cib1.toml
+cfg=ame_a1.toml
+cfg=tsz_tsz1.toml
+cfg=synchrotron_s4.toml
+ch=LAT_f090
+ch=${ch}_w0
+ipython --pdb -- $(which mapsims_run) --verbose --channels=$ch common.toml $cfg
