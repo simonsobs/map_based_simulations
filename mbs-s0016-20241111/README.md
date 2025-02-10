@@ -10,6 +10,7 @@ Tag: `mbs-s0016-20241111`
 
 ## Updates
 
+* 2025-02-10: Added SAT maps executed at 4096 to avoid sharp transitions in time domain due to large pixels, they are located in the `SAT_4096` subfolder of the release, also included the visual maps verification
 * 2025-01-18: Added `s1`, `d1`, and `galactic_foregrounds_d1s1` maps
 * 2024-11-18: Finished map execution, also reconfigured `f1`, `a2` and `a1` to use `ud_grade` instead of spherical harmonics transforms to avoid ringing in the maps
 * 2024-11-11: started map execution
@@ -71,6 +72,8 @@ Maps are in Equatorial Coordinates, `uK_CMB` units, FITS format.
 See [`common.toml`](common.toml) for the naming convention.
 
 Each of the components is available separately, see the TOML files in this repository for the configuration used to run PySM for each component.
+
+All components and combined maps for **SAT at nside 4096** are available in the subfolder `SAT_4096`.
 
 The available combination maps are, (see the [`combine_maps.py` script](combine_maps.py)):
 

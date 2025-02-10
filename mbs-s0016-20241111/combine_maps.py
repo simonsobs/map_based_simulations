@@ -35,19 +35,18 @@ all_combined = {
 }
 
 chs = QTable.read(
-    "instrument_model/instrument_model.tbl",
+    "instrument_model/instrument_model_SAT_4096.tbl",
     format="ascii.ipac",
 )
 
 pixelizations = ["healpix", "car"]
-pixelizations = ["car"]
-pixelizations = ["healpix"]
+
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
             band = row["band"]
             telescope = row["telescope"]
-            output_folder = f"output/{tag}/"
+            output_folder = f"output/SAT_4096/{tag}/"
             output_filename = (
                 output_folder
                 + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
@@ -58,7 +57,7 @@ for pixelization in pixelizations:
                 print(output_filename)
                 for content in components:
                     print(content)
-                    folder = f"output/{content}/"
+                    folder = f"output/SAT_4096/{content}/"
                     filename = (
                         folder
                         + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{content}_{pixelization}.fits"
