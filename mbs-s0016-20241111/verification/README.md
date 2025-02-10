@@ -23,3 +23,9 @@ If the run is properly executed at Nside 4096, no artificial noise is visible an
 * [galactic_foregrounds_lowcomplexity](https://nbviewer.org/gist/zonca/7ea202cd47a003b8592d6c816f1f2fe5)
 * [galactic_foregrounds_mediumcomplexity](https://nbviewer.org/gist/zonca/3f6266027d674fd931e1895fc248b9f1)
 * [galactic_foregrounds_highcomplexity](https://nbviewer.org/gist/zonca/2c7f768d2ab1acd026f64fb120192b3f)
+# Visual inspection of SAT 4096 maps
+
+* [galactic_foregrounds_d1s1](https://nbviewer.org/gist/zonca/d5a8482408a9a0b891e00a7ca8d8d729)
+* [galactic_foregrounds_lowcomplexity](https://nbviewer.org/gist/zonca/882b86cf68fed44bed1fea9f636700a9)
+* [galactic_foregrounds_mediumcomplexity](https://nbviewer.org/gist/zonca/fc513cb86c587ec1376dd15b1d70f6df)
+* [galactic_foregrounds_highcomplexity](https://nbviewer.org/gist/zonca/f2e9ba879353b1bda39067945b298c1c)

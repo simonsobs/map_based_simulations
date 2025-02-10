@@ -28,6 +28,9 @@ for simulation_type in sims:
     hours = 48
     minutes = 00
     for channel in chs:
+        if i_job == max_jobs:
+            print(f"Submitted {max_jobs} jobs")
+            sys.exit(0)
         output_filename = (
             config["output_folder"] + "/" + config["output_filename_template"]
         ).format(
@@ -56,8 +59,5 @@ for simulation_type in sims:
                 )
 
             subprocess.run(["sbatch", f"jobs/{filename}"])
-            if i_job == max_jobs:
-                print(f"Submitted {max_jobs} jobs")
-                sys.exit(0)
             i_job += 1
 
