@@ -4,13 +4,13 @@ Tag: `mbs-s0016-20241111`
 
 ## TODO
 
-* Run spectra validation scripts
 * Run the new Websky Radio Galaxies Catalog-based components (`rg2` and `rg3`)
 * Create new `extragalactic` combined map
 
 ## Updates
 
 * 2025-02-10: Added SAT maps executed at 4096 to avoid sharp transitions in time domain due to large pixels, they are located in the `SAT_4096` subfolder of the release, also included the visual maps verification
+* 2025-01-27: Executed spectra verification scripts
 * 2025-01-18: Added `s1`, `d1`, and `galactic_foregrounds_d1s1` maps
 * 2024-11-18: Finished map execution, also reconfigured `f1`, `a2` and `a1` to use `ud_grade` instead of spherical harmonics transforms to avoid ringing in the maps
 * 2024-11-11: started map execution
