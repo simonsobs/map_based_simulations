@@ -1,6 +1,6 @@
 lmax_over_nside = 2.5
 healpix = true
-car = true
+car = false
 output_folder = "output/{tag}"
 output_filename_template= "sobs_mbs-s0017-20250208_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
 unit = "uK_CMB"
