@@ -4,6 +4,7 @@ Tag: `mbs-s0017-20250208`
 
 ## Updates
 
+* 2025-02-13: Maps executed on Popeye and copied to NERSC
 * 2025-02-08: Created instrument model from NPIPE products and Beyond Planck LFI bandpasses
 
 ## Summary
