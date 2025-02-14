@@ -1,0 +1,17 @@
+\ Text file in IPAC table format, read with astropy
+\ from astropy.table import QTable
+\ QTable.read('filename.tbl', format='ascii.ipac')
+\ Instrument model exported from the Planck NPIPE instrument models
+|telescope|band|center_frequency|              fwhm|nside|   bandpass_file|                          beam_file|
+|     char|char|          double|            double| long|            char|                               char|
+|         |    |             GHz|            arcmin|     |                |                                   |
+|     null|null|            null|              null| null|            null|                               null|
+       LFI  030             30.0       33.102652125  1024 bandpass_030.tbl Bl_TEB_npipe6v20_030GHzx030GHz.fits 
+       LFI  044             44.0        27.94348615  1024 bandpass_044.tbl Bl_TEB_npipe6v20_044GHzx044GHz.fits 
+       LFI  070             70.0 13.076459609999999  1024 bandpass_070.tbl Bl_TEB_npipe6v20_070GHzx070GHz.fits 
+       HFI  100            100.0               9.88  2048 bandpass_100.tbl Bl_TEB_npipe6v20_100GHzx100GHz.fits 
+       HFI  143            143.0               7.18  2048 bandpass_143.tbl Bl_TEB_npipe6v20_143GHzx143GHz.fits 
+       HFI  217            217.0               4.87  2048 bandpass_217.tbl Bl_TEB_npipe6v20_217GHzx217GHz.fits 
+       HFI  353            353.0               4.65  2048 bandpass_353.tbl Bl_TEB_npipe6v20_353GHzx353GHz.fits 
+       HFI  545            545.0               4.72  2048 bandpass_545.tbl     Bl_npipe6v20_545GHzx545GHz.fits 
+       HFI  857            857.0               4.39  2048 bandpass_857.tbl     Bl_npipe6v20_857GHzx857GHz.fits 
