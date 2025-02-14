@@ -1,0 +1,58 @@
+\ Text file in IPAC table format, read with astropy
+\ from astropy.table import QTable
+\ QTable.read('filename.tbl', format='ascii.ipac')
+|telescope|band|center_frequency|  fwhm|nside|
+|     char|char|          double|double| long|
+|         |    |             GHz|arcmin|     |
+|     null|null|            null|  null| null|
+      PICO   20             20.0    5.0  4096 
+      PICO   21             21.0    5.0  4096 
+      PICO   25             25.0    5.0  4096 
+      PICO   27             27.0    5.0  4096 
+      PICO   30             30.0    5.0  4096 
+      PICO   36             36.0    5.0  4096 
+      PICO   39             39.0    5.0  4096 
+      PICO   40             40.0    5.0  4096 
+      PICO   43             43.0    5.0  4096 
+      PICO   44             44.0    5.0  4096 
+      PICO   50             50.0    5.0  4096 
+      PICO   52             52.0    5.0  4096 
+      PICO   60             60.0    5.0  4096 
+      PICO   62             62.0    5.0  4096 
+      PICO   68             68.0    5.0  4096 
+      PICO   70             70.0    5.0  4096 
+      PICO   75             75.0    5.0  4096 
+      PICO   78             78.0    5.0  4096 
+      PICO   85             85.0    5.0  4096 
+      PICO   89             89.0    5.0  4096 
+      PICO   90             90.0    5.0  4096 
+      PICO   95             95.0    5.0  4096 
+      PICO  100            100.0    5.0  4096 
+      PICO  108            108.0    5.0  4096 
+      PICO  119            119.0    5.0  4096 
+      PICO  129            129.0    5.0  4096 
+      PICO  140            140.0    5.0  4096 
+      PICO  143            143.0    5.0  4096 
+      PICO  145            145.0    5.0  4096 
+      PICO  150            150.0    5.0  4096 
+      PICO  155            155.0    5.0  4096 
+      PICO  166            166.0    5.0  4096 
+      PICO  186            186.0    5.0  4096 
+      PICO  195            195.0    5.0  4096 
+      PICO  217            217.0    5.0  4096 
+      PICO  220            220.0    5.0  4096 
+      PICO  223            223.0    5.0  4096 
+      PICO  230            230.0    5.0  4096 
+      PICO  235            235.0    5.0  4096 
+      PICO  268            268.0    5.0  4096 
+      PICO  270            270.0    5.0  4096 
+      PICO  280            280.0    5.0  4096 
+      PICO  321            321.0    5.0  4096 
+      PICO  337            337.0    5.0  4096 
+      PICO  353            353.0    5.0  4096 
+      PICO  385            385.0    5.0  4096 
+      PICO  402            402.0    5.0  4096 
+      PICO  462            462.0    5.0  4096 
+      PICO  555            555.0    5.0  4096 
+      PICO  666            666.0    5.0  4096 
+      PICO  799            799.0    5.0  4096 
