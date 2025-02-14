@@ -3,6 +3,7 @@ import healpy as hp
 import numpy as np
 from astropy.table import QTable
 from pixell import enmap
+from glob import glob
 
 extragalactic = ["ksz_ksz1", "tsz_tsz1"]
 all_combined = {
@@ -31,16 +32,12 @@ all_combined = {
         "ame_a2",
         "co_co3",
     ],
-    "extragalactic_norg_nocib": extragalactic,
 }
 
 chs = QTable.read(
     "instrument_model/instrument_model.tbl",
     format="ascii.ipac",
 )
-
-pixelizations = ["healpix", "car"]
-pixelizations = ["car"]
 pixelizations = ["healpix"]
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
@@ -50,7 +47,7 @@ for pixelization in pixelizations:
             output_folder = f"output/{tag}/"
             output_filename = (
                 output_folder
-                + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
+                + f"sobs_mbs-s0017-20250208_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
             )
             if not os.path.exists(output_filename):
                 print(20 * "*")
@@ -59,10 +56,11 @@ for pixelization in pixelizations:
                 for content in components:
                     print(content)
                     folder = f"output/{content}/"
-                    filename = (
+                    filename = glob(
                         folder
-                        + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{content}_{pixelization}.fits"
-                    )
+                        + f"*_{telescope}_mission_{band}_{content}_{pixelization}.fits"
+                    )[0]
+
                     print("Read", filename)
                     if pixelization == "healpix":
                         m = hp.read_map(
