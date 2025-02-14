@@ -55,13 +55,11 @@ The available combination maps are, (see the [`combine_maps.py` script](combine_
 Radio Galaxies is not included yet, the new Catalog-based component still shows some issues, it will be released in the future, the plan is to have 2 components, `rg2` for the sources > 1mJy generated on-the-fly directly at the target beam and resolution and `rg3`, interpolation-based componet for the fainter sources generated at a fiducial beam and differentially smoothed to the target beam.
 Given we did not have Radio Galaxies, the analysis team recommended to exclude CIB for now, so that we have a set of simulations with no point sources.
 
-**Location at NERSC**, this folder on the Simons Observatory project space only includes the combination maps due to space constraints:
+**Location at NERSC**, requires membership to the `cmb` group for access:
 
-    /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0017-20250208
+    /global/cfs/cdirs/cmb/gsharing/panexp_v1_planck
 
-The entire release, including individual components are available on Perlmutter scratch (accessible from Perlmutter and from the Perlmutter JupyterHub node, it needs membership to the `sobs` group for read access):
-
-    /pscratch/sd/z/zonca/mbs-s0017-20250208
+The dataset is also available via [Globus](https://app.globus.org/file-manager?origin_id=53b2a147-ae9d-4bbf-9d18-3b46d133d4bb&origin_path=%2Fpanexp_v1_planck%2F&two_pane=true)
 
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
 
