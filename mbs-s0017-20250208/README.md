@@ -60,6 +60,8 @@ Given we did not have Radio Galaxies, the analysis team recommended to exclude C
 
     /global/cfs/cdirs/cmb/gsharing/panexp_v1_planck
 
+backed up to tape with the `sobs` user under `mbs/`.
+
 The dataset is also available via [Globus](https://app.globus.org/file-manager?origin_id=53b2a147-ae9d-4bbf-9d18-3b46d133d4bb&origin_path=%2Fpanexp_v1_planck%2F&two_pane=true)
 
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
