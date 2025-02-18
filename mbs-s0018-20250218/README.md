@@ -65,6 +65,8 @@ Given we did not have Radio Galaxies, the analysis team recommended to exclude C
 
     /pscratch/sd/z/zonca/panexp_v1_pico
 
+Backed up to tape under the `sobs` user to `mbs/mbs-0018-panexp_v1_pico.tar`
+
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
 
 ## Model execution
