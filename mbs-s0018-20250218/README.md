@@ -85,6 +85,7 @@ See [the README in the verification folder](verification/README.md)
 ## Known issues
 
 * [Spikes in Synchrotron at high ell](https://github.com/CMB-S4/s4mapbasedsims/issues/29) if Galaxy is not masked. This should not affect much analysis, the galactic plane is always masked.
+* Low frequency maps show shapes of low resolution pixels, see the visual inspection notebooks in the [verification folder](verification/README.md), this is due to the fact that Free-free and AME templates are natively at Nside 512 (they are the same models used in PySM 2). See [the issue in the PySM repository](https://github.com/galsci/pysm/issues/197)
 
 ## Feedback
 
