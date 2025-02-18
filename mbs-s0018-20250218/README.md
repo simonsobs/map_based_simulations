@@ -63,7 +63,7 @@ Given we did not have Radio Galaxies, the analysis team recommended to exclude C
 
 **Location at NERSC**, requires membership to the `cmb` group for access:
 
-    /global/cfs/cdirs/cmb/gsharing/panexp_v1_planck
+    /pscratch/sd/z/zonca/panexp_v1_pico
 
 Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
 
