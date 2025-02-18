@@ -35,7 +35,7 @@ for simulation_type in sims:
             telescope=channel.telescope,
             band=channel.band,
             nside=channel.nside,
-            pixelization="healpix" if config.get("car", False) else "car"
+            pixelization="car" if config.get("car", False) else "healpix"
         )
         if os.path.exists(output_filename):
             print("SKIP", output_filename)
