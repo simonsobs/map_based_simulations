@@ -1,5 +1,9 @@
 # Simulation verification
 
+## Compare 353 GHz PySM to NPIPE Map
+
+* [Run PySM with different bandpasses and compare](https://gist.github.com/zonca/c757aa0bff488231c95c1e6480172b02)
+
 ## CO Lines
 
 [Verify CO Lines notebook](verify_CO.ipynb)
