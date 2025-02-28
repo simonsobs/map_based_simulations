@@ -1,0 +1,5 @@
+tag = "cib_cib1"
+modeling_nside = 4096
+
+[pysm_components]
+pysm_components_string = "cib1"

@@ -1,0 +1,4 @@
+tag = "synchrotron_s5"
+
+[pysm_components]
+pysm_components_string = "s5"

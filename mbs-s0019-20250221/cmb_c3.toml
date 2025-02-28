@@ -1,0 +1,5 @@
+tag = "cmb_c3"
+modeling_nside = 4096
+
+[pysm_components]
+pysm_components_string = "c3"

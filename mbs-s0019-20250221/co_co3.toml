@@ -1,0 +1,5 @@
+tag = "co_co3"
+modeling_nside = 2048
+
+[pysm_components]
+pysm_components_string = "co3"

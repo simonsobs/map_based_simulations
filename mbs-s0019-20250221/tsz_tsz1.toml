@@ -1,0 +1,5 @@
+tag = "tsz_tsz1"
+modeling_nside = 8192
+
+[pysm_components]
+pysm_components_string = "tsz1"
