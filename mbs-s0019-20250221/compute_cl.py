@@ -30,7 +30,7 @@ if os.path.exists(output_filename):
 cl = {}
 for ch in chs:
     try:
-        filename = glob(folder + f"/*{ch['band']}*healpix*")[0]
+        filename = glob(folder + f"/*{ch['band']}_*healpix*")[0]
     except IndexError:
         print(folder + f"*{ch['band']}* NOT FOUND " + ("*" * 20))
         break
