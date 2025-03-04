@@ -1,0 +1,33 @@
+2025-02-27 13:13:02,856:INFO:mapsims:Parsing configuration from common.toml, synchrotron_s7.toml
+2025-02-27 13:13:02,860:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:02,866:INFO:mapsims:Channel Ka
+2025-02-27 13:13:02,874:INFO:mapsims:Beam from instrument_model/beam_Ka.tbl
+2025-02-27 13:13:02,879:INFO:mapsims:Bandpass from instrument_model/bandpass_Ka.tbl
+2025-02-27 13:13:02,880:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:02,882:INFO:mapsims:Channel Ka
+2025-02-27 13:13:02,886:INFO:mapsims:Beam from instrument_model/beam_Ka.tbl
+2025-02-27 13:13:02,888:INFO:mapsims:Bandpass from instrument_model/bandpass_Ka.tbl
+2025-02-27 13:13:02,889:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:13:02,894:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:13:02,896:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_template_nside2048_2023.02.25.fits
+2025-02-27 13:13:05,080:INFO:pysm3:Retrieve data for synch/synch_beta_nside2048_2023.02.16.fits (if not cached already)
+2025-02-27 13:13:05,550:INFO:pysm3:Retrieve data for synch/synch_curvature_nside2048_2023.02.17.fits (if not cached already)
+2025-02-27 13:13:05,886:INFO:mapsims:Processing channel Channel Ka
+2025-02-27 13:13:05,887:INFO:mapsims:Bandpass integration for Channel Ka
+2025-02-27 13:16:07,541:INFO:pysm3:Removing 21/201 points below 1e-10
+2025-02-27 13:16:07,934:INFO:mapsims:Smoothing and coord-transform for Channel Ka
+2025-02-27 13:16:07,935:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:16:09,539:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:16:09,540:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:16:09,553:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:16:09,565:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:16:09,578:INFO:pysm3:Rotate Alm
+2025-02-27 13:16:11,534:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:16:11,770:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Ka_synchrotron_s7_healpix.fits
+2025-02-27 13:16:11,771:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:16:11,780:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:16:11,976:INFO:mapsims:Writing output map
+
+real	3m14.158s
+user	37m24.243s
+sys	2m29.219s

@@ -1,0 +1,34 @@
+2025-02-27 13:13:04,421:INFO:mapsims:Parsing configuration from common.toml, synchrotron_s1.toml
+2025-02-27 13:13:04,424:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:04,432:INFO:mapsims:Channel Q
+2025-02-27 13:13:04,440:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:13:04,445:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:13:04,447:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:04,449:INFO:mapsims:Channel Q
+2025-02-27 13:13:04,453:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:13:04,455:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:13:04,455:INFO:mapsims:Nside: 512, Modeling Nside: 512, Ellmax: 1280
+2025-02-27 13:13:04,495:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:13:04,497:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/synch_t_new.fits
+2025-02-27 13:13:04,554:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/synch_q_new.fits
+2025-02-27 13:13:04,600:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/synch_u_new.fits
+2025-02-27 13:13:04,648:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/synch_beta.fits
+2025-02-27 13:13:04,688:INFO:mapsims:Processing channel Channel Q
+2025-02-27 13:13:04,688:INFO:mapsims:Bandpass integration for Channel Q
+2025-02-27 13:13:16,901:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 13:13:16,930:INFO:mapsims:Smoothing and coord-transform for Channel Q
+2025-02-27 13:13:22,134:INFO:pysm3:Used map2alm_lsq, converged in 8 iterations,residual relative error 0.074
+2025-02-27 13:13:22,134:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:13:22,134:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:13:22,153:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:13:22,172:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:13:22,191:INFO:pysm3:Rotate Alm
+2025-02-27 13:13:24,307:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:13:24,544:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Q_synchrotron_s1_healpix.fits
+2025-02-27 13:13:24,544:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:13:24,554:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:13:24,777:INFO:mapsims:Writing output map
+
+real	0m26.737s
+user	7m37.673s
+sys	1m0.225s

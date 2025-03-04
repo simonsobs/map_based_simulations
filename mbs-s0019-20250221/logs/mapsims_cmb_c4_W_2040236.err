@@ -1,0 +1,37 @@
+2025-02-27 13:14:03,829:INFO:mapsims:Parsing configuration from common.toml, cmb_c4.toml
+2025-02-27 13:14:03,830:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:14:03,832:INFO:mapsims:Channel W
+2025-02-27 13:14:03,837:INFO:mapsims:Beam from instrument_model/beam_W.tbl
+2025-02-27 13:14:03,838:INFO:mapsims:Bandpass from instrument_model/bandpass_W.tbl
+2025-02-27 13:14:03,839:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:14:03,840:INFO:mapsims:Channel W
+2025-02-27 13:14:03,844:INFO:mapsims:Beam from instrument_model/beam_W.tbl
+2025-02-27 13:14:03,845:INFO:mapsims:Bandpass from instrument_model/bandpass_W.tbl
+2025-02-27 13:14:03,845:INFO:mapsims:Nside: 512, Modeling Nside: 4096, Ellmax: 1280
+2025-02-27 13:14:03,847:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:14:03,849:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:03,851:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:03,852:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:03,854:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_I_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:05,516:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_Q_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:07,217:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cmb/map_U_lensed_alm_seed1_nside4096.fits
+2025-02-27 13:14:10,589:INFO:mapsims:Processing channel Channel W
+2025-02-27 13:14:10,589:INFO:mapsims:Bandpass integration for Channel W
+2025-02-27 13:14:10,591:INFO:pysm3:Removing 5/201 points below 1e-10
+2025-02-27 13:14:12,673:INFO:pysm3:Removing 5/201 points below 1e-10
+2025-02-27 13:14:13,419:INFO:mapsims:Smoothing and coord-transform for Channel W
+2025-02-27 13:14:13,421:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:14:18,657:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:14:18,657:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:14:18,669:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:14:18,682:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:14:18,695:INFO:pysm3:Rotate Alm
+2025-02-27 13:14:20,689:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:14:20,920:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_W_cmb_c4_healpix.fits
+2025-02-27 13:14:20,920:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:14:20,929:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:14:21,125:INFO:mapsims:Writing output map
+
+real	0m19.407s
+user	1m45.891s
+sys	0m8.369s

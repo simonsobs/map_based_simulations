@@ -1,0 +1,48 @@
+2025-02-27 13:29:46,841:INFO:mapsims:Parsing configuration from common.toml, dust_d12.toml
+2025-02-27 13:29:46,842:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:29:46,845:INFO:mapsims:Channel Q
+2025-02-27 13:29:46,847:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:29:46,849:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:29:46,849:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:29:46,851:INFO:mapsims:Channel Q
+2025-02-27 13:29:46,853:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:29:46,855:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:29:46,855:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:29:46,857:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:29:49,184:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl1.fits
+2025-02-27 13:29:51,638:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl2.fits
+2025-02-27 13:29:53,770:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl3.fits
+2025-02-27 13:29:55,917:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl4.fits
+2025-02-27 13:29:58,080:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl5.fits
+2025-02-27 13:30:00,109:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_ampl6.fits
+2025-02-27 13:30:11,933:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind1.fits
+2025-02-27 13:30:13,307:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind2.fits
+2025-02-27 13:30:14,414:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind3.fits
+2025-02-27 13:30:15,750:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind4.fits
+2025-02-27 13:30:16,818:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind5.fits
+2025-02-27 13:30:18,117:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_specind6.fits
+2025-02-27 13:30:20,035:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp1.fits
+2025-02-27 13:30:21,482:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp2.fits
+2025-02-27 13:30:22,980:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp3.fits
+2025-02-27 13:30:24,318:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp4.fits
+2025-02-27 13:30:25,600:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp5.fits
+2025-02-27 13:30:27,217:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/mkd_dust/2048/thermaldust_temp6.fits
+2025-02-27 13:30:28,663:INFO:mapsims:Processing channel Channel Q
+2025-02-27 13:30:28,663:INFO:mapsims:Bandpass integration for Channel Q
+2025-02-27 15:04:41,213:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 15:04:41,590:INFO:mapsims:Smoothing and coord-transform for Channel Q
+2025-02-27 15:04:41,592:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 15:04:43,118:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 15:04:43,118:INFO:pysm3:Using the same beam for all components
+2025-02-27 15:04:43,131:INFO:pysm3:Using the same beam for all components
+2025-02-27 15:04:43,144:INFO:pysm3:Using the same beam for all components
+2025-02-27 15:04:43,157:INFO:pysm3:Rotate Alm
+2025-02-27 15:04:45,267:INFO:pysm3:Alm to map HEALPix
+2025-02-27 15:04:45,497:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Q_dust_d12_healpix.fits
+2025-02-27 15:04:45,498:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 15:04:45,507:INFO:mapsims:Reorder ring to nest
+2025-02-27 15:04:45,754:INFO:mapsims:Writing output map
+
+real	95m1.273s
+user	255m7.921s
+sys	32m9.275s

@@ -1,0 +1,5 @@
+tag = "ame_a2"
+modeling_nside = 512
+
+[pysm_components]
+pysm_components_string = "a2"

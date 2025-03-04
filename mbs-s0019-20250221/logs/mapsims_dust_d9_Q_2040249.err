@@ -1,0 +1,31 @@
+2025-02-27 13:16:15,244:INFO:mapsims:Parsing configuration from common.toml, dust_d9.toml
+2025-02-27 13:16:15,246:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:16:15,250:INFO:mapsims:Channel Q
+2025-02-27 13:16:15,257:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:16:15,260:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:16:15,261:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:16:15,263:INFO:mapsims:Channel Q
+2025-02-27 13:16:15,266:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:16:15,268:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:16:15,268:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:16:15,271:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:16:15,273:INFO:pysm3:Retrieve data for dust_gnilc/gnilc_dust_template_nside2048_2023.02.10.fits (if not cached already)
+2025-02-27 13:16:16,648:INFO:mapsims:Processing channel Channel Q
+2025-02-27 13:16:16,648:INFO:mapsims:Bandpass integration for Channel Q
+2025-02-27 13:21:54,749:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 13:21:55,139:INFO:mapsims:Smoothing and coord-transform for Channel Q
+2025-02-27 13:21:55,141:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:21:56,704:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:21:56,704:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:21:56,717:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:21:56,730:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:21:56,742:INFO:pysm3:Rotate Alm
+2025-02-27 13:21:58,845:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:21:59,075:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Q_dust_d9_healpix.fits
+2025-02-27 13:21:59,075:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:21:59,084:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:21:59,283:INFO:mapsims:Writing output map
+
+real	5m46.255s
+user	10m10.467s
+sys	1m43.188s

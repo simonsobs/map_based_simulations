@@ -1,0 +1,13 @@
+\ Text file in IPAC table format, read with astropy
+\ from astropy.table import QTable
+\ QTable.read('filename.tbl', format='ascii.ipac')
+\ Instrument model exported from Lambda WMAP DR5
+|telescope|band|  fwhm|  center_frequency|nside|  bandpass_file|  beam_file|
+|     char|char|double|            double| long|           char|       char|
+|         |    |arcmin|               GHz|     |               |           |
+|     null|null|  null|              null| null|           null|       null|
+      WMAP    K   52.8 22.451910974502667   512  bandpass_K.tbl  beam_K.tbl 
+      WMAP   Ka   39.6 32.706607212937314   512 bandpass_Ka.tbl beam_Ka.tbl 
+      WMAP    Q   30.6  40.36343387766631   512  bandpass_Q.tbl  beam_Q.tbl 
+      WMAP    V   21.0  60.07932358223898   512  bandpass_V.tbl  beam_V.tbl 
+      WMAP    W   13.2  92.82552325276862   512  bandpass_W.tbl  beam_W.tbl 

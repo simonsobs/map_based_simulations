@@ -1,0 +1,32 @@
+2025-02-27 13:21:56,072:INFO:mapsims:Parsing configuration from common.toml, tsz_tsz1.toml
+2025-02-27 13:21:56,073:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:21:56,075:INFO:mapsims:Channel K
+2025-02-27 13:21:56,130:INFO:mapsims:Beam from instrument_model/beam_K.tbl
+2025-02-27 13:21:56,136:INFO:mapsims:Bandpass from instrument_model/bandpass_K.tbl
+2025-02-27 13:21:56,137:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:21:56,140:INFO:mapsims:Channel K
+2025-02-27 13:21:56,145:INFO:mapsims:Beam from instrument_model/beam_K.tbl
+2025-02-27 13:21:56,147:INFO:mapsims:Bandpass from instrument_model/bandpass_K.tbl
+2025-02-27 13:21:56,147:INFO:mapsims:Nside: 512, Modeling Nside: 8192, Ellmax: 1280
+2025-02-27 13:21:56,150:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:21:56,152:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/tsz_8192_hp.fits
+2025-02-27 13:21:56,154:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/tsz_8192_hp.fits
+2025-02-27 13:22:05,276:INFO:mapsims:Processing channel Channel K
+2025-02-27 13:22:05,277:INFO:mapsims:Bandpass integration for Channel K
+2025-02-27 13:33:18,137:INFO:pysm3:Removing 11/201 points below 1e-10
+2025-02-27 13:33:24,480:INFO:mapsims:Smoothing and coord-transform for Channel K
+2025-02-27 13:33:24,482:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:33:47,930:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:33:47,930:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:47,943:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:47,956:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:47,969:INFO:pysm3:Rotate Alm
+2025-02-27 13:33:49,736:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:33:49,972:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_K_tsz_tsz1_healpix.fits
+2025-02-27 13:33:49,972:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:33:49,980:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:33:50,192:INFO:mapsims:Writing output map
+
+real	11m56.447s
+user	19m39.974s
+sys	10m23.591s

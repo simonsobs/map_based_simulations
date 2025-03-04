@@ -1,0 +1,5 @@
+tag = "freefree_f1"
+modeling_nside = 512
+
+[pysm_components]
+pysm_components_string = "f1"
