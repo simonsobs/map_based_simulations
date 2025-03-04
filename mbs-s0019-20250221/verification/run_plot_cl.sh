@@ -1,4 +1,6 @@
+echo
 echo "## Spectra" >> README.md
+echo
 for pol in T E B
 do
     papermill plot_cl.ipynb out_plot_cl_${pol}.ipynb -p pol $pol

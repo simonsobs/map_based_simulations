@@ -7,7 +7,8 @@
 * [galactic_foregrounds_mediumcomplexity](https://nbviewer.org/gist/zonca/21cee4137e87f43fb3d42510d886945a)
 * [galactic_foregrounds_highcomplexity](https://nbviewer.org/gist/zonca/94aeaeac78655a859685cbc37f8e88e3)
 
-# Spectra
-* [T](https://nbviewer.org/gist/zonca/c3a1711e68a41049b9069728ab7e5850)
-* [E](https://nbviewer.org/gist/zonca/3ca9595886de1c88802db8842bf6020d)
-* [B](https://nbviewer.org/gist/zonca/55a220a2dd3328f161c5098ef01bac8a)
+## Spectra
+
+* [T](https://nbviewer.org/gist/zonca/dd3c68c5b0ff6f9b026807d968d80863)
+* [E](https://nbviewer.org/gist/zonca/ac98064cb6a6bdb8c922833c9ee70d12)
+* [B](https://nbviewer.org/gist/zonca/13085054be175f702aa5ca88b2ac57de)
