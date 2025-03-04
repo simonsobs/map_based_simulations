@@ -4,6 +4,8 @@ Tag: `mbs-s0019-20250221`
 
 ## Updates
 
+* 2025-03-03: Completed verification and copied data to NERSC
+* 2025-02-28: Executed simulation
 * 2025-02-27: Created instrument model
 
 ## Summary
