@@ -1,0 +1,36 @@
+2025-02-27 13:34:38,874:INFO:mapsims:Parsing configuration from common.toml, ame_a1.toml
+2025-02-27 13:34:38,875:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:34:38,877:INFO:mapsims:Channel W
+2025-02-27 13:34:38,882:INFO:mapsims:Beam from instrument_model/beam_W.tbl
+2025-02-27 13:34:38,883:INFO:mapsims:Bandpass from instrument_model/bandpass_W.tbl
+2025-02-27 13:34:38,884:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:34:38,885:INFO:mapsims:Channel W
+2025-02-27 13:34:38,889:INFO:mapsims:Beam from instrument_model/beam_W.tbl
+2025-02-27 13:34:38,890:INFO:mapsims:Bandpass from instrument_model/bandpass_W.tbl
+2025-02-27 13:34:38,890:INFO:mapsims:Nside: 512, Modeling Nside: 512, Ellmax: 1280
+2025-02-27 13:34:38,893:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:34:38,894:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2025-02-27 13:34:38,927:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2025-02-27 13:34:38,958:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2025-02-27 13:34:38,965:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2025-02-27 13:34:39,002:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2025-02-27 13:34:39,006:INFO:mapsims:Processing channel Channel W
+2025-02-27 13:34:39,006:INFO:mapsims:Bandpass integration for Channel W
+2025-02-27 13:35:21,554:INFO:pysm3:Removing 5/201 points below 1e-10
+2025-02-27 13:35:21,581:INFO:pysm3:Removing 5/201 points below 1e-10
+2025-02-27 13:35:21,608:INFO:mapsims:Smoothing and coord-transform for Channel W
+2025-02-27 13:35:26,562:INFO:pysm3:Used map2alm_lsq, converged in 7 iterations,residual relative error 0.16
+2025-02-27 13:35:26,562:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:35:26,562:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:35:26,575:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:35:26,588:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:35:26,601:INFO:pysm3:Rotate Alm
+2025-02-27 13:35:28,563:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:35:28,787:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_W_ame_a1_healpix.fits
+2025-02-27 13:35:28,788:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:35:28,796:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:35:29,046:INFO:mapsims:Writing output map
+
+real	0m52.483s
+user	6m59.105s
+sys	0m52.319s

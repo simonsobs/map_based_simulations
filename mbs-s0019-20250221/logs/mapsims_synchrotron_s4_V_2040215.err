@@ -1,0 +1,31 @@
+2025-02-27 13:13:02,911:INFO:mapsims:Parsing configuration from common.toml, synchrotron_s4.toml
+2025-02-27 13:13:02,914:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:02,919:INFO:mapsims:Channel V
+2025-02-27 13:13:02,928:INFO:mapsims:Beam from instrument_model/beam_V.tbl
+2025-02-27 13:13:02,933:INFO:mapsims:Bandpass from instrument_model/bandpass_V.tbl
+2025-02-27 13:13:02,934:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:13:02,935:INFO:mapsims:Channel V
+2025-02-27 13:13:02,940:INFO:mapsims:Beam from instrument_model/beam_V.tbl
+2025-02-27 13:13:02,942:INFO:mapsims:Bandpass from instrument_model/bandpass_V.tbl
+2025-02-27 13:13:02,942:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:13:02,947:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:13:02,949:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_template_nside2048_2023.02.25.fits
+2025-02-27 13:13:05,102:INFO:mapsims:Processing channel Channel V
+2025-02-27 13:13:05,103:INFO:mapsims:Bandpass integration for Channel V
+2025-02-27 13:15:34,661:INFO:pysm3:Removing 14/201 points below 1e-10
+2025-02-27 13:15:35,055:INFO:mapsims:Smoothing and coord-transform for Channel V
+2025-02-27 13:15:35,056:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:15:36,673:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:15:36,673:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:15:36,686:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:15:36,699:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:15:36,712:INFO:pysm3:Rotate Alm
+2025-02-27 13:15:38,839:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:15:39,070:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_V_synchrotron_s4_healpix.fits
+2025-02-27 13:15:39,070:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:15:39,080:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:15:39,291:INFO:mapsims:Writing output map
+
+real	2m41.485s
+user	11m5.473s
+sys	2m25.941s

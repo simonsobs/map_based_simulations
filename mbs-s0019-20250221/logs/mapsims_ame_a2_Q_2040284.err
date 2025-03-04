@@ -1,0 +1,44 @@
+2025-02-27 13:31:31,804:INFO:mapsims:Parsing configuration from common.toml, ame_a2.toml
+2025-02-27 13:31:31,806:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:31:31,808:INFO:mapsims:Channel Q
+2025-02-27 13:31:31,814:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:31:31,817:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:31:31,818:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:31:31,819:INFO:mapsims:Channel Q
+2025-02-27 13:31:31,821:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:31:31,823:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:31:31,823:INFO:mapsims:Nside: 512, Modeling Nside: 512, Ellmax: 1280
+2025-02-27 13:31:31,826:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:31:31,828:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_t_new.fits
+2025-02-27 13:31:31,909:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame_nu_peak_0.fits
+2025-02-27 13:31:31,960:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2025-02-27 13:31:31,968:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2025-02-27 13:31:32,019:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2025-02-27 13:31:32,021:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2025-02-27 13:31:32,082:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2025-02-27 13:31:32,088:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/ame2_t_new.fits
+2025-02-27 13:31:32,138:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/emissivity.txt
+2025-02-27 13:31:32,143:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2025-02-27 13:31:32,179:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_u_new.fits
+2025-02-27 13:31:32,181:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2025-02-27 13:31:32,257:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/pysm_2/dust_q_new.fits
+2025-02-27 13:31:32,261:INFO:mapsims:Processing channel Channel Q
+2025-02-27 13:31:32,261:INFO:mapsims:Bandpass integration for Channel Q
+2025-02-27 13:32:24,990:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 13:32:25,005:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 13:32:25,021:INFO:mapsims:Smoothing and coord-transform for Channel Q
+2025-02-27 13:32:30,932:INFO:pysm3:Used map2alm_lsq, converged in 8 iterations,residual relative error 0.047
+2025-02-27 13:32:30,932:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:32:30,933:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:32:30,946:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:32:30,959:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:32:30,972:INFO:pysm3:Rotate Alm
+2025-02-27 13:32:33,104:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:32:33,337:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Q_ame_a2_healpix.fits
+2025-02-27 13:32:33,337:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:32:33,347:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:32:33,591:INFO:mapsims:Writing output map
+
+real	1m4.176s
+user	11m17.684s
+sys	1m3.928s

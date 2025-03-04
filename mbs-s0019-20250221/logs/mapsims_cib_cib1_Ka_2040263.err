@@ -1,0 +1,56 @@
+2025-02-27 13:20:09,938:INFO:mapsims:Parsing configuration from common.toml, cib_cib1.toml
+2025-02-27 13:20:09,939:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:20:09,941:INFO:mapsims:Channel Ka
+2025-02-27 13:20:09,944:INFO:mapsims:Beam from instrument_model/beam_Ka.tbl
+2025-02-27 13:20:09,945:INFO:mapsims:Bandpass from instrument_model/bandpass_Ka.tbl
+2025-02-27 13:20:09,946:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:20:09,947:INFO:mapsims:Channel Ka
+2025-02-27 13:20:09,949:INFO:mapsims:Beam from instrument_model/beam_Ka.tbl
+2025-02-27 13:20:09,951:INFO:mapsims:Bandpass from instrument_model/bandpass_Ka.tbl
+2025-02-27 13:20:09,951:INFO:mapsims:Nside: 512, Modeling Nside: 4096, Ellmax: 1280
+2025-02-27 13:20:09,954:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:20:10,201:INFO:mapsims:Processing channel Channel Ka
+2025-02-27 13:20:10,201:INFO:mapsims:Bandpass integration for Channel Ka
+2025-02-27 13:20:10,572:INFO:pysm3:Frequencies considered: [24.5 27.3 30.  35.9 41.7]
+2025-02-27 13:20:10,635:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0024.5.fits
+2025-02-27 13:20:10,636:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0024.5.fits
+2025-02-27 13:20:10,637:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0024.5.fits
+2025-02-27 13:20:15,355:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0024.5.fits
+2025-02-27 13:20:20,780:INFO:pysm3:Mean emission at 24.5 GHz in I: 1.529 uK_RJ
+2025-02-27 13:20:20,873:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0027.3.fits
+2025-02-27 13:20:20,873:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0027.3.fits
+2025-02-27 13:20:20,874:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0027.3.fits
+2025-02-27 13:20:26,638:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0027.3.fits
+2025-02-27 13:20:31,192:INFO:pysm3:Mean emission at 27.3 GHz in I: 1.805 uK_RJ
+2025-02-27 13:20:31,195:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0030.0.fits
+2025-02-27 13:20:31,195:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0030.0.fits
+2025-02-27 13:20:31,196:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0030.0.fits
+2025-02-27 13:20:34,434:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0030.0.fits
+2025-02-27 13:20:39,027:INFO:pysm3:Mean emission at 30.0 GHz in I: 2.083 uK_RJ
+2025-02-27 13:20:39,029:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0035.9.fits
+2025-02-27 13:20:39,030:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0035.9.fits
+2025-02-27 13:20:39,031:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0035.9.fits
+2025-02-27 13:20:42,581:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0035.9.fits
+2025-02-27 13:20:47,020:INFO:pysm3:Mean emission at 35.9 GHz in I: 2.731 uK_RJ
+2025-02-27 13:20:47,022:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0041.7.fits
+2025-02-27 13:20:47,023:INFO:pysm3:Reading map /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0041.7.fits
+2025-02-27 13:20:47,025:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0041.7.fits
+2025-02-27 13:20:50,404:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/websky/0.4/cib/cib_0041.7.fits
+2025-02-27 13:20:54,917:INFO:pysm3:Mean emission at 41.7 GHz in I: 3.415 uK_RJ
+2025-02-27 13:28:45,945:INFO:pysm3:Removing 21/201 points below 1e-10
+2025-02-27 13:28:47,459:INFO:mapsims:Smoothing and coord-transform for Channel Ka
+2025-02-27 13:28:47,461:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:28:53,088:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:28:53,088:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:28:53,101:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:28:53,113:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:28:53,125:INFO:pysm3:Rotate Alm
+2025-02-27 13:28:55,174:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:28:55,399:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Ka_cib_cib1_healpix.fits
+2025-02-27 13:28:55,399:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:28:55,408:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:28:55,624:INFO:mapsims:Writing output map
+
+real	8m47.952s
+user	6m55.079s
+sys	3m21.233s

@@ -1,0 +1,32 @@
+2025-02-27 13:33:06,470:INFO:mapsims:Parsing configuration from common.toml, synchrotron_s5.toml
+2025-02-27 13:33:06,470:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:33:06,473:INFO:mapsims:Channel K
+2025-02-27 13:33:06,476:INFO:mapsims:Beam from instrument_model/beam_K.tbl
+2025-02-27 13:33:06,478:INFO:mapsims:Bandpass from instrument_model/bandpass_K.tbl
+2025-02-27 13:33:06,479:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:33:06,480:INFO:mapsims:Channel K
+2025-02-27 13:33:06,482:INFO:mapsims:Beam from instrument_model/beam_K.tbl
+2025-02-27 13:33:06,483:INFO:mapsims:Bandpass from instrument_model/bandpass_K.tbl
+2025-02-27 13:33:06,484:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:33:06,487:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:33:06,489:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/synch/synch_template_nside2048_2023.02.25.fits
+2025-02-27 13:33:07,825:INFO:pysm3:Retrieve data for synch/synch_beta_nside2048_2023.02.16.fits (if not cached already)
+2025-02-27 13:33:08,315:INFO:mapsims:Processing channel Channel K
+2025-02-27 13:33:08,315:INFO:mapsims:Bandpass integration for Channel K
+2025-02-27 13:36:14,595:INFO:pysm3:Removing 11/201 points below 1e-10
+2025-02-27 13:36:14,995:INFO:mapsims:Smoothing and coord-transform for Channel K
+2025-02-27 13:36:14,997:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:36:16,596:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:36:16,596:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:36:16,609:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:36:16,622:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:36:16,635:INFO:pysm3:Rotate Alm
+2025-02-27 13:36:18,690:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:36:18,928:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_K_synchrotron_s5_healpix.fits
+2025-02-27 13:36:18,928:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:36:18,938:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:36:19,137:INFO:mapsims:Writing output map
+
+real	3m14.923s
+user	28m59.717s
+sys	2m22.518s

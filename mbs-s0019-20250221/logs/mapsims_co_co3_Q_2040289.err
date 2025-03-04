@@ -1,0 +1,40 @@
+2025-02-27 13:32:39,256:INFO:mapsims:Parsing configuration from common.toml, co_co3.toml
+2025-02-27 13:32:39,258:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:32:39,260:INFO:mapsims:Channel Q
+2025-02-27 13:32:39,266:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:32:39,270:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:32:39,270:INFO:mapsims:Parsing channels from instrument_model/instrument_model.tbl
+2025-02-27 13:32:39,271:INFO:mapsims:Channel Q
+2025-02-27 13:32:39,274:INFO:mapsims:Beam from instrument_model/beam_Q.tbl
+2025-02-27 13:32:39,276:INFO:mapsims:Bandpass from instrument_model/bandpass_Q.tbl
+2025-02-27 13:32:39,276:INFO:mapsims:Nside: 512, Modeling Nside: 2048, Ellmax: 1280
+2025-02-27 13:32:39,279:INFO:mapsims:Initializing the PySM Sky object
+2025-02-27 13:32:39,281:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2025-02-27 13:32:39,282:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/HFI_CompMap_CO-Type1_2048_R2.00_ring.fits
+2025-02-27 13:32:58,702:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2025-02-27 13:32:58,704:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2025-02-27 13:32:59,398:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/psimap_dust90_2048.fits
+2025-02-27 13:32:59,399:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2025-02-27 13:32:59,400:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2025-02-27 13:33:00,297:WARNING:pysm3:No physical unit associated with file /mnt/sdceph/users/azonca/pysm-data/co/gmap_dust90_2048.fits
+2025-02-27 13:33:00,299:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2025-02-27 13:33:00,300:INFO:pysm3:Access data from /mnt/sdceph/users/azonca/pysm-data/co/mcmoleCO_HGL_2048.fits
+2025-02-27 13:33:02,352:INFO:mapsims:Processing channel Channel Q
+2025-02-27 13:33:02,352:INFO:mapsims:Bandpass integration for Channel Q
+2025-02-27 13:33:03,362:INFO:pysm3:Removing 17/201 points below 1e-10
+2025-02-27 13:33:03,790:INFO:mapsims:Smoothing and coord-transform for Channel Q
+2025-02-27 13:33:03,791:INFO:pysm3:Using map2alm with pixel weights
+2025-02-27 13:33:05,346:INFO:pysm3:Smoothing with a custom isotropic beam
+2025-02-27 13:33:05,346:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:05,359:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:05,372:INFO:pysm3:Using the same beam for all components
+2025-02-27 13:33:05,385:INFO:pysm3:Rotate Alm
+2025-02-27 13:33:07,674:INFO:pysm3:Alm to map HEALPix
+2025-02-27 13:33:07,903:INFO:mapsims:Writing output map sobs_mbs-s0019-20250221_WMAP_mission_Q_co_co3_healpix.fits
+2025-02-27 13:33:07,903:INFO:mapsims:Replace NaN with UNSEEN
+2025-02-27 13:33:07,912:INFO:mapsims:Reorder ring to nest
+2025-02-27 13:33:08,134:INFO:mapsims:Writing output map
+
+real	0m31.153s
+user	1m50.842s
+sys	0m8.889s
