@@ -1,4 +1,5 @@
 tag = "radio_rg3"
+modeling_nside = "same" # execute at target nside
 
 [pysm_components]
 pysm_components_string = "rg3"
