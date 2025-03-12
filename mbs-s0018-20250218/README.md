@@ -1,4 +1,4 @@
-# Map based simulation 18: Ideal PICO Galactic, Extragalactic, CMB with bandpasses and beam window functions
+# Map based simulation 18: Delta Frequency simulations Galactic, Extragalactic, CMB at same resolution for component separation studies
 
 Tag: `mbs-s0018-20250218`
 
@@ -10,9 +10,8 @@ Tag: `mbs-s0018-20250218`
 
 ## Summary
 
-Full sky simulations for an idealized instrument with single-frequency (Dirac delta function bandpasses) channels at all PICO frequencies and with channels with the same 5 arcminute Gaussian beams.
+Full sky simulations for an idealized instrument with single-frequency (Dirac delta function bandpasses) channels at all SPO, SO, CMB-S4, LiteBIRD and PICO frequencies and with channels with the same 5 arcminute Gaussian beams.
 This is an idealized dataset to be used for component separation studies.
-Planck frequency channels for HFI and LFI of Galactic foregrounds using PySM 3 with the latest PySM models.
 Given that the main purpose of these simulations is to couple them with ground experiments, we simulate directly in Equatorial coordinates.
 
 ## Sky model
