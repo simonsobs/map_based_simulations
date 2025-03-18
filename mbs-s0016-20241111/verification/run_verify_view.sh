@@ -1,13 +1,12 @@
 #!/bin/bash
 
 components=(
-"galactic_foregrounds_d1s1"
-"galactic_foregrounds_lowcomplexity"
-"galactic_foregrounds_mediumcomplexity"
-"galactic_foregrounds_highcomplexity"
+"galactic_foregrounds_lowcomplexity_websky"
+"galactic_foregrounds_mediumcomplexity_websky"
+"galactic_foregrounds_highcomplexity_websky"
 )
 
-echo "# Visual inspection of maps" >> README.md
+echo "# Visual inspection of maps - Websky" >> README.md
 echo "" >> README.md
 
 for component in "${components[@]}"
