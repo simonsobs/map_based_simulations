@@ -1,4 +1,5 @@
 import os
+import sys
 import healpy as hp
 import numpy as np
 from astropy.table import QTable
@@ -34,19 +35,30 @@ all_combined = {
     "extragalactic_norg_nocib": extragalactic,
 }
 
+websky_catalog = ["tsz_tsz1", "ksz_ksz1", "radio_rg3", "radio_rg2", "cib_cib1"]
+
+new_combined = {}
+for name, components in all_combined.items():
+    if name.startswith("galactic") and "d1s1" not in name:
+        new_combined[name + "_websky"] = components + websky_catalog
+
+key = list(new_combined.keys())[int(sys.argv[1])]
+all_combined = {key: new_combined[key]}
+
+
 chs = QTable.read(
-    "instrument_model/instrument_model_SAT_4096.tbl",
+    "instrument_model/instrument_model_SAT_4096_and_LAT.tbl",
     format="ascii.ipac",
 )
 
-pixelizations = ["healpix", "car"]
+pixelizations = ["healpix"]#, "car"]
 
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
             band = row["band"]
             telescope = row["telescope"]
-            output_folder = f"output/SAT_4096/{tag}/"
+            output_folder = f"output/{tag}/"
             output_filename = (
                 output_folder
                 + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
@@ -57,7 +69,7 @@ for pixelization in pixelizations:
                 print(output_filename)
                 for content in components:
                     print(content)
-                    folder = f"output/SAT_4096/{content}/"
+                    folder = f"output/{content}/"
                     filename = (
                         folder
                         + f"sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{content}_{pixelization}.fits"
