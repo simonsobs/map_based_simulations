@@ -2,13 +2,9 @@
 
 Tag: `mbs-s0016-20241111`
 
-## TODO
-
-* Run the new Websky Radio Galaxies Catalog-based components (`rg2` and `rg3`)
-* Create new `extragalactic` combined map
-
 ## Updates
 
+* 2025-03-18: Executed the new Radio Galaxies components, added `rg2`, `rg3`, also `rg1` is available for comparison
 * 2025-02-10: Added SAT maps executed at 4096 to avoid sharp transitions in time domain due to large pixels, they are located in the `SAT_4096` subfolder of the release, also included the visual maps verification
 * 2025-01-27: Executed spectra verification scripts
 * 2025-01-18: Added `s1`, `d1`, and `galactic_foregrounds_d1s1` maps
@@ -29,9 +25,10 @@ This release is based on the [3 sets of recommended sky models by the Panexperim
 
 and based on Websky for extragalactic and CMB:
 
-* `ksz1,tsz1`
+* `ksz1,tsz1,cib1`
 * `c3`: CMB with same Cosmological parameters used in Websky unlensed
 * `c4`: Same as `c3` but lensed by Websky
+* `rg1`, `rg2`, `rg3`: Radio Galaxies, `rg1` is the original Websky radio galaxy model with input maps having single-pixel sources, `rg2` and `rg3` are the new Catalog-based components, `rg2` is generated on-the-fly at the target beam and resolution, `rg3` is generated at a fiducial beam and resolution and differentially smoothed to the target beam.
 
 Documentation reference:
 
@@ -43,11 +40,11 @@ Documentation reference:
 
 ## Instrument model
 
-See [`instrument_model.tbl`](instrument_model/instrument_model.tbl) for the instrument model, extracted from `sotodlib` and converted to IPAC table format, which has the advantage of supporting units for the columns and can be read as `astropy.QTable`.
+See [`instrument_model_SAT_4096_and_LAT.tbl`](instrument_model/instrument_model_SAT_4096_and_LAT.tbl) for the instrument model, extracted from `sotodlib` and converted to IPAC table format, which has the advantage of supporting units for the columns and can be read as `astropy.QTable`.
 
 ```python
 from astropy.table import QTable
-instrument_model = QTable.read("instrument_model/instrument_model.tbl", format="ascii.ipac")
+instrument_model = QTable.read("instrument_model/instrument_model_SAT_4096_and_LAT.tbl", format="ascii.ipac")
 instrument_model.add_index("band")
 ```
 
@@ -66,40 +63,39 @@ git submodule update --init
 
 ## Available maps
 
-Maps are available both in HEALPix and in CAR (Fejer1 variant) pixelizations, generated from the same set of Alms. The resolution of the maps varies by channel, all resolutions are available in the main instrument model table.
+Maps (except the radio galaxy components and the combined maps that include them, which are HEALPix-only) are available both in HEALPix and in CAR (Fejer1 variant) pixelizations, generated from the same set of Alms. The resolution of the maps varies by channel, all resolutions are available in the main instrument model table.
 
 Maps are in Equatorial Coordinates, `uK_CMB` units, FITS format.
 See [`common.toml`](common.toml) for the naming convention.
 
 Each of the components is available separately, see the TOML files in this repository for the configuration used to run PySM for each component.
 
-All components and combined maps for **SAT at nside 4096** are available in the subfolder `SAT_4096`.
-
 The available combination maps are, (see the [`combine_maps.py` script](combine_maps.py)):
 
+* `galactic_foregrounds_mediumcomplexity_websky`
+* `galactic_foregrounds_lowcomplexity_websky`
+* `galactic_foregrounds_highcomplexity_websky`
 * `galactic_foregrounds_mediumcomplexity`
 * `galactic_foregrounds_d1s1`
 * `galactic_foregrounds_lowcomplexity`
 * `galactic_foregrounds_highcomplexity`
 * `extragalactic_norg_nocib` (Websky extragalactic maps without CIB and Radio Galaxies, so only kSZ and tSZ)
 
-Radio Galaxies is not included yet, the new Catalog-based component still shows some issues, it will be released in the next weeks, the plan is to have 2 components, `rg2` for the sources > 1mJy generated on-the-fly directly at the target beam and resolution and `rg3`, interpolation-based componet for the fainter sources generated at a fiducial beam and differentially smoothed to the target beam.
-Given we did not have Radio Galaxies, the analysis team recommended to exclude CIB for now, so that we have a set of simulations with no point sources.
-Once available, we will release a new combined set `extragalactic` with all the 4 extragalactic components.
+Radio Galaxies, kSZ, tSZ and CIB are included in the combined components named `websky`
 
-Which are meant to be used with either `cmb` for the Lensed CMB or with `cmb_unlensed`, the CMB maps have no solar dipole.
+Which are meant to be used with either `cmb_c4` for the Lensed CMB or with `cmb_c3`, the CMB maps have no solar dipole.
 
-In case you only need 1 single set of maps with all the components, you should sum `galactic_foregrounds_mediumcomplexity`, `cmb` and `extragalactic_norg_nocib`.
+In case you only need 1 single set of maps with all the components, you should sum `galactic_foregrounds_mediumcomplexity_websky`, `cmb_c4`
 
 **Location at NERSC**, this folder on the Simons Observatory project space only includes the combination maps and the 2 CMB maps (total of .75TB) due to space constraints:
 
     /global/cfs/cdirs/sobs/v4_sims/mbs/mbs-s0016-20241111
 
-The entire release, including individual components are available on Perlmutter scratch (accessible from Perlmutter and from the Perlmutter JupyterHub node, it needs membership to the `sobs` group for read access):
+Some individual components are available on Perlmutter scratch (accessible from Perlmutter and from the Perlmutter JupyterHub node, it needs membership to the `sobs` group for read access):
 
     /pscratch/sd/z/zonca/mbs-s0016-20241111
 
-Please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problems.
+Due to space constraints, other maps are only available on Popeye, please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problem and if you need access to a specific set of maps.
 
 ## Metadata
 
