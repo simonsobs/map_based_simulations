@@ -1,12 +1,15 @@
 Map based simulations for the Simons Observatory
 ================================================
 
-Map based simulations for Simons Observatory, documentation about releases, maintained by the Map-Based Simulation Pipeline Working Group (MBS)
+Map based simulations for Simons Observatory, documentation about releases.
 
 Slack channel: `#dm-simulations`
 
 ## Available simulations
 
+* [`mbs-s0019-20250221`](mbs-s0019-20250221/README.md): WMAP Galactic, Extragalactic, CMB with bandpasses and beam window functions
+* [`mbs-s0018-20250218`](mbs-s0018-20250218/README.md): Delta Frequency simulations Galactic, Extragalactic, CMB at same resolution for component separation studies
+* [`mbs-s0017-20250208`](mbs-s0017-20250208/README.md): Planck Galactic, Extragalactic, CMB with bandpasses and beam window functions
 * [`mbs-s0016-20241111`](mbs-s0016-20241111/README.md): Galactic, extragalactic, CMB with simulated wafer by wafer bandpasses
 * [`mbs-s0015-20240504`](mbs-s0015-20240504/README.md): Map-based noise simulations based on the LAT `mss-0002` mission scale time-domain simulations
 * [`mbs-s0014-20230920`](mbs-s0014-20230920/README.md): Map-based noise simulations based on the SAT `mbs-noise-sims-sat` time-domain simulations
@@ -16,10 +19,6 @@ Slack channel: `#dm-simulations`
 * [`mbs-s0009-20191107`](201911_lensed_cmb/README.md): 100 CMB realizations lensed with gaussian potential
 * [`mbs-s0008-20190919`](201909_highres_foregrounds_extragalactic_planck_deltabandpass/README.md): Planck delta bandpasses: high resolution foregrounds with spectral index not varying spatially and extragalactic
 * [`mbs-s0006-20190705`](201906_highres_foregrounds_extragalactic_tophat/README.md): Tophat bandpasses simulation: high resolution foregrounds with spectral index not varying spatially and extragalactic
-
-## Logbook
-
-Check [the Logbook](LOGBOOK.md) for the latest information about Map Based Simulations.
 
 ## Obsolete simulations
 
