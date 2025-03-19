@@ -62,7 +62,7 @@ Given we did not have Radio Galaxies, the analysis team recommended to exclude C
 
 **Location at NERSC**, requires membership to the `cmb` group for access:
 
-    /pscratch/sd/z/zonca/panexp_v1_pico
+    /global/cfs/cdirs/cmb/gsharing/panexp_v1_compsep
 
 Backed up to tape under the `sobs` user to `mbs/mbs-0018-panexp_v1_pico.tar`
 
