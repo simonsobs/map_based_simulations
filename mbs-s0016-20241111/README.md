@@ -148,6 +148,7 @@ See [the README in the verification folder](verification/README.md)
 ## Known issues
 
 * [Spikes in Synchrotron at high ell](https://github.com/CMB-S4/s4mapbasedsims/issues/29) if Galaxy is not masked. This should not affect much analysis, the galactic plane is always masked.
+* 30GHz and 40GHz channels have no CIB emission, i.e. the maps are zero everywhere, see https://github.com/simonsobs/map_based_simulations/issues/55, this problem has been fixed upstream in PySM but have not rerun these simulations. Please open issue if you think we should execute again.
 
 ## Feedback
 
