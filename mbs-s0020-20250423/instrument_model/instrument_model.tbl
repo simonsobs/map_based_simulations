@@ -1,0 +1,12 @@
+\ Text file in IPAC table format, read with astropy
+\ from astropy.table import QTable
+\ QTable.read('filename.tbl', format='ascii.ipac')
+\ Instrument model exported from the Planck NPIPE instrument models
+|telescope|band|center_frequency|  fwhm|nside|   bandpass_file|beam_file|
+|     char|char|          double|double| long|            char|     char|
+|         |    |             GHz|arcmin|     |                |         |
+|     null|null|            null|  null| null|            null|     null|
+      BK18  B95             95.0   24.0  1024 bandpass_B95.tbl           
+      BK18  K95             95.0   43.0  1024 bandpass_K95.tbl           
+      BK18  150            150.0   30.0  1024 bandpass_150.tbl           
+      BK18  220            220.0   20.0  1024 bandpass_220.tbl           
