@@ -11,7 +11,6 @@ from glob import glob
 sims = list(glob("*.toml"))
 sims = [s.split(".")[0] for s in sims]
 sims.remove("common")
-sims = ["radio_rg1", "radio_rg2", "radio_rg3"]
 
 from mapsims.channel_utils import parse_channels
 
@@ -29,9 +28,6 @@ for simulation_type in sims:
     hours = 48
     minutes = 00
     for channel in chs:
-        if i_job == max_jobs:
-            print(f"Submitted {max_jobs} jobs")
-            sys.exit(0)
         output_filename = (
             config["output_folder"] + "/" + config["output_filename_template"]
         ).format(
@@ -39,7 +35,7 @@ for simulation_type in sims:
             telescope=channel.telescope,
             band=channel.band,
             nside=channel.nside,
-            pixelization="healpix"
+            pixelization="car"
         )
         if os.path.exists(output_filename):
             print("SKIP", output_filename)
@@ -60,5 +56,8 @@ for simulation_type in sims:
                 )
 
             subprocess.run(["sbatch", f"jobs/{filename}"])
+            if i_job == max_jobs:
+                print(f"Submitted {max_jobs} jobs")
+                sys.exit(0)
             i_job += 1
 
