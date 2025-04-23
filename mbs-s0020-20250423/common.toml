@@ -1,0 +1,9 @@
+lmax_over_nside = 2.5
+healpix = true
+car = false
+output_folder = "output/{tag}"
+output_filename_template= "sobs_mbs-s0016-20241111_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
+unit = "uK_CMB"
+num = 0
+output_reference_frame = "C"
+instrument_parameters = "instrument_model/instrument_model_SAT_4096_and_LAT.tbl"
