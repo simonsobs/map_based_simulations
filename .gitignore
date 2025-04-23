@@ -111,3 +111,5 @@ output
 *.out
 jobs
 logs
+
+debug*.ipynb
