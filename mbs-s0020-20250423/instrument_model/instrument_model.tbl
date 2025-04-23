@@ -1,7 +1,7 @@
 \ Text file in IPAC table format, read with astropy
 \ from astropy.table import QTable
 \ QTable.read('filename.tbl', format='ascii.ipac')
-\ Instrument model exported from the Planck NPIPE instrument models
+\ Instrument model exported from http://bicepkeck.org/bk18_2021_release.html
 |telescope|band|center_frequency|  fwhm|nside|   bandpass_file|beam_file|
 |     char|char|          double|double| long|            char|     char|
 |         |    |             GHz|arcmin|     |                |         |
