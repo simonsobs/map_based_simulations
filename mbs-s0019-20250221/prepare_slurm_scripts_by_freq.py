@@ -11,6 +11,7 @@ from glob import glob
 sims = list(glob("*.toml"))
 sims = [s.split(".")[0] for s in sims]
 sims.remove("common")
+sims = ["radio_rg1", "radio_rg2", "radio_rg3"]
 
 from mapsims.channel_utils import parse_channels
 
