@@ -6,7 +6,7 @@
 #SBATCH --error=logs/compute_cl_%j.out
 #SBATCH --output=logs/compute_cl_%j.out
 #SBATCH --cpus-per-task=48
-#SBATCH --array=0-17
+#SBATCH --array=0-27
 
 export OMP_NUM_THREADS=48
 export NUMBA_NUM_THREADS=$OMP_NUM_THREADS
