@@ -18,7 +18,7 @@ if len(sys.argv) > 1:
     folder = sys.argv[1]
 else:
     ID = int(os.environ["SLURM_ARRAY_TASK_ID"])
-    folder = [f for f in glob("output/*") if not f.endswith("pkl")][ID]
+    folder = [f for f in glob("output/*") if (not f.endswith("pkl") and not f.endswith("C_ell"))][ID]
 print(folder)
 component = os.path.basename(folder)
 
