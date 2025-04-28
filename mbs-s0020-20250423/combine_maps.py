@@ -42,7 +42,7 @@ for name, components in all_combined.items():
     if name.startswith("galactic") and "d1s1" not in name:
         new_combined[name + "_websky"] = components + websky_catalog
 
-all_combined = new_combined
+all_combined = {**all_combined, **new_combined}
 
 
 chs = QTable.read(
