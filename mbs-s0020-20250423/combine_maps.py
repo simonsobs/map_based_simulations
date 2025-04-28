@@ -1,11 +1,10 @@
 import os
+import sys
 import healpy as hp
 import numpy as np
 from astropy.table import QTable
 from pixell import enmap
-from glob import glob
 
-extragalactic = ["ksz_ksz1", "tsz_tsz1"]
 all_combined = {
     "galactic_foregrounds_mediumcomplexity": [
         "dust_d10",
@@ -34,11 +33,23 @@ all_combined = {
     ],
 }
 
+websky_catalog = ["tsz_tsz1", "ksz_ksz1", "radio_rg3", "radio_rg2", "cib_cib1"]
+
+new_combined = {}
+for name, components in all_combined.items():
+    if name.startswith("galactic") and "d1s1" not in name:
+        new_combined[name + "_websky"] = components + websky_catalog
+
+all_combined = new_combined
+
+
 chs = QTable.read(
     "instrument_model/instrument_model.tbl",
     format="ascii.ipac",
 )
+
 pixelizations = ["healpix"]
+
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
@@ -47,7 +58,7 @@ for pixelization in pixelizations:
             output_folder = f"output/{tag}/"
             output_filename = (
                 output_folder
-                + f"sobs_mbs-s0017-20250208_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
+                + f"sobs_mbs-s0020-20250423_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
             )
             if not os.path.exists(output_filename):
                 print(20 * "*")
@@ -56,7 +67,7 @@ for pixelization in pixelizations:
                 for content in components:
                     print(content)
                     folder = f"output/{content}/"
-                    filename = glob(
+                    filename = (
                         folder
                         + f"*_{telescope}_mission_{band}_{content}_{pixelization}.fits"
                     )[0]
