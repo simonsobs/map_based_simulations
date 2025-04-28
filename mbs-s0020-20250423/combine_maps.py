@@ -4,6 +4,7 @@ import healpy as hp
 import numpy as np
 from astropy.table import QTable
 from pixell import enmap
+import toml
 
 all_combined = {
     "galactic_foregrounds_mediumcomplexity": [
@@ -50,16 +51,32 @@ chs = QTable.read(
 
 pixelizations = ["healpix"]
 
+# Load the common.toml file
+with open("common.toml", "r") as f:
+    common_config = toml.load(f)
+
+try:
+    template = common_config["output_filename_template"]
+except KeyError:
+    raise KeyError("output_filename_template not found in common.toml")
+
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
             band = row["band"]
             telescope = row["telescope"]
             output_folder = f"output/{tag}/"
-            output_filename = (
-                output_folder
-                + f"sobs_mbs-s0020-20250423_{telescope}_mission_{band}_{tag}_{pixelization}.fits"
-            )
+
+            # Get the output filename from the config
+            try:
+                output_filename = template.format(
+                    tag=tag,
+                    telescope=telescope,
+                    band=band,
+                    pixelization=pixelization,
+                )
+            except KeyError as e:
+                raise ValueError(f"Missing key in output_filename_template: {e}")
             if not os.path.exists(output_filename):
                 print(20 * "*")
                 print("Starting")
