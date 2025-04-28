@@ -5,6 +5,7 @@ import numpy as np
 from astropy.table import QTable
 from pixell import enmap
 import toml
+import glob
 
 all_combined = {
     "galactic_foregrounds_mediumcomplexity": [
@@ -56,27 +57,29 @@ with open("common.toml", "r") as f:
     common_config = toml.load(f)
 
 try:
+    output_folder_template = common_config["output_folder"]
     template = common_config["output_filename_template"]
-except KeyError:
-    raise KeyError("output_filename_template not found in common.toml")
+except KeyError as e:
+    raise KeyError(f"{e.args[0]} not found in common.toml")
 
 for pixelization in pixelizations:
     for tag, components in all_combined.items():
         for row in chs:
             band = row["band"]
             telescope = row["telescope"]
-            output_folder = f"output/{tag}/"
 
-            # Get the output filename from the config
-            try:
-                output_filename = template.format(
+            # Build output folder and filename from templates
+            output_folder = output_folder_template.format(tag=tag)
+            output_filename = os.path.join(
+                output_folder,
+                template.format(
                     tag=tag,
                     telescope=telescope,
                     band=band,
                     pixelization=pixelization,
-                )
-            except KeyError as e:
-                raise ValueError(f"Missing key in output_filename_template: {e}")
+                ),
+            )
+
             if not os.path.exists(output_filename):
                 print(20 * "*")
                 print("Starting")
@@ -84,10 +87,15 @@ for pixelization in pixelizations:
                 for content in components:
                     print(content)
                     folder = f"output/{content}/"
-                    filename = (
+                    pattern = (
                         folder
                         + f"*_{telescope}_mission_{band}_{content}_{pixelization}.fits"
-                    )[0]
+                    )
+                    matches = glob.glob(pattern)
+                    if not matches:
+                        print(f"File not found: {pattern}")
+                        continue
+                    filename = matches[0]
 
                     print("Read", filename)
                     if pixelization == "healpix":
@@ -100,7 +108,9 @@ for pixelization in pixelizations:
                         combined_map += m
                     except NameError:
                         combined_map = m
-                os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+                output_dir = os.path.dirname(output_filename)
+                if output_dir:
+                    os.makedirs(output_dir, exist_ok=True)
                 if pixelization == "healpix":
                     hp.write_map(
                         output_filename,
