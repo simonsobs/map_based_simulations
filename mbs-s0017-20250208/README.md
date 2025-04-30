@@ -4,6 +4,7 @@ Tag: `mbs-s0017-20250208`
 
 ## Updates
 
+* 2025-04-30: Added `rg1`, `rg2` and `rg3` components, new combined maps with Radio Galaxies
 * 2025-02-13: Maps executed on Popeye and copied to NERSC
 * 2025-02-08: Created instrument model from NPIPE products and Beyond Planck LFI bandpasses
 
@@ -53,8 +54,11 @@ The available combination maps are, (see the [`combine_maps.py` script](combine_
 * `galactic_foregrounds_lowcomplexity`
 * `galactic_foregrounds_highcomplexity`
 
-Radio Galaxies is not included yet, the new Catalog-based component still shows some issues, it will be released in the future, the plan is to have 2 components, `rg2` for the sources > 1mJy generated on-the-fly directly at the target beam and resolution and `rg3`, interpolation-based componet for the fainter sources generated at a fiducial beam and differentially smoothed to the target beam.
-Given we did not have Radio Galaxies, the analysis team recommended to exclude CIB for now, so that we have a set of simulations with no point sources.
+And the related combined components includeing Websky extragalactic components, `cib1,tsz1,ksz1,rg2,rg3`, no CMB is included:
+
+* `galactic_foregrounds_mediumcomplexity_websky`
+* `galactic_foregrounds_lowcomplexity_websky`
+* `galactic_foregrounds_highcomplexity_websky`
 
 **Location at NERSC**, requires membership to the `cmb` group for access:
 
