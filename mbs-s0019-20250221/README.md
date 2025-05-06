@@ -4,6 +4,7 @@ Tag: `mbs-s0019-20250221`
 
 ## Updates
 
+* 2025-05-06: Maps backed up to tape under `cmb` user in the `gsharing` folder
 * 2025-04-30: Added `rg1`, `rg2` and `rg3` components, new combined maps with Radio Galaxies
 * 2025-03-03: Completed verification and copied data to NERSC
 * 2025-02-28: Executed simulation

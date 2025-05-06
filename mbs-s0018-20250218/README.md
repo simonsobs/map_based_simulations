@@ -4,6 +4,7 @@ Tag: `mbs-s0018-20250218`
 
 ## Updates
 
+* 2025-05-06: Maps backed up to tape under `cmb` user in the `gsharing` folder
 * 2025-04-30: Added `rg1`, `rg2` and `rg3` components, did not produce new combined maps due to disk space constraints
 * 2025-02-18: Maps copied to NERSC
 * 2025-02-14: Maps executed on Popeye

@@ -4,6 +4,7 @@ Tag: `mbs-s0020-20250423`
 
 ## Updates
 
+* 2025-05-06: Maps backed up to tape under `cmb` user in the `gsharing` folder
 * 2025-02-28: Maps copied to NERSC
 * 2025-04-24: Maps executed on Popeye
 * 2025-04-23: Created instrument model
