@@ -13,7 +13,7 @@ For CMB, we will use the Websky 0.4 lensed and un-lensed components and possibly
 
 ## Bandpass
 
-Realistic wafer-by-wafer bandpasses generated using the Bandpass Sampler (which will be included in PySM) starting from a reference bandpass based on the latest instrument model. Need to decide how many wafers per band.
+Realistic wafer-by-wafer bandpasses generated using the Bandpass Sampler (which will be included in PySM) starting from a reference bandpass based on the latest instrument model.
 
 ## Beam
 
@@ -26,6 +26,8 @@ using the same resolution used for real data.
 Modelling is executed at twice the resolution and a minimum of NSIDE 2048,
 in the final step, spherical harmonics are transformed to the target NSIDE or CAR resolution.
 No intermediate maps are saved, only the final bandpass-integrated and beam-smoothed maps for each wafer.
+
+We need to [check that the disk space occupied by the maps is reasonable](https://github.com/simonsobs/map_based_simulations/issues/71).
 
 Available maps:
 
