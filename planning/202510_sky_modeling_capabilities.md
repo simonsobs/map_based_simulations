@@ -1,8 +1,6 @@
-# Draft Proposal: Next Map Domain Simulations
+# Capabilities for Map Domain Simulations
 
-## Capabilities for Sky Modelling
-
-### Available PySM3 Components and Models
+## Available PySM3 Components and Models
 
 **Dust**
 - `d0`: Simple dust, fixed spectral index and temperature everywhere.
@@ -64,14 +62,14 @@
 
 **Planned addition:** Implement Half Dome extragalactic model (see [PySM issue #204](https://github.com/galsci/pysm/issues/204)), with SZ, CIB, Radio Galaxies and CMB components.
 
-### Instrument characterization
+## Instrument characterization
 
-## Bandpass
+### Bandpass
 - Delta frequency (single frequency channel)
 - Top-hat bandpass (uniform response over a frequency range)
 - Realistic bandpass (measured or modeled instrument response)
 - Generalization of bandpass sampling in PySM, this allows to generate different realistic for each wafer based on a reference bandpass ([issue #228](https://github.com/galsci/pysm/issues/228)).
 
-## Beam
+### Beam
 - Gaussian beam (simple analytic model)
 - Beam window function in spherical harmonics domain (for more realistic instrument response)

@@ -1,9 +1,9 @@
-## Proposed plan: Updated version of MBS 16
+# Proposed plan: Updated version of MBS 16
 
 See the [Documentation of MBS-16](https://github.com/simonsobs/map_based_simulations/blob/main/mbs-s0016-20241111/README.md).
 Our initial plan is to update MBS-16 with the latest instrument model and add Half-Dome extragalactic components (on top of Websky), if available.
 
-### Sky modelling
+## Sky modelling
 
 For Galactic components the plan is to use the Low, Medium and High Complexity sky models, the same we used in MBS-16, they are described in the Documentation of MBS-16 and in the [PySM methods paper](https://iopscience.iop.org/article/10.3847/1538-4357/adf212). Moreover, for comparison with previous simulations, we plan on running also the `s1` and `d1` models.
 
@@ -11,15 +11,15 @@ For Extragalactic components the plan is to use Websky 0.4, including the Catalo
 
 For CMB, we will use the Websky 0.4 lensed and un-lensed components and possibly Half-Dome. We will also simulate separately the CMB Solar Dipole with frequency-varying quadrupole `dip2`.
 
-### Bandpass
+## Bandpass
 
 Realistic wafer-by-wafer bandpasses generated using the Bandpass Sampler (which will be included in PySM) starting from a reference bandpass based on the latest instrument model. Need to decide how many wafers per band.
 
-### Beam
+## Beam
 
 The plan is to use Gaussian beams based on the most recently measured FWHM.
 
-### Output maps
+## Output maps
 
 Output maps are both in CAR and HEALPix, with variable resolution by frequency,
 using the same resolution used for real data.
@@ -37,7 +37,7 @@ Available maps:
 * Combined Websky Extragalactic components
 * If available, combined Half-Dome Extragalactic components
 
-### Additional Data products
+## Additional Data products
 
 * Instrument model with all parameters used
 * Configuration files used to run `mapsims`
