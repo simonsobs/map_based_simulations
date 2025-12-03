@@ -201,6 +201,8 @@ def parse_combined_components(combine_maps_path: str) -> Dict[str, List[str]]:
 def estimate_disk_space(
     release_folder: str,
     combine_maps_path: Optional[str] = None,
+    n_individual_override: Optional[int] = None,
+    n_combined_override: Optional[int] = None,
     verbose: bool = True
 ) -> dict:
     """
@@ -212,6 +214,10 @@ def estimate_disk_space(
         Path to the release folder containing common.toml and component files
     combine_maps_path : str, optional
         Path to the combine_maps.py script. If not provided, looks for it in release_folder
+    n_individual_override : int, optional
+        Override the number of individual components (instead of counting TOML files)
+    n_combined_override : int, optional
+        Override the number of combined components (instead of parsing combine_maps.py)
     verbose : bool
         If True, print detailed information
 
@@ -229,12 +235,18 @@ def estimate_disk_space(
     do_car = common_config.get("car", False)
 
     # Get components
-    individual_components = count_component_toml_files(release_folder)
+    if n_individual_override is not None:
+        individual_components = [f"component_{i+1}" for i in range(n_individual_override)]
+    else:
+        individual_components = count_component_toml_files(release_folder)
 
     # Get combined components
-    if combine_maps_path is None:
-        combine_maps_path = os.path.join(release_folder, "combine_maps.py")
-    combined_components = parse_combined_components(combine_maps_path)
+    if n_combined_override is not None:
+        combined_components = {f"combined_{i+1}": [] for i in range(n_combined_override)}
+    else:
+        if combine_maps_path is None:
+            combine_maps_path = os.path.join(release_folder, "combine_maps.py")
+        combined_components = parse_combined_components(combine_maps_path)
 
     # Count channels
     n_channels = len(instrument_model)
@@ -370,6 +382,7 @@ def main():
 Example usage:
     python estimate_disk_space.py mbs-s0016-20241111
     python estimate_disk_space.py mbs-s0016-20241111 --combine-maps combine_maps.py
+    python estimate_disk_space.py mbs-s0016-20241111 --n-individual 10 --n-combined 5
 
 The script reads the following files from the release folder:
   - common.toml: Configuration file with pixelization settings
@@ -380,12 +393,26 @@ The script reads the following files from the release folder:
     )
     parser.add_argument(
         "release_folder",
+        nargs="?",
+        default=None,
         help="Path to the release folder containing common.toml and component files"
     )
     parser.add_argument(
         "--combine-maps",
         dest="combine_maps_path",
         help="Path to combine_maps.py script (default: <release_folder>/combine_maps.py)"
+    )
+    parser.add_argument(
+        "--n-individual",
+        type=int,
+        default=None,
+        help="Override the number of individual components (instead of counting TOML files)"
+    )
+    parser.add_argument(
+        "--n-combined",
+        type=int,
+        default=None,
+        help="Override the number of combined components (instead of parsing combine_maps.py)"
     )
     parser.add_argument(
         "-q", "--quiet",
@@ -395,6 +422,11 @@ The script reads the following files from the release folder:
 
     args = parser.parse_args()
 
+    # If no release folder provided, print help and exit
+    if args.release_folder is None:
+        parser.print_help()
+        sys.exit(0)
+
     if not os.path.isdir(args.release_folder):
         print(f"Error: {args.release_folder} is not a directory", file=sys.stderr)
         sys.exit(1)
@@ -403,6 +435,8 @@ The script reads the following files from the release folder:
         result = estimate_disk_space(
             args.release_folder,
             combine_maps_path=args.combine_maps_path,
+            n_individual_override=args.n_individual,
+            n_combined_override=args.n_combined,
             verbose=not args.quiet
         )
         if args.quiet:
