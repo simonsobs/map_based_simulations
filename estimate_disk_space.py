@@ -3,19 +3,62 @@
 Estimate disk space for a map-based simulation release.
 
 This script reads the instrument model and configuration files to estimate
-the total disk space required for all maps in a release.
+the total disk space required for all maps in a release. It calculates sizes
+for both HEALPix and CAR (Cylindrical Equal-Area Rectangular) pixelizations.
 
-Usage:
-    python estimate_disk_space.py path/to/release_folder [--combine-maps path/to/combine_maps.py]
+Usage
+-----
+    python estimate_disk_space.py <release_folder> [options]
 
-Example:
+Arguments
+---------
+release_folder : str
+    Path to the release folder containing common.toml and component files.
+
+Options
+-------
+--combine-maps PATH
+    Path to combine_maps.py script. Default: <release_folder>/combine_maps.py
+--n-individual N
+    Override the number of individual components instead of counting TOML files.
+--n-combined N
+    Override the number of combined components instead of parsing combine_maps.py.
+-q, --quiet
+    Only print the total disk space.
+
+Examples
+--------
+Basic usage with a release folder:
     python estimate_disk_space.py mbs-s0016-20241111
+
+Override component counts for quick estimates:
+    python estimate_disk_space.py mbs-s0016-20241111 --n-individual 10 --n-combined 5
+
+Quiet mode for scripting:
+    python estimate_disk_space.py mbs-s0016-20241111 -q
+
+Input Files
+-----------
+The script reads the following files from the release folder:
+- common.toml: Configuration file with pixelization settings (healpix, car flags)
+- instrument_model/*.tbl: IPAC table with channel parameters (nside, car_resol)
+- *.toml: Individual component configuration files (one per sky component)
+- combine_maps.py: Script defining combined component dictionaries
+
+Size Calculations
+-----------------
+HEALPix maps:
+    size = 12 * nside^2 * n_components * dtype_bytes
+    where n_components=3 (I,Q,U) and dtype_bytes=4 (float32)
+
+CAR maps:
+    size = (360*60/resolution) * (180*60/resolution) * n_components * dtype_bytes
+    where n_components=3 (I,Q,U) and dtype_bytes=8 (float64)
 """
 
 import argparse
 import ast
 import glob
-import math
 import os
 import sys
 from typing import Dict, List, Optional
@@ -50,11 +93,13 @@ def get_healpix_map_size_bytes(nside: int, n_components: int = 3, dtype_bytes: i
     return npix * n_components * dtype_bytes
 
 
-def get_car_map_size_bytes(resolution_arcmin: float, n_components: int = 3, dtype_bytes: int = 4) -> int:
+def get_car_map_size_bytes(resolution_arcmin: float, n_components: int = 3, dtype_bytes: int = 8) -> int:
     """
-    Calculate the size of a CAR (Plate Carree) map in bytes.
+    Calculate the size of a CAR (Cylindrical Equal-Area Rectangular) map in bytes.
 
-    Assumes full-sky coverage with Fejer1 variant pixelization.
+    CAR maps use a rectangular grid covering the full sky:
+    - 360 degrees in longitude (RA)
+    - 180 degrees in latitude (Dec)
 
     Parameters
     ----------
@@ -64,19 +109,18 @@ def get_car_map_size_bytes(resolution_arcmin: float, n_components: int = 3, dtyp
         Number of Stokes components (typically 3 for I, Q, U)
     dtype_bytes : int
         Bytes per pixel value (4 for float32, 8 for float64)
+        Default is 8 (float64) as used by pixell/enmap
 
     Returns
     -------
     int
         Size in bytes
     """
-    # Full sky area: 4*pi steradians converted to arcmin^2
-    # 1 steradian = (180/pi)^2 degrees^2 = (180*60/pi)^2 arcmin^2
-    arcmin_per_steradian = (180 * 60 / math.pi) ** 2
-    full_sky_arcmin2 = 4 * math.pi * arcmin_per_steradian
-    # Number of pixels
-    npix = full_sky_arcmin2 / (resolution_arcmin ** 2)
-    return int(npix * n_components * dtype_bytes)
+    # CAR maps use a rectangular grid: nx pixels in longitude, ny in latitude
+    nx = int(360 * 60 / resolution_arcmin)  # 360 degrees in arcmin
+    ny = int(180 * 60 / resolution_arcmin)  # 180 degrees in arcmin
+    npix = nx * ny
+    return npix * n_components * dtype_bytes
 
 
 def format_size(size_bytes: int) -> str:
@@ -379,16 +423,20 @@ def main():
         description="Estimate disk space for a map-based simulation release.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Example usage:
+Examples:
     python estimate_disk_space.py mbs-s0016-20241111
-    python estimate_disk_space.py mbs-s0016-20241111 --combine-maps combine_maps.py
     python estimate_disk_space.py mbs-s0016-20241111 --n-individual 10 --n-combined 5
+    python estimate_disk_space.py mbs-s0016-20241111 -q
 
-The script reads the following files from the release folder:
-  - common.toml: Configuration file with pixelization settings
-  - instrument_model/*.tbl: Instrument model with channel parameters
-  - *.toml: Individual component configuration files
-  - combine_maps.py: Script defining combined components
+Input files read from release folder:
+  - common.toml: Configuration (healpix/car flags)
+  - instrument_model/*.tbl: Channel parameters (nside, car_resol)
+  - *.toml: Individual component configs
+  - combine_maps.py: Combined component definitions
+
+Size formulas:
+  HEALPix: 12 * nside^2 * 3 components * 4 bytes (float32)
+  CAR: (360*60/res) * (180*60/res) * 3 components * 8 bytes (float64)
         """
     )
     parser.add_argument(
