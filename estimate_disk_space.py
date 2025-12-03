@@ -15,8 +15,10 @@ Example:
 import argparse
 import ast
 import glob
+import math
 import os
 import sys
+from typing import Dict, List, Optional
 
 try:
     import tomllib
@@ -68,8 +70,10 @@ def get_car_map_size_bytes(resolution_arcmin: float, n_components: int = 3, dtyp
     int
         Size in bytes
     """
-    # Full sky in arcmin^2
-    full_sky_arcmin2 = 4 * 180 * 60 * 180 * 60  # 4*pi steradians
+    # Full sky area: 4*pi steradians converted to arcmin^2
+    # 1 steradian = (180/pi)^2 degrees^2 = (180*60/pi)^2 arcmin^2
+    arcmin_per_steradian = (180 * 60 / math.pi) ** 2
+    full_sky_arcmin2 = 4 * math.pi * arcmin_per_steradian
     # Number of pixels
     npix = full_sky_arcmin2 / (resolution_arcmin ** 2)
     return int(npix * n_components * dtype_bytes)
@@ -107,7 +111,7 @@ def load_instrument_model(release_folder: str, common_config: dict) -> QTable:
     return QTable.read(full_path, format="ascii.ipac")
 
 
-def count_component_toml_files(release_folder: str) -> list[str]:
+def count_component_toml_files(release_folder: str) -> List[str]:
     """Count the component TOML files (excluding common.toml)."""
     toml_files = glob.glob(os.path.join(release_folder, "*.toml"))
     components = []
@@ -122,9 +126,19 @@ def count_component_toml_files(release_folder: str) -> list[str]:
     return components
 
 
-def parse_combined_components(combine_maps_path: str) -> dict:
+def parse_combined_components(combine_maps_path: str) -> Dict[str, List[str]]:
     """
     Parse the combine_maps.py script to extract combined component definitions.
+
+    This function uses AST parsing to extract the dictionary of combined components
+    from the combine_maps.py script. It handles:
+    - The main all_combined dictionary definition
+    - Variable references (e.g., extragalactic list)
+    - Dynamic websky variant generation
+
+    Note: The parser assumes the first all_combined assignment contains the complete
+    dictionary definition. Subsequent assignments (e.g., filtering for batch jobs)
+    are ignored.
 
     Returns a dictionary mapping combined component names to lists of individual components.
     """
@@ -137,16 +151,16 @@ def parse_combined_components(combine_maps_path: str) -> dict:
     # Parse the AST to extract the all_combined dictionary
     tree = ast.parse(source)
 
-    combined = {}
-    websky_catalog = []
-    extragalactic = []
+    combined = {}  # type: Dict[str, any]
+    websky_catalog = []  # type: List[str]
+    extragalactic = []  # type: List[str]
 
     for node in ast.walk(tree):
         if isinstance(node, ast.Assign):
             for target in node.targets:
                 if isinstance(target, ast.Name):
                     # Only take the first all_combined assignment (the full dictionary)
-                    # as subsequent assignments may filter it
+                    # as subsequent assignments may filter or replace it for batch processing
                     if target.id == "all_combined" and isinstance(node.value, ast.Dict) and not combined:
                         for key, value in zip(node.value.keys, node.value.values):
                             if isinstance(key, ast.Constant):
@@ -186,7 +200,7 @@ def parse_combined_components(combine_maps_path: str) -> dict:
 
 def estimate_disk_space(
     release_folder: str,
-    combine_maps_path: str | None = None,
+    combine_maps_path: Optional[str] = None,
     verbose: bool = True
 ) -> dict:
     """
