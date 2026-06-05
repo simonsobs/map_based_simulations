@@ -97,6 +97,22 @@ Some individual components are available on Perlmutter scratch (accessible from 
 
 Due to space constraints, other maps are only available on Popeye, please [open an issue here](https://github.com/simonsobs/map_based_simulations/issues/new) for any data access problem and if you need access to a specific set of maps.
 
+## HPSS Tape Archive
+
+The full set of individual component maps (24 TB) is archived on HPSS tape under the `sobs` account.
+
+**Archive path:** `/home/s/sobs/mbs/mbs-s0016-20241111.tar`
+
+To restore from tape (requires sobs group membership):
+```bash
+# Get sobs SSH certificate
+sshproxy_bw -c sobs
+ssh-add ~/.ssh/sobs
+
+# Restore to Perlmutter scratch
+ssh -i ~/.ssh/sobs sobs@perlmutter.nersc.gov "cd /pscratch/sd/z/zonca && htar -xvf /home/s/sobs/mbs/mbs-s0016-20241111.tar"
+```
+
 ## Metadata
 
 Most useful metadata is available in the FITS header of the HEALPix maps, for example:
