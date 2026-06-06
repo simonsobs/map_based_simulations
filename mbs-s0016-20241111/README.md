@@ -99,18 +99,48 @@ Due to space constraints, other maps are only available on Popeye, please [open 
 
 ## HPSS Tape Archive
 
-The full set of individual component maps (24 TB) is archived on HPSS tape under the `sobs` account.
+The full set of individual component maps (24 TB) is archived on HPSS tape under the `sobs` account at:
 
-**Archive path:** `/home/s/sobs/mbs/mbs-s0016-20241111.tar`
+**Archive base path:** `/home/s/sobs/mbs/mbs-s0016-20241111/`
 
-To restore from tape (requires sobs group membership):
+Due to htar's 99-character filename limit and 20 TB archive size limit, the data is stored as per-component archives:
+- Most components (filenames ≤ 99 chars): individual `.tar` files created with `htar`, e.g. `dust_d9.tar`, `cmb_c3.tar`
+- `*_websky` components (filenames 102–105 chars): stored as individual files via `hsi put -r` in subdirectories, e.g. `galactic_foregrounds_highcomplexity_websky/`
+
+To list the archive contents:
 ```bash
-# Get sobs SSH certificate
 sshproxy_bw -c sobs
-ssh-add ~/.ssh/sobs
+ssh -o IdentitiesOnly=yes -i ~/.ssh/sobs sobs@perlmutter.nersc.gov \
+  "hsi 'ls -l /home/s/sobs/mbs/mbs-s0016-20241111/'"
+```
 
-# Restore to Perlmutter scratch
-ssh -i ~/.ssh/sobs sobs@perlmutter.nersc.gov "cd /pscratch/sd/z/zonca && htar -xvf /home/s/sobs/mbs/mbs-s0016-20241111.tar"
+To restore a single component from tape (requires `sobs` group membership):
+```bash
+sshproxy_bw -c sobs
+
+# Restore an htar component (e.g. dust_d9)
+ssh -o IdentitiesOnly=yes -i ~/.ssh/sobs sobs@perlmutter.nersc.gov \
+  "cd /pscratch/sd/z/zonca && htar -xvf /home/s/sobs/mbs/mbs-s0016-20241111/dust_d9.tar"
+
+# Restore an hsi component (e.g. galactic_foregrounds_highcomplexity_websky)
+ssh -o IdentitiesOnly=yes -i ~/.ssh/sobs sobs@perlmutter.nersc.gov \
+  "hsi 'cd /home/s/sobs/mbs/mbs-s0016-20241111/galactic_foregrounds_highcomplexity_websky; get -r *' : /pscratch/sd/z/zonca/mbs-s0016-20241111/galactic_foregrounds_highcomplexity_websky/"
+```
+
+To restore all components:
+```bash
+sshproxy_bw -c sobs
+
+# Restore all htar components
+ssh -o IdentitiesOnly=yes -i ~/.ssh/sobs sobs@perlmutter.nersc.gov \
+  "cd /pscratch/sd/z/zonca && for tar in \$(hsi 'ls /home/s/sobs/mbs/mbs-s0016-20241111/*.tar' 2>/dev/null | grep -o 'mbs-s0016-20241111/[^\ ]*\.tar'); do htar -xvf /home/s/sobs/mbs/\$tar; done"
+
+# Restore all hsi components
+for d in galactic_foregrounds_highcomplexity_websky galactic_foregrounds_lowcomplexity_websky galactic_foregrounds_mediumcomplexity_websky; do
+  mkdir -p /pscratch/sd/z/zonca/mbs-s0016-20241111/\$d
+  ssh -o IdentitiesOnly=yes -i ~/.ssh/sobs sobs@perlmutter.nersc.gov \
+    "hsi 'cd /home/s/sobs/mbs/mbs-s0016-20241111/\$d; get -r *' : /pscratch/sd/z/zonca/mbs-s0016-20241111/\$d/"
+done
 ```
 
 ## Metadata
