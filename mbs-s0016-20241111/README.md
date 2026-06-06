@@ -4,6 +4,7 @@ Tag: `mbs-s0016-20241111`
 
 ## Updates
 
+* 2026-06-06: Archived full dataset (24 TB) to HPSS tape under `sobs` account at `/home/s/sobs/mbs/mbs-s0016-20241111/`, see HPSS Tape Archive section for restore instructions
 * 2025-03-18: Executed the new Radio Galaxies components, added `rg2`, `rg3`, also `rg1` is available for comparison
 * 2025-02-10: Added SAT maps executed at 4096 to avoid sharp transitions in time domain due to large pixels, they are located in the `SAT_4096` subfolder of the release, also included the visual maps verification
 * 2025-01-27: Executed spectra verification scripts
