@@ -4,9 +4,22 @@ Per-wafer SAT beam window functions for the next map based simulations release,
 converted from the Simons Observatory product `20261104_bessel` (the strictly
 SCR5 product recommended in the Beams Metadata Version Log since 2026-11-05).
 
-This directory contains the SAT f090 and f150 beams only. The other bands and
-the LAT keep the Gaussian beams of the mbs-s0016 instrument model until their
-products are defined.
+This directory contains the SAT f090 and f150 beams only. The other SAT bands
+stay Gaussian at the nominal instrument model FWHM, which is identical to the
+one in mbs-s0016 because no measured SAT LF or UHF beam product exists yet:
+
+| Band | FWHM (arcmin) | Status |
+|---|---|---|
+| f030 | 91.0 | nominal, not measured |
+| f040 | 63.0 | nominal, not measured |
+| f090 | 27.6 to 28.4 | measured, 20261104_bessel |
+| f150 | 19.4 to 19.8 | measured, 20261104_bessel |
+| f230 | 11.0 | nominal, not measured |
+| f290 | 9.0 | nominal, not measured |
+
+The nominal values come from `sotodlib.sim_hardware.sim_nominal()` and are
+unchanged from `mbs-s0016-20241111`. They are placeholders: for the two MF bands
+the measurements differ from the nominal 30.0 and 17.0 by about 1 to 3 arcmin.
 
 ## Contents
 
