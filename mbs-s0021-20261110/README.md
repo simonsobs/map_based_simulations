@@ -16,19 +16,12 @@ beams and the instrument model are in place, in
   and to join the measured per wafer passbands, which are keyed by module name,
   to the simulation channels, which are keyed by band and wafer slot.
 
-## Planned content
+## Scope
 
-From the planning documents in [`../planning/`](../planning):
-
-* Galactic: the three MBS-16 complexity sets, `d9,s4,f1,a1,co1`,
-  `d10,s5,f1,a1,co3`, `d12,s7,f1,a2,co3`, plus `s1` and `d1` for comparison.
-* Extragalactic: WebSky 0.4, CIB, tSZ, kSZ and the catalog based radio galaxies
-  `rg2` and `rg3`, with Half Dome and Agora as comparison sets if available.
-* CMB: WebSky 0.4 `c3` and `c4`, plus the solar dipole `dip2`, also part of the
-  combined CMB maps.
-* Instrument: measured SAT beams per wafer, per wafer measured LAT passbands,
-  and simulated per wafer bandpasses for the LF channels. Beam and passband
-  decisions are tracked in the issues below.
+The release content is defined by the open issues listed below, which are the
+source of truth. In short: per wafer measured SAT beams for f090 and f150, per
+wafer measured LAT passbands, simulated per wafer LF bandpasses, and the MBS-16
+sky model sets updated for the extragalactic and CMB components.
 
 ## Tracking
 
