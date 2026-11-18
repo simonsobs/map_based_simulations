@@ -33,6 +33,10 @@ Data are now only stored on tape at NERSC under the `sobs` user. Please ask @zon
 * [`mbs-s0002-20190325`](201903_highres_foregrounds/README.md): High resolution foregrounds with spectral index not varying spatially
 * [`mbs-s0001-20190220`](201901_gaussian_fg_lensed_cmb_realistic_noise/README.md): Gaussian foregrouds, lensed CMB, realistic noise map based simulations
 
+## Instrument reference
+
+* [Band, optics tube and wafer coupling](docs/instrument_model/band_optics_wafer_coupling.md): UFM module for each optics tube and wafer slot, per hardware configuration, used to connect simulated channels with the measured beams and passbands.
+
 ## Maintained repositories
 
 * [`mapsims`: Map-based simulation package based on PySM + SO noise simulations](https://github.com/galsci/mapsims)
