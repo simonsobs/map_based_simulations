@@ -35,7 +35,7 @@ Data are now only stored on tape at NERSC under the `sobs` user. Please ask @zon
 
 ## Instrument reference
 
-* [Band, optics tube and wafer coupling](docs/instrument_model/band_optics_wafer_coupling.md): UFM module for each optics tube and wafer slot, per hardware configuration, used to connect simulated channels with the measured beams and passbands.
+* [Band, optics tube and wafer coupling](mbs-s0021-20261110/instrument_model/band_optics_wafer_coupling.md): UFM module for each optics tube and wafer slot, per hardware configuration, used to connect simulated channels with the measured beams and passbands.
 
 ## Maintained repositories
 

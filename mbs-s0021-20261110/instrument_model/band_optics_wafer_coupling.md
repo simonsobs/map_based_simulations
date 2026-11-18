@@ -7,7 +7,8 @@ channel can be connected to the measured product for the same physical array.
 Status: prepared for mbs-0021, tracked in
 [`simonsobs/map_based_simulations#79 "[mbs-0021] band to optics and wafer coupling"`](https://github.com/simonsobs/map_based_simulations/issues/79).
 The SAT assignments and the ASO LAT assignment are complete. The SO nominal LAT
-assignment is only partial, see [Open items](#open-items).
+assignment is only partial, see [Open items](#open-items). The document lives in
+the release directory of mbs-0021, `mbs-s0021-20261110/instrument_model/`.
 
 ## What the table is for
 
